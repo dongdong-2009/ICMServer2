@@ -1,0 +1,460 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:v="clr-namespace:ICMServer.WPF.Views"
+             xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+             xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+             xmlns:local="clr-namespace:ICMServer.WPF"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+             x:Class="ICMServer.WPF.Views.FormLogManagement"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="1000"
+             FontSize="14" Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+
+            <!-- MVVM Locator -->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converters -->
+            <converter:AlarmEventToStringConverter x:Key="AlarmEventConverter"/>
+            <converter:CallStatusToStringConverter x:Key="CallStatusConverter"/>
+            <converter:DetectorToStringConverter x:Key="DetectorConverter"/>
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            <converter:IntToProcessStateConverter x:Key="IntToProcessStateConverter"/>
+            <converter:OpenDoorResultToStringConverter x:Key="OpenDoorResultConverter"/>
+            <converter:ProcessStateToStringConverter x:Key="ProcessStateConverter"/>
+            <converter:OpenDoorMethodToStringConverter x:Key="OpenDoorMethodConverter"/>
+
+            <!-- Style Settings -->
+            <Style TargetType="{x:Type UserControl}">
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="ContentStringFormat" Value="{}{0}:"/>
+            </Style>
+            <Style x:Key="CommandButtons" TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="MinHeight" Value="30"/>
+                <Setter Property="MinWidth" Value="80"/>
+            </Style>
+            <Style TargetType="{x:Type ComboBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type xctk:MaskedTextBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="{x:Type DatePicker}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type DataGrid}">
+                <Setter Property="RowHeaderWidth" Value="40"/>
+                <Setter Property="CanUserResizeRows" Value="False"/>
+                <Setter Property="SelectionUnit" Value="FullRow"/>
+                <Setter Property="CanUserAddRows" Value="False"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+                <Setter Property="AutoGenerateColumns" Value="False"/>
+                <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+                <!--<Setter Property="RowHeight" Value="25"/>-->
+            </Style>
+            <!-- This is the style used to display enabled or disabled button images for removing filters-->
+            <Style x:Key="ImageStyleForDisableFilterButtons" TargetType="{x:Type Image}">
+                <Style.Triggers>
+                    <!-- Filter Enabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}" Value="True">
+                        <Setter Property="Source"  Value="/Wpf;component/Images/disable_filter_16x16.png"/>
+                    </DataTrigger>
+                    <!-- Filter Disabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" Value="False">
+                        <Setter Property="Source" Value="/Wpf;component/Images/disable_filter_16x16_disabled.png"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <ObjectDataProvider x:Key="ProcessStateValues" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="model:ProcessState" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+            
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="安防記錄">
+                <TabItem.DataContext>
+                    <Binding Mode="OneWay" Path="AlarmsViewModel" Source="{StaticResource Locator}"/>
+                </TabItem.DataContext>
+
+                <DockPanel LastChildFill="True">
+                    <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Refresh}" Command="{Binding RefreshCommand}" />
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Delete}" Command="{Binding DeleteAlarmsCommand}" CommandParameter="{Binding SelectedItems, ElementName=dataGridAlarms}" />
+                            <Button Style="{StaticResource CommandButtons}" Content="處理" Command="{Binding EditAlarmCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="撤銷安防" Command="{Binding DisableSafetyCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Print}" Command="{Binding PrintCommand, Mode=OneTime}" CommandParameter="{Binding ElementName=dataGridAlarms}"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- filters -->
+                            <Label Content="上報時間(起始日期)"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding BeginDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveBeginDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Content="上報時間(結束日期)" Grid.Column="1"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding EndDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveEndDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Content="處理狀態" Grid.Column="2"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="2" Margin="0,0,20,0">
+                                <ComboBox  ItemsSource="{Binding Source={StaticResource ProcessStateValues}}" SelectedValue="{Binding ProcessStateFilterValue, Converter={StaticResource IntToProcessStateConverter}}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Converter={StaticResource ProcessStateConverter}}" />
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveProcessStateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ResetFilter}" Grid.Column="3" Grid.Row="1" Command="{Binding ResetFiltersCommand, Mode=OneWay}" Margin="10,5,0,5"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock Text="總共有 "/>
+                        <TextBlock Text="{Binding Alarms.Count}"/>
+                        <TextBlock Text=" 筆資料"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="dataGridAlarms" ItemsSource="{Binding Alarms}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="發生位置" Binding="{Binding srcaddr, Converter={StaticResource DeviceAddressConverter}}"/>
+                            <DataGridTextColumn Header="發生時間" Binding="{Binding time, StringFormat=\{0:G\}}"/>
+                            <DataGridTextColumn Header="偵測器類型" Binding="{Binding type, Converter={StaticResource DetectorConverter}}"/>
+                            <DataGridTextColumn Header="{DynamicResource Event}" Binding="{Binding action, Converter={StaticResource AlarmEventConverter}}">
+                                <DataGridTextColumn.CellStyle>
+                                    <Style TargetType="{x:Type DataGridCell}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding action}" Value="trig">
+                                                <Setter Property="Background" Value="Red"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding action}" Value="unalarm">
+                                                <Setter Property="Background" Value="Green"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGridTextColumn.CellStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="通道位置" Binding="{Binding channel}"/>
+                            <DataGridTextColumn Header="處理狀態" Binding="{Binding handlestatus, Converter={StaticResource ProcessStateConverter}}"/>
+                            <DataGridTextColumn Header="處理時間" Binding="{Binding handletime}"/>
+                            <DataGridTextColumn Header="處理人" Binding="{Binding handler}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+
+            <TabItem Header="{DynamicResource CommonEventLog}">
+                <TabItem.DataContext>
+                    <Binding Mode="OneWay" Path="CommonEventsViewModel" Source="{StaticResource Locator}"/>
+                </TabItem.DataContext>
+                
+                <DockPanel LastChildFill="True">
+                    <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Refresh}" Command="{Binding RefreshCommand}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Delete}" Command="{Binding DeleteCommonEventsCommand}" CommandParameter="{Binding SelectedItems, ElementName=dataGridCommonEvents}" />
+                            <Button Style="{StaticResource CommandButtons}" Content="處理" Command="{Binding EditCommonEventCommand}" />
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Print}" Command="{Binding PrintCommand, Mode=OneTime}" CommandParameter="{Binding ElementName=dataGridCommonEvents}"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- filters -->
+                            <Label Content="上報時間(起始日期)"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding BeginDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveBeginDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Content="上報時間(結束日期)" Grid.Column="1"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding EndDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveEndDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Content="處理狀態" Grid.Column="2"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="2" Margin="0,0,20,0">
+                                <ComboBox  ItemsSource="{Binding Source={StaticResource ProcessStateValues}}" SelectedValue="{Binding ProcessStateFilterValue, Converter={StaticResource IntToProcessStateConverter}}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Converter={StaticResource ProcessStateConverter}}" />
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveProcessStateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Grid.Column="3" Content="上報位置"/>
+                            <StackPanel Orientation="Horizontal"  Grid.Column="3" Grid.Row="1" Margin="0,0,20,0">
+                                <TextBox IsReadOnly="True" MinWidth="150" VerticalAlignment="Center" Text="{Binding AddressFilterValue, Converter={StaticResource DeviceAddressConverter}}" Margin="5,5,0,5"/>
+                                <Button Content="..." Margin="0,5,5,5" Padding="10,0,10,0" VerticalAlignment="Center" Command="{Binding PickAddressFilterValueCommand, Mode=OneWay}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveAddressFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ResetFilter}" Grid.Column="4" Grid.Row="1" Command="{Binding ResetFiltersCommand, Mode=OneWay}"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock Text="總共有 "/>
+                        <TextBlock Text="{Binding CommonEvents.Count}"/>
+                        <TextBlock Text=" 筆資料"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="dataGridCommonEvents" ItemsSource="{Binding CommonEvents}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="發生位置" Binding="{Binding srcaddr, Converter={StaticResource DeviceAddressConverter}}"/>
+                            <DataGridTextColumn Header="發生時間" Binding="{Binding time, StringFormat=\{0:G\}}"/>
+                            <DataGridTextColumn Header="事件內容" Binding="{Binding content}"/>
+                            <DataGridTextColumn Header="處理狀態" Binding="{Binding handlestatus, Converter={StaticResource ProcessStateConverter}}"/>
+                            <DataGridTextColumn Header="處理時間" Binding="{Binding handletime}"/>
+                            <DataGridTextColumn Header="處理人" Binding="{Binding handler}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+
+            <TabItem Header="對講記錄">
+                <TabItem.DataContext>
+                    <Binding Mode="OneWay" Path="CallOutEventsViewModel" Source="{StaticResource Locator}"/>
+                </TabItem.DataContext>
+                
+                <DockPanel LastChildFill="True">
+                    <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Refresh}" Command="{Binding RefreshCommand, Mode=OneWay}" />
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Delete}" Command="{Binding DeleteCallOutEventsCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGridCallOutEvents}" />
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Print}" Command="{Binding PrintCommand, Mode=OneTime}" CommandParameter="{Binding ElementName=dataGridCallOutEvents}"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- filters -->
+                            <Label Content="呼叫時間(起始日期)"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding BeginDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveBeginDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Content="呼叫時間(結束日期)" Grid.Column="1"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding EndDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveEndDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Grid.Column="2" Content="主叫方"/>
+                            <StackPanel Orientation="Horizontal"  Grid.Column="2" Grid.Row="1" Margin="0,0,20,0">
+                                <TextBox IsReadOnly="True" MinWidth="150" VerticalAlignment="Center" Text="{Binding SrcAddressFilterValue, Converter={StaticResource DeviceAddressConverter}}" Margin="5,5,0,5"/>
+                                <Button Content="..." Margin="0,5,5,5" Padding="10,0,10,0" VerticalAlignment="Center" Command="{Binding PickSrcAddressFilterValueCommand, Mode=OneWay}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveSrcAddressFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Grid.Column="3" Content="被叫方"/>
+                            <StackPanel Orientation="Horizontal"  Grid.Column="3" Grid.Row="1" Margin="0,0,20,0">
+                                <TextBox IsReadOnly="True" MinWidth="150" VerticalAlignment="Center" Text="{Binding DstAddressFilterValue, Converter={StaticResource DeviceAddressConverter}}" Margin="5,5,0,5"/>
+                                <Button Content="..." Margin="0,5,5,5" Padding="10,0,10,0" VerticalAlignment="Center" Command="{Binding PickDstAddressFilterValueCommand}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveDstAddressFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ResetFilter}" Grid.Column="4" Grid.Row="1" Command="{Binding ResetFiltersCommand, Mode=OneWay}"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock Text="總共有 "/>
+                        <TextBlock Text="{Binding CallOutEvents.Count}"/>
+                        <TextBlock Text=" 筆資料"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="dataGridCallOutEvents" ItemsSource="{Binding CallOutEvents}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="主叫方" Binding="{Binding from, Converter={StaticResource DeviceAddressConverter}}"/>
+                            <DataGridTextColumn Header="被叫方" Binding="{Binding to, Converter={StaticResource DeviceAddressConverter}}"/>
+                            <DataGridTextColumn Header="發生時間" Binding="{Binding time, StringFormat=\{0:G\}}"/>
+                            <DataGridTextColumn Header="來電狀態" Binding="{Binding action, Converter={StaticResource CallStatusConverter}}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+
+            <TabItem Header="開門記錄">
+                <TabItem.DataContext>
+                    <Binding Mode="OneWay" Path="OpenDoorEventsViewModel" Source="{StaticResource Locator}"/>
+                </TabItem.DataContext>
+                
+                <DockPanel LastChildFill="True">
+                    <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Refresh}" Command="{Binding RefreshCommand, Mode=OneWay}" />
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Delete}" Command="{Binding DeleteOpenDoorEventsCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=dataGridOpenDoorEvents, Path=SelectedItems, Mode=OneWay}" />
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Print}" Command="{Binding PrintCommand, Mode=OneTime}" CommandParameter="{Binding ElementName=dataGridOpenDoorEvents}"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- filters -->
+                            <Label Content="開門時間(起始日期)"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding BeginDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveBeginDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Content="開門時間(結束日期)" Grid.Column="1"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding EndDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveEndDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Grid.Column="2" Content="門口機"/>
+                            <StackPanel Orientation="Horizontal"  Grid.Column="2" Grid.Row="1" Margin="0,0,20,0">
+                                <TextBox IsReadOnly="True" MinWidth="150" VerticalAlignment="Center" Text="{Binding LobbyPhoneAddressFilterValue, Converter={StaticResource DeviceAddressConverter}}" Margin="5,5,0,5"/>
+                                <Button Content="..." Margin="0,5,5,5" Padding="10,0,10,0" VerticalAlignment="Center" Command="{Binding PickLobbyPhoneAddressFilterValueCommand, Mode=OneWay}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveLobbyPhoneAddressFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ResetFilter}" Grid.Column="3" Grid.Row="1" Command="{Binding ResetFiltersCommand, Mode=OneWay}"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock Text="總共有 "/>
+                        <TextBlock Text="{Binding OpenDoorEvents.Count}"/>
+                        <TextBlock Text=" 筆資料"/>
+                    </StackPanel>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <DataGrid x:Name="dataGridOpenDoorEvents" ItemsSource="{Binding OpenDoorEvents}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="門口機" Binding="{Binding C_from, Converter={StaticResource DeviceAddressConverter}}"/>
+                                <DataGridTextColumn Header="開門方法" Binding="{Binding C_mode, Converter={StaticResource OpenDoorMethodConverter}}"/>
+                                <DataGridTextColumn Header="開門者" Binding="{Binding C_open_object}"/>
+                                <DataGridTextColumn Header="時間" Binding="{Binding C_time, StringFormat=\{0:G\}}"/>
+                                <DataGridTextColumn Header="開門狀態" Binding="{Binding C_verified, Converter={StaticResource OpenDoorResultConverter}}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <GroupBox Grid.Column="1" Header="抓拍圖像">
+                            <Image Width="188" Height="156" Margin="3" Source="{Binding Snapshot}"/>
+                        </GroupBox>
+                    </Grid>
+                </DockPanel>
+            </TabItem>
+
+            <!--<TabItem Header="設備狀態記錄">
+            </TabItem>-->
+        </TabControl>
+    </Grid>
+</UserControl>

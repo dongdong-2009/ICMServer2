@@ -1,0 +1,266 @@
+﻿<UserControl x:Class="ICMServer.WPF.Views.FormDeviceManagement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:v="clr-namespace:ICMServer.WPF.Views"
+             xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+             xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+             xmlns:local="clr-namespace:ICMServer.WPF"
+             xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+             xmlns:prism="http://prismlibrary.com/"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="1000"
+             FontSize="14">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+                <ResourceDictionary Source="GlobalResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+
+            <!-- MVVM Locator -->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converters -->
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            <converter:DeviceTypeToStringConverter x:Key="DeviceTypeConverter"/>
+            <converter:MacAddressConverter x:Key="MacAddressConverter"/>
+            <converter:OnlineStatusToStringConverter x:Key="OnlineStatusConverter"/>
+            <converter:IntToDeviceTypeConverter x:Key="IntToDeviceTypeConverter"/>
+            <converter:IntToOnlineStatusConverter x:Key="IntToOnlineStatusConverter"/>
+            <converter:SyncStatusToStringConverter x:Key="SyncStatusConverter"/>
+
+            <ObjectDataProvider x:Key="DeviceTypeValues" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="model:DeviceType" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+            <ObjectDataProvider x:Key="OnlineStatusValues" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="model:OnlineStatus" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+
+            <!-- Style Settings -->
+            <Style TargetType="{x:Type UserControl}">
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="ContentStringFormat" Value="{}{0}:"/>
+            </Style>
+            <Style x:Key="CommandButtons" TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="MinHeight" Value="30"/>
+                <Setter Property="MinWidth" Value="80"/>
+            </Style>
+            <Style TargetType="{x:Type ComboBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type DataGrid}">
+                <Setter Property="RowHeaderWidth" Value="40"/>
+                <Setter Property="CanUserResizeRows" Value="False"/>
+                <Setter Property="SelectionUnit" Value="FullRow"/>
+                <Setter Property="CanUserAddRows" Value="False"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+                <Setter Property="AutoGenerateColumns" Value="False"/>
+                <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+                <!--<Setter Property="RowHeight" Value="25"/>-->
+            </Style>
+            <!-- This is the style used to display enabled or disabled button images for removing filters-->
+            <Style x:Key="ImageStyleForDisableFilterButtons" TargetType="{x:Type Image}">
+                <Style.Triggers>
+                    <!-- Filter Enabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}" Value="True">
+                        <Setter Property="Source" Value="/Wpf;component/Images/disable_filter_16x16.png"/>
+                    </DataTrigger>
+                    <!-- Filter Disabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" Value="False">
+                        <Setter Property="Source" Value="/Wpf;component/Images/disable_filter_16x16_disabled.png"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="{DynamicResource DeviceManagement}">
+                <TabItem.DataContext>
+                    <Binding Mode="OneWay" Path="DevicesViewModel" Source="{StaticResource Locator}"/>
+                </TabItem.DataContext>
+                <!--<Grid>
+                    <ContentControl prism:RegionManager.RegionName="DeviceListRegion"/>
+                </Grid>-->
+                <DockPanel LastChildFill="True">
+                    <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Refresh}" Command="{Binding RefreshCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="查看設備信息" Command="{Binding DisplayDeviceDetailCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource AddDevice}" Command="{Binding AddDeviceCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource EditDevice}" Command="{Binding EditDeviceCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource DeleteDevices}" Command="{Binding DeleteDevicesCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGridDevices}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ImportAddressBook}" Command="{Binding ImportAddressBookCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ExportAddressBook}" Command="{Binding ExportAddressBookCommnad, Mode=OneWay}"/>
+                            <!--<Button Style="{StaticResource CommandButtons}" Content="同步地址簿" Command="{Binding SyncAddressBookWithDevicesCommand, Mode=OneWay}"/>-->
+                            <!--<Button Style="{StaticResource CommandButtons}" Content="同步地址簿"/>-->
+                        </StackPanel>
+                    </GroupBox>
+
+                    <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- filters -->
+                            <Label Content="{DynamicResource DeviceType}"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,20,0">
+                                <ComboBox ItemsSource="{Binding Source={StaticResource DeviceTypeValues}}" SelectedValue="{Binding DeviceTypeFilterValue, Converter={StaticResource IntToDeviceTypeConverter}}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Converter={StaticResource DeviceTypeConverter}}" />
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveDeviceTypeFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+                            <Label Content="設備狀態" Grid.Column="1"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0">
+                                <ComboBox ItemsSource="{Binding Source={StaticResource OnlineStatusValues}}" SelectedValue="{Binding OnlineStatusFilterValue, Converter={StaticResource IntToOnlineStatusConverter}}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Converter={StaticResource OnlineStatusConverter}}" />
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveOnlineStatusFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ResetFilter}" Grid.Column="2" Grid.Row="1" Command="{Binding ResetFiltersCommand, Mode=OneWay}"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock Text="總共有 "/>
+                        <TextBlock Text="{Binding Devices.Count}"/>
+                        <TextBlock Text=" 筆資料"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="dataGridDevices" ItemsSource="{Binding Devices}">
+                        <!--<DataGrid x:Name="dataGridDevices" AutoGenerateColumns="False" ItemsSource="{Binding ShapingItems}" IsReadOnly="True" helper:MultiSelect.IsEnabled="True" IsSynchronizedWithCurrentItem="True">-->
+                        <!--<i:Interaction.Behaviors>
+                            <helper:ScrollDataGridRowIntoView />
+                        </i:Interaction.Behaviors>-->
+                        <!--<DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=issel}"
+                            </Style>
+                        </DataGrid.RowStyle>-->
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="online" Header="{DynamicResource OnlineStatus}" Binding="{Binding online, Converter={StaticResource OnlineStatusConverter}}">
+                                <DataGridTextColumn.CellStyle>
+                                    <Style TargetType="{x:Type DataGridCell}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding online}" Value="0">
+                                                <Setter Property="Background" Value="Red"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding online}" Value="1">
+                                                <Setter Property="Background" Value="Green"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGridTextColumn.CellStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource DeviceAlias}" Binding="{Binding alias}"/>
+                            <DataGridTextColumn Header="{DynamicResource DeviceType}" Binding="{Binding type, Converter={StaticResource DeviceTypeConverter}}"/>
+                            <DataGridTextColumn Header="{DynamicResource DeviceAddress}" Binding="{Binding roomid, Converter={StaticResource DeviceAddressConverter}}"/>
+                            <DataGridTextColumn Header="{DynamicResource IPAddress}" Binding="{Binding ip}"/>
+                            <DataGridTextColumn Header="{DynamicResource SubnetMask}" Binding="{Binding sm}"/>
+                            <DataGridTextColumn Header="{DynamicResource Gateway}" Binding="{Binding gw}"/>
+                            <DataGridTextColumn Header="{DynamicResource MulticastGroupIP}" Binding="{Binding group}"/>
+                            <DataGridTextColumn Header="{DynamicResource MacAddress}" Binding="{Binding mac, Converter={StaticResource MacAddressConverter}}"/>
+                            <DataGridTextColumn Header="{DynamicResource IPCAMAccount}" Binding="{Binding cameraid}"/>
+                            <DataGridTextColumn Header="{DynamicResource IPCAMPassword}" Binding="{Binding camerapw}"/>
+                            <DataGridTextColumn Header="{DynamicResource CurrentFirmwareVersion}" Binding="{Binding fVer}"/>
+                            <DataGridTextColumn Header="{DynamicResource CurrentAddressBookVersion}" Binding="{Binding aVer}"/>
+                            <DataGridTextColumn Header="{DynamicResource CurrentCardListVersion}" Binding="{Binding cVer}"/>
+                            <!--<DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Click="ShowHideDetails">Details</Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>-->
+                        </DataGrid.Columns>
+                        <!--<i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <cmd:EventToCommand Command="{Binding SelectionChangedCommand, Mode=OneWay}" PassEventArgsToCommand="True"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>-->
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+
+            <TabItem Header="SIP帳戶管理">
+                <TabItem.DataContext>
+                    <Binding Mode="OneWay" Path="SipAccountsViewModel" Source="{StaticResource Locator}"/>
+                </TabItem.DataContext>
+
+                <DockPanel>
+                    <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource CommandButtons}" Content="帳號管理" Command="{Binding SipAccountManagementCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="帳號刷新" Command="{Binding RefreshCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="刷新在線狀態" Command="{Binding RefreshOnlineStatusCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="推送測試" Command="{Binding PushNotificationCommand, Mode=OneWay}"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock Text="總共有 "/>
+                        <TextBlock Text="{Binding SipAccounts.Count}"/>
+                        <TextBlock Text=" 筆資料"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="dataGridSipAccounts" ItemsSource="{Binding SipAccounts}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="狀態" Binding="{Binding C_registerstatus, Converter={StaticResource OnlineStatusConverter}}" />
+                            <DataGridTextColumn Header="帳號" Binding="{Binding C_user}" />
+                            <DataGridTextColumn Header="房間號" Binding="{Binding C_room, Converter={StaticResource DeviceAddressConverter}}" />
+                            <DataGridTextColumn Header="群組編號" Binding="{Binding C_usergroup}" />
+                            <DataGridTextColumn Header="同步狀態" Binding="{Binding C_sync, Converter={StaticResource SyncStatusConverter}}"/>
+                        </DataGrid.Columns>
+
+                        <DataGrid.GroupStyle>
+                            <GroupStyle ContainerStyle="{StaticResource SipAccountsGroupHeaderStyle}">
+                                <GroupStyle.Panel>
+                                    <ItemsPanelTemplate>
+                                        <DataGridRowsPresenter/>
+                                    </ItemsPanelTemplate>
+                                </GroupStyle.Panel>
+                            </GroupStyle>
+                        </DataGrid.GroupStyle>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

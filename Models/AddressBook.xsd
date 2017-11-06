@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AddrList" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dev" msprop:Generator_TableClassName="devDataTable" msprop:Generator_TableVarName="tabledev" msprop:Generator_TablePropName="dev" msprop:Generator_RowDeletingName="devRowDeleting" msprop:Generator_RowChangingName="devRowChanging" msprop:Generator_RowEvHandlerName="devRowChangeEventHandler" msprop:Generator_RowDeletedName="devRowDeleted" msprop:Generator_UserTableName="dev" msprop:Generator_RowChangedName="devRowChanged" msprop:Generator_RowEvArgName="devRowChangeEvent" msprop:Generator_RowClassName="devRow">
+    <xs:complexType>
+      <xs:attribute name="ty" msprop:Generator_ColumnVarNameInTable="columnty" msprop:Generator_ColumnPropNameInRow="ty" msprop:Generator_ColumnPropNameInTable="tyColumn" msprop:Generator_UserColumnName="ty" type="xs:unsignedByte" msdata:DefaultValue="5" use="required" />
+      <xs:attribute name="ro" msprop:Generator_ColumnVarNameInTable="columnro" msprop:Generator_ColumnPropNameInRow="ro" msprop:Generator_ColumnPropNameInTable="roColumn" msprop:Generator_UserColumnName="ro" msdata:DefaultValue="00-00-00-00-00-00" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="17" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="alias" msprop:Generator_ColumnVarNameInTable="columnalias" msprop:Generator_ColumnPropNameInRow="alias" msprop:Generator_ColumnPropNameInTable="aliasColumn" msprop:Generator_UserColumnName="alias" type="xs:string" />
+      <xs:attribute name="ip" msprop:Generator_ColumnVarNameInTable="columnip" msprop:Generator_ColumnPropNameInRow="ip" msprop:Generator_ColumnPropNameInTable="ipColumn" msprop:Generator_UserColumnName="ip" msdata:DefaultValue="192.168.1.2" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="15" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="sm" msprop:Generator_ColumnVarNameInTable="columnsm" msprop:Generator_ColumnPropNameInRow="sm" msprop:Generator_ColumnPropNameInTable="smColumn" msprop:Generator_UserColumnName="sm" msdata:DefaultValue="255.255.255.0" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="15" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="gw" msprop:Generator_ColumnVarNameInTable="columngw" msprop:Generator_ColumnPropNameInRow="gw" msprop:Generator_ColumnPropNameInTable="gwColumn" msprop:Generator_UserColumnName="gw" msdata:DefaultValue="192.168.1.1" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="15" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="mc" msprop:Generator_ColumnVarNameInTable="columnmc" msprop:Generator_ColumnPropNameInRow="mc" msprop:Generator_ColumnPropNameInTable="mcColumn" msprop:Generator_UserColumnName="mc" type="xs:string" />
+      <xs:attribute name="group" msprop:Generator_ColumnVarNameInTable="columngroup" msprop:Generator_ColumnPropNameInRow="group" msprop:Generator_ColumnPropNameInTable="groupColumn" msprop:Generator_UserColumnName="group" type="xs:string" />
+      <xs:attribute name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" />
+      <xs:attribute name="pw" msprop:Generator_ColumnVarNameInTable="columnpw" msprop:Generator_ColumnPropNameInRow="pw" msprop:Generator_ColumnPropNameInTable="pwColumn" msprop:Generator_UserColumnName="pw" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddrList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="AddrList" msprop:Generator_UserDSName="AddrList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="dev" />
+        <xs:element name="multicastGroup" msprop:Generator_TableClassName="multicastGroupDataTable" msprop:Generator_TableVarName="tablemulticastGroup" msprop:Generator_RowChangedName="multicastGroupRowChanged" msprop:Generator_TablePropName="multicastGroup" msprop:Generator_RowDeletingName="multicastGroupRowDeleting" msprop:Generator_RowChangingName="multicastGroupRowChanging" msprop:Generator_RowEvHandlerName="multicastGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="multicastGroupRowDeleted" msprop:Generator_RowClassName="multicastGroupRow" msprop:Generator_UserTableName="multicastGroup" msprop:Generator_RowEvArgName="multicastGroupRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ip" msprop:Generator_ColumnVarNameInTable="columnip" msprop:Generator_ColumnPropNameInRow="ip" msprop:Generator_ColumnPropNameInTable="ipColumn" msprop:Generator_UserColumnName="ip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="IpMustBeUnique">
+      <xs:selector xpath=".//dev" />
+      <xs:field xpath="@ip" />
+    </xs:unique>
+    <xs:unique name="PrimaryKey" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//dev" />
+      <xs:field xpath="@ro" />
+    </xs:unique>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//multicastGroup" />
+      <xs:field xpath="ip" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

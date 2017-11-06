@@ -1,0 +1,151 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogViewDevice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:controls="clr-namespace:ITE.WPF.Controls;assembly=WpfIPAddressControlLib"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=vm:DeviceViewModel, IsDesignTimeCreatable=True}"
+        Title="檢視裝置資料" Height="Auto" Width="350" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="WidthAndHeight" ResizeMode="NoResize" FontSize="14">
+   <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            <converter:DeviceTypeToStringConverter x:Key="DeviceTypeConverter"/>
+            <converter:IntToDeviceTypeConverter x:Key="IntToDeviceTypeConverter"/>
+            <converter:MacAddressConverter x:Key="MacAddressConverter"/>
+
+            <Style TargetType="{x:Type Window}">
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+            </Style>
+            <Style TargetType="{x:Type Label}" x:Key="PropertyName">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="ContentStringFormat" Value="{}{0}:"/>
+            </Style>
+            <Style TargetType="{x:Type ComboBox}">
+                <Style.Triggers>
+                    <!--<DataTrigger Binding="{Binding local:Re}"-->
+                </Style.Triggers>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="MinWidth" Value="50"/>
+                <Setter Property="Margin" Value="5,15,20,5"/>
+            </Style>
+            <Style TargetType="{x:Type controls:IPAddressControl}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <ObjectDataProvider MethodName="GetValues"
+                        ObjectType="{x:Type sys:Enum}"
+                        x:Key="DeviceTypeValues">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="model:DeviceType" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <StackPanel>
+        <!--<Grid Margin="5" VerticalAlignment="Top" DataContext="{Binding Device, Source={StaticResource Locator}}">-->
+        <Grid Margin="5" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource PropertyName}" Content="{DynamicResource DeviceType}"/>
+            <TextBlock Grid.Column="1" Text="{Binding DeviceType, Converter={StaticResource DeviceTypeConverter}}"/>
+            <!--<ComboBox Grid.Column="1" ItemsSource="{Binding Source={StaticResource DeviceTypeValues}}" SelectedValue="{Binding DeviceType, Converter={StaticResource IntToDeviceTypeConverter}}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource DeviceTypeConverter}}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>-->
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="1" Content="{DynamicResource DeviceAddress}"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DeviceAddress, Converter={StaticResource DeviceAddressConverter}}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="2" Content="{DynamicResource DeviceAlias}"/>
+            <TextBlock Grid.Row="2"  Grid.Column="1" Text="{Binding Alias}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="3" Content="{DynamicResource IPAddress}"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding IPAddress}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="4" Content="{DynamicResource Gateway}"/>
+            <TextBlock Grid.Row="4"  Grid.Column="1" Text="{Binding Gateway}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="5"  Content="{DynamicResource SubnetMask}"/>
+            <TextBlock Grid.Row="5"  Grid.Column="1" Text="{Binding SubnetMask}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="6" Content="{DynamicResource MulticastGroupIP}"/>
+            <TextBlock Grid.Row="6"  Grid.Column="1" Text="{Binding MulticastGroupIP}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="7" Content="{DynamicResource MacAddress}"/>
+            <TextBlock Grid.Row="7"  Grid.Column="1" Text="{Binding MacAddress, Converter={StaticResource MacAddressConverter}}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="8" Content="{DynamicResource IPCAMAccount}"/>
+            <TextBlock Grid.Row="8"  Grid.Column="1" Text="{Binding IPCamID}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="9"  Content="{DynamicResource IPCAMPassword}"/>
+            <TextBlock Grid.Row="9"  Grid.Column="1" Text="{Binding IPCamPassword}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="10"  Content="{DynamicResource CurrentAddressBookVersion}"/>
+            <TextBlock  Grid.Row="10"  Grid.Column="1" Text="{Binding AddressBookVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="11"  Content="{DynamicResource LatestAddressBookVersion}"/>
+            <TextBlock  Grid.Row="11"  Grid.Column="1" Text="{Binding LatestAddressBookVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="12"  Content="{DynamicResource CurrentCardListVersion}"/>
+            <TextBlock  Grid.Row="12"  Grid.Column="1" Text="{Binding CardListVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="13"  Content="{DynamicResource LatestCardListVersion}"/>
+            <TextBlock  Grid.Row="13"  Grid.Column="1" Text="{Binding LatestCardListVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="14"  Content="{DynamicResource CurrentFirmwareVersion}"/>
+            <TextBlock  Grid.Row="14"  Grid.Column="1" Text="{Binding FirmwareVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="15"  Content="{DynamicResource LatestFirmwareVersion}"/>
+            <TextBlock  Grid.Row="15"  Grid.Column="1" Text="{Binding LatestFirmwareVersion}"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="{DynamicResource Close}" Click="Button_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

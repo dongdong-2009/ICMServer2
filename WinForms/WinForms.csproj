@@ -1,0 +1,1152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68D3A385-A71D-4CE0-B6B7-055C0E664B41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICMServer</RootNamespace>
+    <AssemblyName>WinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)bin\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)bin\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Equin.ApplicationFramework.BindingListView">
+      <HintPath>..\packages\Equin.ApplicationFramework.BindingListView.1.4.5222.35545\lib\net40-Client\Equin.ApplicationFramework.BindingListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\packages\MySqlBackup.NET.2.0.9.5\lib\net45\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.0.0, Culture=neutral, PublicKeyToken=830ae994e36ac27d, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.0\lib\net45\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.0.0, Culture=neutral, PublicKeyToken=830ae994e36ac27d, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.0\lib\net45\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alarm.Designer.cs">
+      <DependentUpon>Alarm.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DevicesAddressConverter.cs" />
+    <Compile Include="DialogAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAbout.designer.cs">
+      <DependentUpon>DialogAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogCardAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogCardAdd.designer.cs">
+      <DependentUpon>DialogCardAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDevAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogDevAdd.designer.cs">
+      <DependentUpon>DialogDevAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogResidentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogResidentAdd.designer.cs">
+      <DependentUpon>DialogResidentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSIPAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSIPAdd.designer.cs">
+      <DependentUpon>DialogSIPAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUserAdd.designer.cs">
+      <DependentUpon>DialogUserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAdminMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAdminMan.designer.cs">
+      <DependentUpon>DialogAdminMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAdminSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAdminSet.designer.cs">
+      <DependentUpon>DialogAdminSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAdsSeqSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAdsSeqSet.designer.cs">
+      <DependentUpon>DialogAdsSeqSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDevAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogDevAlter.designer.cs">
+      <DependentUpon>DialogDevAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAreaAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAreaAddress.designer.cs">
+      <DependentUpon>DialogAreaAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogIPCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogIPCall.designer.cs">
+      <DependentUpon>DialogIPCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogMsgCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogMsgCreate.designer.cs">
+      <DependentUpon>DialogMsgCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDevDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogDevDelete.Designer.cs">
+      <DependentUpon>DialogDevDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEventWarn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEventWarn.Designer.cs">
+      <DependentUpon>DialogEventWarn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAddressBookExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAddressBookExport.Designer.cs">
+      <DependentUpon>DialogAddressBookExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogHandleAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogHandleAlarm.Designer.cs">
+      <DependentUpon>DialogHandleAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogHandlePublishInfoTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAddressBookImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAddressBookImport.designer.cs">
+      <DependentUpon>DialogAddressBookImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogCardImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogCardImport.Designer.cs">
+      <DependentUpon>DialogCardImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogLeaveMsgPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogLeaveMsgPlayer.designer.cs">
+      <DependentUpon>DialogLeaveMsgPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogLogin.designer.cs">
+      <DependentUpon>DialogLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogLoginResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DialogLoginResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DialogLoginResource.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DialogLoginResource.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DialogMsgView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogMsgView.designer.cs">
+      <DependentUpon>DialogMsgView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogProgress.Designer.cs">
+      <DependentUpon>DialogProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDevSelectCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogDevSelectCall.designer.cs">
+      <DependentUpon>DialogDevSelectCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDevSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogDevSelect.Designer.cs">
+      <DependentUpon>DialogDevSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSelectEntranceDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSelectEntranceDevices.Designer.cs">
+      <DependentUpon>DialogSelectEntranceDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSelectIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSelectIP.Designer.cs">
+      <DependentUpon>DialogSelectIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSelectUpgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSelectUpgrade.designer.cs">
+      <DependentUpon>DialogSelectUpgrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSendDisableSafties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSendDisableSafties.Designer.cs">
+      <DependentUpon>DialogSendDisableSafties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogShowQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogShowQR.designer.cs">
+      <DependentUpon>DialogShowQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSIPMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSIPMan.designer.cs">
+      <DependentUpon>DialogSIPMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSIPManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSIPManagement.Designer.cs">
+      <DependentUpon>DialogSIPManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSyncSIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSyncSIP.designer.cs">
+      <DependentUpon>DialogSyncSIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateAddressBookBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateAddressBookBox.Designer.cs">
+      <DependentUpon>DialogUpdateAddressBookBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateCardListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateCardListBox.Designer.cs">
+      <DependentUpon>DialogUpdateCardListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateSoftwareBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateSoftwareBox.Designer.cs">
+      <DependentUpon>DialogUpdateSoftwareBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSysBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSysBackup.designer.cs">
+      <DependentUpon>DialogSysBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSystemSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSystemSet.designer.cs">
+      <DependentUpon>DialogSystemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUploadAdFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUploadAdFile.designer.cs">
+      <DependentUpon>DialogUploadAdFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogWatchSelectDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogWatchSelectDev.designer.cs">
+      <DependentUpon>DialogWatchSelectDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAnnouncementManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnnouncementManagement.Designer.cs">
+      <DependentUpon>FormAnnouncementManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeviceManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeviceManagement.Designer.cs">
+      <DependentUpon>FormDeviceManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoorAccessCtrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoorAccessCtrl.Designer.cs">
+      <DependentUpon>FormDoorAccessCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeaveMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeaveMessage.Designer.cs">
+      <DependentUpon>FormLeaveMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogManagement.Designer.cs">
+      <DependentUpon>FormLogManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormMainResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FormResidentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResidentManagement.Designer.cs">
+      <DependentUpon>FormResidentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSoftwareUpgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSoftwareUpgrade.Designer.cs">
+      <DependentUpon>FormSoftwareUpgrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystemManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystemManagement.Designer.cs">
+      <DependentUpon>FormSystemManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoTalk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoTalk.Designer.cs">
+      <DependentUpon>FormVideoTalk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceName.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlaceName.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceName.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlaceName.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RtspService.cs" />
+    <Compile Include="strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="strings.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.zh-CN.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Alarm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Alarm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAbout.resx">
+      <DependentUpon>DialogAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAbout.zh-CN.resx">
+      <DependentUpon>DialogAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogCardAdd.resx">
+      <DependentUpon>DialogCardAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogCardAdd.zh-CN.resx">
+      <DependentUpon>DialogCardAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevAdd.resx">
+      <DependentUpon>DialogDevAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevAdd.zh-CN.resx">
+      <DependentUpon>DialogDevAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogResidentAdd.resx">
+      <DependentUpon>DialogResidentAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogResidentAdd.zh-CN.resx">
+      <DependentUpon>DialogResidentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSIPAdd.resx">
+      <DependentUpon>DialogSIPAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSIPAdd.zh-CN.resx">
+      <DependentUpon>DialogSIPAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUserAdd.resx">
+      <DependentUpon>DialogUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUserAdd.zh-CN.resx">
+      <DependentUpon>DialogUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAdminMan.resx">
+      <DependentUpon>DialogAdminMan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAdminMan.zh-CN.resx">
+      <DependentUpon>DialogAdminMan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAdminSet.resx">
+      <DependentUpon>DialogAdminSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAdminSet.zh-CN.resx">
+      <DependentUpon>DialogAdminSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAdsSeqSet.resx">
+      <DependentUpon>DialogAdsSeqSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAdsSeqSet.zh-CN.resx">
+      <DependentUpon>DialogAdsSeqSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevAlter.resx">
+      <DependentUpon>DialogDevAlter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevAlter.zh-CN.resx">
+      <DependentUpon>DialogDevAlter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAreaAddress.resx">
+      <DependentUpon>DialogAreaAddress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAreaAddress.zh-CN.resx">
+      <DependentUpon>DialogAreaAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogIPCall.resx">
+      <DependentUpon>DialogIPCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogIPCall.zh-CN.resx">
+      <DependentUpon>DialogIPCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogMsgCreate.resx">
+      <DependentUpon>DialogMsgCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogMsgCreate.zh-CN.resx">
+      <DependentUpon>DialogMsgCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevDelete.resx">
+      <DependentUpon>DialogDevDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEventWarn.resx">
+      <DependentUpon>DialogEventWarn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEventWarn.zh-CN.resx">
+      <DependentUpon>DialogEventWarn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAddressBookExport.resx">
+      <DependentUpon>DialogAddressBookExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAddressBookExport.zh-CN.resx">
+      <DependentUpon>DialogAddressBookExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogHandleAlarm.resx">
+      <DependentUpon>DialogHandleAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogHandleAlarm.zh-CN.resx">
+      <DependentUpon>DialogHandleAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogHandlePublishInfoTask.resx">
+      <DependentUpon>DialogHandlePublishInfoTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogHandlePublishInfoTask.zh-CN.resx">
+      <DependentUpon>DialogHandlePublishInfoTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAddressBookImport.resx">
+      <DependentUpon>DialogAddressBookImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAddressBookImport.zh-CN.resx">
+      <DependentUpon>DialogAddressBookImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogCardImport.resx">
+      <DependentUpon>DialogCardImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogCardImport.zh-CN.resx">
+      <DependentUpon>DialogCardImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogLeaveMsgPlayer.resx">
+      <DependentUpon>DialogLeaveMsgPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogLeaveMsgPlayer.zh-CN.resx">
+      <DependentUpon>DialogLeaveMsgPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogLogin.resx">
+      <DependentUpon>DialogLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogLogin.zh-CN.resx">
+      <DependentUpon>DialogLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogLoginResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DialogLoginResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogLoginResource.zh-CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DialogLoginResource.zh-CN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogMsgView.resx">
+      <DependentUpon>DialogMsgView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogMsgView.zh-CN.resx">
+      <DependentUpon>DialogMsgView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogProgress.resx">
+      <DependentUpon>DialogProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogProgress.zh-CN.resx">
+      <DependentUpon>DialogProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevSelectCall.resx">
+      <DependentUpon>DialogDevSelectCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevSelectCall.zh-CN.resx">
+      <DependentUpon>DialogDevSelectCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevSelect.resx">
+      <DependentUpon>DialogDevSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDevSelect.zh-CN.resx">
+      <DependentUpon>DialogDevSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSelectEntranceDevices.resx">
+      <DependentUpon>DialogSelectEntranceDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSelectEntranceDevices.zh-CN.resx">
+      <DependentUpon>DialogSelectEntranceDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSelectIP.resx">
+      <DependentUpon>DialogSelectIP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSelectIP.zh-CN.resx">
+      <DependentUpon>DialogSelectIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSelectUpgrade.resx">
+      <DependentUpon>DialogSelectUpgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSelectUpgrade.zh-CN.resx">
+      <DependentUpon>DialogSelectUpgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSendDisableSafties.resx">
+      <DependentUpon>DialogSendDisableSafties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSendDisableSafties.zh-CN.resx">
+      <DependentUpon>DialogSendDisableSafties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogShowQR.resx">
+      <DependentUpon>DialogShowQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSIPMan.resx">
+      <DependentUpon>DialogSIPMan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSIPMan.zh-CN.resx">
+      <DependentUpon>DialogSIPMan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSIPManagement.resx">
+      <DependentUpon>DialogSIPManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSIPManagement.zh-CN.resx">
+      <DependentUpon>DialogSIPManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSyncSIP.resx">
+      <DependentUpon>DialogSyncSIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSyncSIP.zh-CN.resx">
+      <DependentUpon>DialogSyncSIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSystemSet.zh-Hans.resx">
+      <DependentUpon>DialogSystemSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateAddressBookBox.resx">
+      <DependentUpon>DialogUpdateAddressBookBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateAddressBookBox.zh-CN.resx">
+      <DependentUpon>DialogUpdateAddressBookBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateCardListBox.resx">
+      <DependentUpon>DialogUpdateCardListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateCardListBox.zh-CN.resx">
+      <DependentUpon>DialogUpdateCardListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateSoftwareBox.resx">
+      <DependentUpon>DialogUpdateSoftwareBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSysBackup.resx">
+      <DependentUpon>DialogSysBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSysBackup.zh-CN.resx">
+      <DependentUpon>DialogSysBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSystemSet.resx">
+      <DependentUpon>DialogSystemSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSystemSet.zh-CN.resx">
+      <DependentUpon>DialogSystemSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateSoftwareBox.zh-CN.resx">
+      <DependentUpon>DialogUpdateSoftwareBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUploadAdFile.resx">
+      <DependentUpon>DialogUploadAdFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUploadAdFile.zh-CN.resx">
+      <DependentUpon>DialogUploadAdFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogWatchSelectDev.resx">
+      <DependentUpon>DialogWatchSelectDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogWatchSelectDev.zh-CN.resx">
+      <DependentUpon>DialogWatchSelectDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnnouncementManagement.resx">
+      <DependentUpon>FormAnnouncementManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnnouncementManagement.zh-CN.resx">
+      <DependentUpon>FormAnnouncementManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeviceManagement.resx">
+      <DependentUpon>FormDeviceManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeviceManagement.zh-CN.resx">
+      <DependentUpon>FormDeviceManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoorAccessCtrl.resx">
+      <DependentUpon>FormDoorAccessCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoorAccessCtrl.zh-CN.resx">
+      <DependentUpon>FormDoorAccessCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeaveMessage.resx">
+      <DependentUpon>FormLeaveMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeaveMessage.zh-CN.resx">
+      <DependentUpon>FormLeaveMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogManagement.resx">
+      <DependentUpon>FormLogManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogManagement.zh-CN.resx">
+      <DependentUpon>FormLogManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.zh-CN.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormMainResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResidentManagement.resx">
+      <DependentUpon>FormResidentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResidentManagement.zh-CN.resx">
+      <DependentUpon>FormResidentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSoftwareUpgrade.zh-CN.resx">
+      <DependentUpon>FormSoftwareUpgrade.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystemManagement.resx">
+      <DependentUpon>FormSystemManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystemManagement.zh-CN.resx">
+      <DependentUpon>FormSystemManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoTalk.resx">
+      <DependentUpon>FormVideoTalk.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSoftwareUpgrade.resx">
+      <DependentUpon>FormSoftwareUpgrade.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoTalk.zh-CN.resx">
+      <DependentUpon>FormVideoTalk.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaceName.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PlaceName.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaceName.zh-CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PlaceName.zh-CN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="strings.zh-CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.zh-CN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ICMServer.Models.device.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.Device1.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.eventopendoor.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.eventwarn.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.heartbeatlog.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.iccard.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.icmap.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.leaveword.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.publishinfo.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.sipaccount.datasource" />
+    <None Include="Properties\DataSources\ICMServer.Models.upgrade.datasource" />
+    <None Include="Resources\btn_closex.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_loginx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_login.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dlg_login.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_server.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeviceAddressControlLib\DeviceAddressControlLib.csproj">
+      <Project>{f09bb582-4e5f-4783-9895-7706e12ff3bf}</Project>
+      <Name>DeviceAddressControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HttpClient\HttpClient.csproj">
+      <Project>{b1350ad1-84bd-48ac-a19b-d14302ddd820}</Project>
+      <Name>HttpClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HttpServer\HttpServer.csproj">
+      <Project>{bdbc5d59-6ade-4768-b655-ee398481f515}</Project>
+      <Name>HttpServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICMServerLib\ICMServerLib.csproj">
+      <Project>{9c992ae1-256c-42e9-a66b-2a38a6cc4aef}</Project>
+      <Name>ICMServerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPAddressControlLib\IPAddressControlLib.csproj">
+      <Project>{a5ed2b33-5644-47c4-bc30-a4840f67ff87}</Project>
+      <Name>IPAddressControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\ICMServer.Models.csproj">
+      <Project>{6340f9ae-dca1-449a-9c1c-70fe49a5b3c8}</Project>
+      <Name>ICMServer.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mooftpserv\lib\FtpServer.csproj">
+      <Project>{b32ba32f-8c7f-4b84-935b-4af17cadaef6}</Project>
+      <Name>FtpServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\announcement_management.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\announcement_management_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\device_management.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\device_management_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_access_ctrl.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_access_ctrl_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave_message.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave_message_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_management.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_management_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resident_management.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resident_management_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software_upgrade.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software_upgrade_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_management.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_management_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video_talk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video_talk_focus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110jl.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\1.ico" />
+    <Content Include="res\110jl.wav" />
+    <Content Include="res\1x.ico" />
+    <Content Include="res\2.ico" />
+    <Content Include="res\2x.ico" />
+    <Content Include="res\3.ico" />
+    <Content Include="res\3x.ico" />
+    <Content Include="res\4.ico" />
+    <Content Include="res\4x.ico" />
+    <Content Include="res\5.ico" />
+    <Content Include="res\5x.ico" />
+    <Content Include="res\6.ico" />
+    <Content Include="res\6x.ico" />
+    <Content Include="res\7.ico" />
+    <Content Include="res\7x.ico" />
+    <Content Include="res\8.ico" />
+    <Content Include="res\8x.ico" />
+    <Content Include="res\accept.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\accept_x.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\area.ico" />
+    <Content Include="res\back1.bmp" />
+    <Content Include="res\back2.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\bitmap2.bmp" />
+    <Content Include="res\bmp1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\bmp2.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\bmp3.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\bmp4.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\bmp5.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\bmp_audioin.bmp" />
+    <Content Include="res\bmp_audioout.bmp" />
+    <Content Include="res\brush1.cur" />
+    <Content Include="res\brush2.cur" />
+    <Content Include="res\brush3.cur" />
+    <Content Include="res\brush4.cur" />
+    <Content Include="res\brush5.cur" />
+    <Content Include="res\btn_0.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_1 %2819%29.bmp" />
+    <Content Include="res\btn_1 %2820%29.bmp" />
+    <Content Include="res\btn_1 %2829%29.bmp" />
+    <Content Include="res\btn_1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_2.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_3.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_4.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_5.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_6.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_7.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_8.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_9.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\btn_logclose.bmp" />
+    <Content Include="res\btn_logclosex.bmp" />
+    <Content Include="res\btn_login.bmp" />
+    <Content Include="res\btn_loginx.bmp" />
+    <Content Include="res\btn_x.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\busy.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\busy_x.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\bz36.bmp" />
+    <Content Include="res\call.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\clear.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\control_server.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\cursor1.cur" />
+    <Content Include="res\eraser.cur" />
+    <Content Include="res\eraser1.cur" />
+    <Content Include="res\eraser2.cur" />
+    <Content Include="res\eraser3.cur" />
+    <Content Include="res\eraser4.cur" />
+    <Content Include="res\eraser5.cur" />
+    <None Include="res\GUSON logo.png" />
+    <Content Include="res\hangup.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\hangup_x.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\ICMServer.ico" />
+    <Content Include="res\ICMServerDoc.ico" />
+    <Content Include="res\icon11.ico" />
+    <Content Include="res\ipcall.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\ipcallx.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\l1.ico" />
+    <Content Include="res\l2.ico" />
+    <Content Include="res\lock.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\lock_x.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\login.bmp" />
+    <Content Include="res\login2.bmp" />
+    <Content Include="res\main.bmp" />
+    <Content Include="res\main.jpg" />
+    <Content Include="res\pencil.cur" />
+    <Content Include="res\ret.bmp" />
+    <Content Include="res\ret_x.bmp" />
+    <Content Include="res\ring.bmp" />
+    <Content Include="res\seldev.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\slider.bmp" />
+    <Content Include="res\sliderx.bmp" />
+    <Content Include="res\stop.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\stopx.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\thumb.bmp" />
+    <Content Include="res\thumbx.bmp" />
+    <Content Include="res\Toolbar.bmp" />
+    <Content Include="res\Toolbar1.bmp" />
+    <Content Include="res\Toolbar256.bmp" />
+    <Content Include="res\video_prompt.bmp" />
+    <Content Include="res\watch.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\watchx.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\btn_loginx2.bmp" />
+    <None Include="Resources\btn_login2.bmp" />
+    <None Include="Resources\btn_closex2.bmp" />
+    <None Include="Resources\btn_close2.bmp" />
+    <None Include="Resources\dlg_login_CHT.bmp" />
+    <None Include="Resources\btn_closex_CHT.bmp" />
+    <None Include="Resources\btn_close_CHT.bmp" />
+    <None Include="Resources\btn_loginx_CHT.bmp" />
+    <None Include="Resources\btn_login_CHT.bmp" />
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參照此電腦中缺少的  NuGet 套件。啟用「NuGet 套件還原」以便下載。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案為 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

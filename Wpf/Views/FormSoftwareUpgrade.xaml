@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="ICMServer.WPF.Views.FormSoftwareUpgrade"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:v="clr-namespace:ICMServer.WPF.Views"
+             xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+             xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+             xmlns:local="clr-namespace:ICMServer.WPF"
+             xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="1000"
+             FontSize="14">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+
+            <!-- MVVM Locator -->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converters -->
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            <converter:DeviceTypeToStringConverter x:Key="DeviceTypeConverter"/>
+            <converter:OnlineStatusToStringConverter x:Key="OnlineStatusConverter"/>
+            <converter:StringResourceIDToStringConverter x:Key="StringResourceIDConverter"/>
+            <converter:UpgradeFileTypeToStringConverter x:Key="UpgradeFileTypeConverter"/>
+            <converter:UpgradeStatusToStringConverter x:Key="UpgradeStatusConverter"/>
+
+            <!-- Style Settings -->
+            <Style TargetType="{x:Type UserControl}">
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+            </Style>
+            <Style TargetType="{x:Type DatePicker}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="ContentStringFormat" Value="{}{0}:"/>
+            </Style>
+            <Style x:Key="CommandButtons" TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="MinHeight" Value="30"/>
+                <Setter Property="MinWidth" Value="80"/>
+            </Style>
+            <Style TargetType="{x:Type ComboBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type DataGrid}">
+                <Setter Property="RowHeaderWidth" Value="40"/>
+                <Setter Property="CanUserResizeRows" Value="False"/>
+                <Setter Property="SelectionUnit" Value="FullRow"/>
+                <Setter Property="CanUserAddRows" Value="False"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+                <Setter Property="AutoGenerateColumns" Value="False"/>
+                <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+                <!--<Setter Property="RowHeight" Value="25"/>-->
+            </Style>
+            <!-- This is the style used to display enabled or disabled button images for removing filters-->
+            <Style x:Key="ImageStyleForDisableFilterButtons" TargetType="{x:Type Image}">
+                <Style.Triggers>
+                    <!-- Filter Enabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}" Value="True">
+                        <Setter Property="Source"  Value="/Wpf;component/Images/disable_filter_16x16.png"/>
+                    </DataTrigger>
+                    <!-- Filter Disabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" Value="False">
+                        <Setter Property="Source" Value="/Wpf;component/Images/disable_filter_16x16_disabled.png"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <TabControl>
+        <TabItem Header="升級檔案管理">
+            <TabItem.DataContext>
+                <Binding Mode="OneWay" Path="UpgradeFilesViewModel" Source="{StaticResource Locator}"/>
+            </TabItem.DataContext>
+            <DockPanel LastChildFill="True" Margin="5">
+                <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource CommandButtons}" Content="上傳升級檔案" Command="{Binding AddUpgradeFileCommand, Mode=OneWay}" />
+                        <Button Style="{StaticResource CommandButtons}" Content="軟體升級" Command="{Binding UpgradeCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGridFiles}"/>
+                        <Button Style="{StaticResource CommandButtons}" Content="刪除檔案" Command="{Binding DeleteUpgradeFilesCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGridFiles}"/>
+                        <Button Style="{StaticResource CommandButtons}" Content="設置為預設升級軟體" Command="{Binding SetToDefaultCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGridFiles}"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Top">
+                    <Label Content="{DynamicResource FtpRootFolder}"/>
+                    <TextBox MinWidth="400" IsReadOnly="True" Text="{Binding FtpServerRootPath, Mode=OneWay}"/>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                    <TextBlock Text="總共有 "/>
+                    <TextBlock Text="{Binding UpgradeFiles.Count}"/>
+                    <TextBlock Text=" 筆資料"/>
+                </StackPanel>
+
+                <DataGrid x:Name="dataGridFiles" ItemsSource="{Binding UpgradeFiles}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="版本號" Binding="{Binding version}"/>
+                        <DataGridTextColumn Header="升級檔案類型" Binding="{Binding filetype, Converter={StaticResource UpgradeFileTypeConverter}}"/>
+                        <DataGridTextColumn Header="升級設備類型" Binding="{Binding device_type, Converter={StaticResource DeviceTypeConverter}}"/>
+                        <DataGridTextColumn Header="上傳時間" Binding="{Binding time, StringFormat=\{0:G\}}"/>
+                        <DataGridTextColumn Header="{DynamicResource FilePath}" Binding="{Binding filepath}"/>
+                        <DataGridCheckBoxColumn Header="預設升級檔案" Binding="{Binding is_default}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </TabItem>
+
+        <TabItem Header="升級任務管理">
+            <TabItem.DataContext>
+                <Binding Mode="OneWay" Path="UpgradeTasksViewModel" Source="{StaticResource Locator}"/>
+            </TabItem.DataContext>
+            <DockPanel LastChildFill="True" Margin="5">
+                <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource CommandButtons}" Content="刪除任務" Command="{Binding DeleteUpgradeTasksCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGridTasks}"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                    <TextBlock Text="總共有 "/>
+                    <TextBlock Text="{Binding UpgradeTasks.Count}"/>
+                    <TextBlock Text=" 筆資料"/>
+                </StackPanel>
+
+                <DataGrid x:Name="dataGridTasks" ItemsSource="{Binding UpgradeTasks}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="序號" Binding="{Binding ID}"/>
+                        <DataGridTextColumn Header="更新狀態" Binding="{Binding Status, Converter={StaticResource UpgradeStatusConverter}}"/>
+                        <DataGridTextColumn Header="刪除中" Binding="{Binding DeletedByUser}"/>
+                        <DataGridTextColumn Header="{DynamicResource FileSize}" Binding="{Binding UpgradeFile.FileSize}"/>
+                        <DataGridTextColumn Header="已傳送" Binding="{Binding SentDataBytes}"/>
+                        <DataGridTextColumn Header="更新任務啟動時間" Binding="{Binding LastStartTime}"/>
+                        <DataGridTextColumn Header="更新任務異動時間" Binding="{Binding LastUpdateTime}"/>
+                        <DataGridTextColumn Header="{DynamicResource OnlineStatus}" Binding="{Binding Device.online, Converter={StaticResource OnlineStatusConverter}}"/>
+                        <DataGridTextColumn Header="{DynamicResource DeviceAlias}" Binding="{Binding Device.alias}"/>
+                        <DataGridTextColumn Header="{DynamicResource DeviceType}" Binding="{Binding Device.type, Converter={StaticResource DeviceTypeConverter}}"/>
+                        <DataGridTextColumn Header="{DynamicResource DeviceAddress}" Binding="{Binding Device.roomid, Converter={StaticResource DeviceAddressConverter}}"/>
+                        <DataGridTextColumn Header="升級檔案類型" Binding="{Binding UpgradeFile.filetype, Converter={StaticResource UpgradeFileTypeConverter}}"/>
+                        <DataGridTextColumn Header="版本號" Binding="{Binding UpgradeFile.version}"/>
+                        <DataGridTextColumn Header="上傳時間" Binding="{Binding UpgradeFile.time, StringFormat=\{0:G\}}"/>
+                        <DataGridTextColumn Header="{DynamicResource FilePath}" Binding="{Binding UpgradeFile.filepath}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </TabItem>
+    </TabControl>
+</UserControl>

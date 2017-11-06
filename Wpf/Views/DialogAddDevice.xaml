@@ -1,0 +1,151 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogAddDevice" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"       
+        xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+        xmlns:controls="clr-namespace:ITE.WPF.Controls;assembly=WpfIPAddressControlLib"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=vm:DeviceViewModel, IsDesignTimeCreatable=True}"
+        Height="Auto" Width="380" 
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="WidthAndHeight" ResizeMode="NoResize"
+        Loaded="Window_Loaded" MinWidth="380" FontSize="14">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+                <ResourceDictionary Source="InputFormResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converter -->
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            <converter:DeviceTypeToStringConverter x:Key="DeviceTypeConverter"/>
+            <converter:IntToDeviceTypeConverter x:Key="IntToDeviceTypeConverter"/>
+            <converter:MacAddressConverter x:Key="MacAddressConverter"/>
+            <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+
+            <ObjectDataProvider MethodName="GetValues" 
+                                ObjectType="{x:Type sys:Enum}" x:Key="DeviceTypeValues">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="model:DeviceType" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Title>
+        <DynamicResource ResourceKey="AddDevice"/>
+    </Window.Title>
+    
+    <StackPanel>
+        <!--<Grid Margin="5" VerticalAlignment="Top" DataContext="{Binding Device, Source={StaticResource Locator}}">-->
+        <Grid Margin="5" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource PropertyName}" Content="{DynamicResource DeviceType}"/>
+            <ComboBox Grid.Column="1" ItemsSource="{Binding Source={StaticResource DeviceTypeValues}}" SelectedValue="{Binding DeviceType, Converter={StaticResource IntToDeviceTypeConverter}}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource DeviceTypeConverter}}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="1" Content="{DynamicResource DeviceAddress}"/>
+            <xctk:MaskedTextBox Mask="{DynamicResource DeviceAddressMask}" IncludeLiteralsInValue="True" IncludePromptInValue="True" PromptChar="0" Grid.Row="1" Grid.Column="1" Text="{Binding DeviceAddress, Converter={StaticResource DeviceAddressConverter}}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="2" Content="{DynamicResource DeviceAlias}"/>
+            <TextBox Grid.Row="2"  Grid.Column="1" Text="{Binding Alias}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="3" Content="{DynamicResource IPAddress}"/>
+            <controls:IPAddressControl Grid.Row="3" Grid.Column="1" IP="{Binding IPAddress}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="4" Content="{DynamicResource Gateway}"/>
+            <controls:IPAddressControl Grid.Row="4"  Grid.Column="1" IP="{Binding Gateway}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="5"  Content="{DynamicResource SubnetMask}"/>
+            <controls:IPAddressControl Grid.Row="5"  Grid.Column="1" IP="{Binding SubnetMask}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="6" Content="{DynamicResource MulticastGroupIP}"/>
+            <TextBox Grid.Row="6"  Grid.Column="1" Text="{Binding MulticastGroupIP}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="7" Content="{DynamicResource MacAddress}"/>
+            <xctk:MaskedTextBox Mask="00:00:00:00:00:00" Grid.Row="7"  Grid.Column="1" Text="{Binding MacAddress}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="8" Content="{DynamicResource IPCAMAccount}"/>
+            <TextBox Grid.Row="8"  Grid.Column="1" Text="{Binding IPCamID}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="9"  Content="{DynamicResource IPCAMPassword}"/>
+            <TextBox Grid.Row="9"  Grid.Column="1" Text="{Binding IPCamPassword}"/>
+
+            <!--<Label Style="{StaticResource PropertyName}" Grid.Row="10"  Content="{DynamicResource CurrentAddressBookVersion}"/>
+            <TextBlock  Grid.Row="10"  Grid.Column="1" Text="{Binding AddressBookVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="11"  Content="{DynamicResource LatestAddressBookVersion}"/>
+            <TextBlock  Grid.Row="11"  Grid.Column="1" Text="{Binding LatestAddressBookVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="12"  Content="{DynamicResource CurrentCardListVersion}"/>
+            <TextBlock  Grid.Row="12"  Grid.Column="1" Text="{Binding CardListVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="13"  Content="{DynamicResource LatestCardListVersion}"/>
+            <TextBlock  Grid.Row="13"  Grid.Column="1" Text="{Binding LatestCardListVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="14"  Content="{DynamicResource CurrentFirmwareVersion}"/>
+            <TextBlock  Grid.Row="14"  Grid.Column="1" Text="{Binding FirmwareVersion}"/>
+
+            <Label Style="{StaticResource PropertyName}" Grid.Row="15"  Content="{DynamicResource LatestFirmwareVersion}"/>
+            <TextBlock  Grid.Row="15"  Grid.Column="1" Text="{Binding LatestFirmwareVersion}"/>-->
+        </Grid>
+
+        <Grid Visibility="{Binding AddCommand.Execution, Converter={StaticResource NullToVisibilityConverter}}">
+            <Label Visibility="{Binding AddCommand.Execution.IsNotCompleted, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                   Content="{DynamicResource Saving}" ContentStringFormat="{}{0}..."/>
+
+            <!--Completed-->
+            <Label Visibility="{Binding AddCommand.Execution.IsSuccessfullyCompleted, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                   Content="{DynamicResource SuccessfullySaved}" ContentStringFormat="{}{0}..."/>
+
+            <!--Canceled-->
+            <Label Visibility="{Binding AddCommand.Execution.IsCanceled, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                   Content="{DynamicResource Canceled}" ContentStringFormat="{}{0}..."/>
+
+            <!--Error details-->
+            <Label Visibility="{Binding AddCommand.Execution.IsFaulted, Converter={StaticResource BooleanToVisibilityConverter}}" Foreground="Red" 
+                   Content="{Binding AddCommand.Execution.ErrorMessage}" />
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="{DynamicResource Save}" Command="{Binding AddCommand, Mode=OneWay}"/>
+            <Button Content="{DynamicResource Close}" Click="Button_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

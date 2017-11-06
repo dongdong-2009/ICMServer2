@@ -1,0 +1,1848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;BtnChooseDev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnQueryOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="&gt;&gt;textBoxCaller.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dateTimePickerEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 60</value>
+  </data>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>837, 641</value>
+  </data>
+  <data name="&gt;&gt;BtnDelDial.Name" xml:space="preserve">
+    <value>BtnDelDial</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BtnDel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 6</value>
+  </data>
+  <data name="BtnRefreshOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>至</value>
+  </data>
+  <data name="&gt;&gt;BtnDiviceLogRefresh.Name" xml:space="preserve">
+    <value>BtnDiviceLogRefresh</value>
+  </data>
+  <data name="BtnPrintDial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>638, 49</value>
+  </data>
+  <data name="BtnChooseDev.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 22</value>
+  </data>
+  <data name="ComboBoxHandleState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 65</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshOpen.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;listViewNormalEvent.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnRefresh.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryOpen.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="textBoxCaller.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="checkBoxNormalAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;BtnDelOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="BtnDel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="checkBoxAllSession.Text" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>837, 641</value>
+  </data>
+  <data name="&gt;&gt;eventopendoordataGridView.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ComboBoxNormalStatus.Items" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="&gt;&gt;eventwarnBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDealNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>634, 9</value>
+  </data>
+  <data name="&gt;&gt;BtnDelOpen.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;BtnDealNormal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnChooseDev.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnDelDial.Text" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="checkBoxAllSession.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerNormalStart.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="BtnRefreshDial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="dateTimePickerNormalStart.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="BtnPrintDial.Text" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="listViewNormalEvent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 105</value>
+  </data>
+  <data name="&gt;&gt;BtnDelNormal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxLobby.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 183</value>
+  </data>
+  <data name="BtnChooseDev.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 22</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 69</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="pictureBoxSnap.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxHandleState.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryNormal.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="eventwarnDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>819, 469</value>
+  </data>
+  <data name="clogtimeDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxHandleState.Name" xml:space="preserve">
+    <value>ComboBoxHandleState</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerNormalEnd.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="eventopendoordataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 58</value>
+  </data>
+  <data name="&gt;&gt;BtnDrop.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;eventDevStatusGridView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>至</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="dgvTextBoxOpenDoorFrom.HeaderText" xml:space="preserve">
+    <value>门口机</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorTime.Name" xml:space="preserve">
+    <value>dgvTextBoxOpenDoorTime</value>
+  </data>
+  <data name="ComboBoxSessionlog.Items1" xml:space="preserve">
+    <value>未接來电</value>
+  </data>
+  <data name="ComboBoxSessionlog.Items2" xml:space="preserve">
+    <value>去电紀錄</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryNormal.Name" xml:space="preserve">
+    <value>BtnQueryNormal</value>
+  </data>
+  <data name="BtnDealNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="dgvTextBoxAlarmTime.HeaderText" xml:space="preserve">
+    <value>发生时间</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BtnDrop.Name" xml:space="preserve">
+    <value>BtnDrop</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshOpen.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="BtnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 6</value>
+  </data>
+  <data name="&gt;&gt;clogDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBoxLobby.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textBoxLobby.Name" xml:space="preserve">
+    <value>textBoxLobby</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerNormalStart.Name" xml:space="preserve">
+    <value>dateTimePickerNormalStart</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerCallStart.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="BtnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="ComboBoxNormalStatus.Items2" xml:space="preserve">
+    <value>未处理</value>
+  </data>
+  <data name="BtnDeal.Text" xml:space="preserve">
+    <value>处理</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmHandler.Name" xml:space="preserve">
+    <value>dgvTextBoxAlarmHandler</value>
+  </data>
+  <data name="BtnDelOpen.Text" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ComboBoxSessionlog.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;clogtimeDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>clogtimeDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="dateTimePickerNormalEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNormalStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dateTimePickerNormalStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 15</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllSession.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;BtnNormalRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDelDial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>539, 49</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="clogtimeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>日誌时间</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ComboBoxNormalStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 20</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllSession.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxSnap.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnNormalRefresh.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="&gt;&gt;BtnDelDial.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="BtnDiviceLogRefresh.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshDial.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BtnDelOpen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxCallee.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 54</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="BtnPrintDial.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dgvTextBoxAlarmSrc.HeaderText" xml:space="preserve">
+    <value>发生位置</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;BtnDelDial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerNormalStart.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintNormal.Name" xml:space="preserve">
+    <value>BtnPrintNormal</value>
+  </data>
+  <data name="checkBoxAllSession.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;textBoxCaller.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEnd.Name" xml:space="preserve">
+    <value>dateTimePickerEnd</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="BtnDelNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="ComboBoxSessionlog.Items" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="checkBoxAllSession.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;BtnDeal.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="BtnRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmAction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 667</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 69</value>
+  </data>
+  <data name="listViewNormalEvent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;BtnDel.Name" xml:space="preserve">
+    <value>BtnDel</value>
+  </data>
+  <data name="&gt;&gt;textBoxCallee.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxSnap.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="BtnRefreshOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>414, 10</value>
+  </data>
+  <data name="ComboBoxSessionlog.Items3" xml:space="preserve">
+    <value>已接來电</value>
+  </data>
+  <data name="listViewSessionLog.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerCallStart.Name" xml:space="preserve">
+    <value>dateTimePickerCallStart</value>
+  </data>
+  <data name="listViewSessionLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>819, 499</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorOpenObject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage1.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BtnDrop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="BtnDeal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="&gt;&gt;eventopendoorbindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 62</value>
+  </data>
+  <data name="BtnQueryNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerNormalEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTextBoxOpenDoorOpenObject.HeaderText" xml:space="preserve">
+    <value>開鎖者</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="textBoxCaller.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 57</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxSnap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerCallEnd.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="BtnDiviceLogRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="BtnQuery.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="eventDevStatusGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 60</value>
+  </data>
+  <data name="checkBoxNormalAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 616</value>
+  </data>
+  <data name="BtnRefreshOpen.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNormalAll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnQueryNormal.Text" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintDial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTextBoxAlarmSrc.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 22</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="BtnDelDial.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryDial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxSessionlog.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="listViewNormalEvent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>819, 495</value>
+  </data>
+  <data name="dgvTextBoxAlarmChannel.HeaderText" xml:space="preserve">
+    <value>通道位置</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>上报位置：</value>
+  </data>
+  <data name="dgvTextBoxAlarmHandleTime.HeaderText" xml:space="preserve">
+    <value>处理时间</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dateTimePickerStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 64</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshDial.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="BtnDelOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="&gt;&gt;BtnDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCallee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 62</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BtnNormalRefresh.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxCallee.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="BtnPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BtnDealNormal.Text" xml:space="preserve">
+    <value>处理</value>
+  </data>
+  <data name="&gt;&gt;BtnRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ComboBoxHandleState.Items1" xml:space="preserve">
+    <value>未处理</value>
+  </data>
+  <data name="dateTimePickerCallEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="&gt;&gt;listViewSessionLog.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 27</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryOpen.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;eventwarnBindingSource.Name" xml:space="preserve">
+    <value>eventwarnBindingSource</value>
+  </data>
+  <data name="ComboBoxHandleState.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNormalStatus.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDel.Text" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="listViewSessionLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 101</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="BtnPrintDial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="BtnRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTextBoxAlarmHandler.HeaderText" xml:space="preserve">
+    <value>处理人</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllSession.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDiviceLogRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="dgvTextBoxAlarmType.HeaderText" xml:space="preserve">
+    <value>事件类型</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnDeal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnDelNormal.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>至</value>
+  </data>
+  <data name="eventDevStatusGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>812, 536</value>
+  </data>
+  <data name="BtnQueryDial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="&gt;&gt;textBoxCallee.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dateTimePickerCallStart.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryDial.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>629, 58</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxLobby.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="dateTimePickerCallEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="textBoxCallee.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;BtnDealNormal.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmHandleTime.Name" xml:space="preserve">
+    <value>dgvTextBoxAlarmHandleTime</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorFrom.Name" xml:space="preserve">
+    <value>dgvTextBoxOpenDoorFrom</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>对讲紀錄</value>
+  </data>
+  <data name="BtnChooseDev.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;BtnDeal.Name" xml:space="preserve">
+    <value>BtnDeal</value>
+  </data>
+  <data name="&gt;&gt;textBoxCaller.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BtnPrintNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="textBoxLobby.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="&gt;&gt;BtnQuery.Name" xml:space="preserve">
+    <value>BtnQuery</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxHandleState.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="eventwarnDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="dgvTextBoxAlarmAction.HeaderText" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllSession.Name" xml:space="preserve">
+    <value>checkBoxAllSession</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNormalStatus.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="&gt;&gt;eventDevStatusGridView.Name" xml:space="preserve">
+    <value>eventDevStatusGridView</value>
+  </data>
+  <data name="BtnQueryOpen.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxSessionlog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDeal.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEnd.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 62</value>
+  </data>
+  <data name="textBoxCaller.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="dgvTextBoxOpenDoorStatus.HeaderText" xml:space="preserve">
+    <value>開鎖状态</value>
+  </data>
+  <data name="&gt;&gt;textBoxCaller.Name" xml:space="preserve">
+    <value>textBoxCaller</value>
+  </data>
+  <data name="&gt;&gt;BtnDrop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnQuery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;BtnQuery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>上报日期：</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>处理状态：</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNormalStatus.Name" xml:space="preserve">
+    <value>ComboBoxNormalStatus</value>
+  </data>
+  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dateTimePickerNormalEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 55</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshDial.Name" xml:space="preserve">
+    <value>BtnRefreshDial</value>
+  </data>
+  <data name="&gt;&gt;listViewNormalEvent.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmHandleStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="eventopendoordataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>596, 542</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmTime.Name" xml:space="preserve">
+    <value>dgvTextBoxAlarmTime</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerCallEnd.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>安防紀錄</value>
+  </data>
+  <data name="BtnDiviceLogRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="BtnDelOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>512, 10</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNormalAll.Name" xml:space="preserve">
+    <value>checkBoxNormalAll</value>
+  </data>
+  <data name="dateTimePickerStart.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="checkBoxNormalAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="BtnPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryDial.Name" xml:space="preserve">
+    <value>BtnQueryDial</value>
+  </data>
+  <data name="&gt;&gt;listViewNormalEvent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnDealNormal.Name" xml:space="preserve">
+    <value>BtnDealNormal</value>
+  </data>
+  <data name="pictureBoxSnap.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;cidDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cidDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;BtnRefresh.Name" xml:space="preserve">
+    <value>BtnRefresh</value>
+  </data>
+  <data name="&gt;&gt;BtnPrint.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryNormal.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;listViewSessionLog.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerCallStart.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;eventDevStatusbindingSource.Name" xml:space="preserve">
+    <value>eventDevStatusbindingSource</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxSnap.Name" xml:space="preserve">
+    <value>pictureBoxSnap</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshDial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>上报日期：</value>
+  </data>
+  <data name="ComboBoxNormalStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;BtnDel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ComboBoxHandleState.Items" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxHandleState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="eventwarnDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 100</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnDiviceLogRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>837, 641</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxSessionlog.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;BtnChooseDev.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 69</value>
+  </data>
+  <data name="BtnQueryOpen.Text" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="&gt;&gt;BtnDelNormal.Name" xml:space="preserve">
+    <value>BtnDelNormal</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmChannel.Name" xml:space="preserve">
+    <value>dgvTextBoxAlarmChannel</value>
+  </data>
+  <data name="&gt;&gt;BtnDealNormal.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;BtnRefresh.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxAllSession.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgvTextBoxAlarmTime.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="dateTimePickerEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 64</value>
+  </data>
+  <data name="ComboBoxHandleState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 20</value>
+  </data>
+  <data name="ComboBoxHandleState.Items3" xml:space="preserve">
+    <value>已处理</value>
+  </data>
+  <data name="BtnRefreshOpen.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintNormal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmHandler.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBoxNormalAll.Text" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;clogDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>clogDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;BtnDelOpen.Name" xml:space="preserve">
+    <value>BtnDelOpen</value>
+  </data>
+  <data name="dateTimePickerCallStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="eventopendoordataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="BtnDeal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 6</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>处理状态：</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="BtnQueryDial.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="BtnNormalRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>732, 55</value>
+  </data>
+  <data name="BtnPrintNormal.Text" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormLogManagement</value>
+  </data>
+  <data name="dgvTextBoxAlarmHandleStatus.HeaderText" xml:space="preserve">
+    <value>处理状态</value>
+  </data>
+  <data name="BtnQuery.Text" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="eventwarnDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>抓拍图像</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerCallEnd.Name" xml:space="preserve">
+    <value>dateTimePickerCallEnd</value>
+  </data>
+  <data name="BtnChooseDev.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="BtnDelDial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BtnPrint.Text" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="BtnQueryNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 9</value>
+  </data>
+  <data name="BtnRefreshDial.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="&gt;&gt;BtnPrint.Name" xml:space="preserve">
+    <value>BtnPrint</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;eventopendoordataGridView.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDealNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="ComboBoxSessionlog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 20</value>
+  </data>
+  <data name="ComboBoxNormalStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 19</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmHandleStatus.Name" xml:space="preserve">
+    <value>dgvTextBoxAlarmHandleStatus</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorStatus.Name" xml:space="preserve">
+    <value>dgvTextBoxOpenDoorStatus</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;eventopendoorbindingSource.Name" xml:space="preserve">
+    <value>eventopendoorbindingSource</value>
+  </data>
+  <data name="&gt;&gt;BtnQuery.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>被叫方：</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerCallStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTextBoxAlarmType.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BtnDelNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="eventDevStatusGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="checkBoxAllSession.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 616</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintNormal.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;eventwarnDataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBoxSnap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
+  </data>
+  <data name="tabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="BtnQueryDial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 49</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;eventwarnDataGridView.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="pictureBoxSnap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 156</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintNormal.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmHandleTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eventopendoordataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="eventopendoordataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmSrc.Name" xml:space="preserve">
+    <value>dgvTextBoxAlarmSrc</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryNormal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="eventDevStatusGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;BtnDelDial.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;BtnDeal.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerNormalStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTextBoxOpenDoorMode.HeaderText" xml:space="preserve">
+    <value>開鎖类型</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmSrc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dateTimePickerNormalEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmChannel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorOpenObject.Name" xml:space="preserve">
+    <value>dgvTextBoxOpenDoorOpenObject</value>
+  </data>
+  <data name="&gt;&gt;cidDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cidDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;BtnPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>设备状态紀錄</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 22</value>
+  </data>
+  <data name="BtnDelNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>536, 9</value>
+  </data>
+  <data name="cidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="&gt;&gt;BtnDel.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintDial.Name" xml:space="preserve">
+    <value>BtnPrintDial</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerStart.Name" xml:space="preserve">
+    <value>dateTimePickerStart</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listViewSessionLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTextBoxOpenDoorFrom.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;BtnDiviceLogRefresh.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="BtnDel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerCallEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNormalAll.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxSessionlog.Name" xml:space="preserve">
+    <value>ComboBoxSessionlog</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 22</value>
+  </data>
+  <data name="BtnQueryDial.Text" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="BtnQueryOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 10</value>
+  </data>
+  <data name="dateTimePickerNormalStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="BtnNormalRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;eventDevStatusGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>普通事件紀錄</value>
+  </data>
+  <data name="BtnNormalRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;listViewNormalEvent.Name" xml:space="preserve">
+    <value>listViewNormalEvent</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnRefreshDial.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="BtnDelOpen.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="ComboBoxNormalStatus.Items1" xml:space="preserve">
+    <value>已处理</value>
+  </data>
+  <data name="&gt;&gt;BtnDrop.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="checkBoxNormalAll.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshOpen.Name" xml:space="preserve">
+    <value>BtnRefreshOpen</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="BtnDrop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 6</value>
+  </data>
+  <data name="dateTimePickerStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnPrint.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>主叫方：</value>
+  </data>
+  <data name="&gt;&gt;BtnQuery.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;listViewSessionLog.Name" xml:space="preserve">
+    <value>listViewSessionLog</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryOpen.Name" xml:space="preserve">
+    <value>BtnQueryOpen</value>
+  </data>
+  <data name="listViewSessionLog.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>845, 630</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmAction.Name" xml:space="preserve">
+    <value>dgvTextBoxAlarmAction</value>
+  </data>
+  <data name="BtnRefreshDial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>736, 49</value>
+  </data>
+  <data name="&gt;&gt;BtnRefresh.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;eventDevStatusbindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxLobby.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dateTimePickerCallStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="dgvTextBoxOpenDoorTime.HeaderText" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="dateTimePickerCallEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 15</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FormLogManagement</value>
+  </data>
+  <data name="&gt;&gt;BtnDelNormal.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;eventopendoordataGridView.Name" xml:space="preserve">
+    <value>eventopendoordataGridView</value>
+  </data>
+  <data name="BtnDrop.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCallee.Name" xml:space="preserve">
+    <value>textBoxCallee</value>
+  </data>
+  <data name="BtnQueryNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNormalAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clogtimeDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnPrintNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>732, 9</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerStart.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="BtnQuery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>607, 55</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxOpenDoorMode.Name" xml:space="preserve">
+    <value>dgvTextBoxOpenDoorMode</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>类型：</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>837, 641</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="BtnDelNormal.Text" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintDial.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="dateTimePickerEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="listViewNormalEvent.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="BtnPrintNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;BtnNormalRefresh.Name" xml:space="preserve">
+    <value>BtnNormalRefresh</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerNormalEnd.Name" xml:space="preserve">
+    <value>dateTimePickerNormalEnd</value>
+  </data>
+  <data name="ComboBoxSessionlog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>414, 17</value>
+  </data>
+  <data name="&gt;&gt;BtnChooseDev.Name" xml:space="preserve">
+    <value>BtnChooseDev</value>
+  </data>
+  <data name="&gt;&gt;eventwarnDataGridView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintDial.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="clogDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>日誌信息</value>
+  </data>
+  <data name="ComboBoxHandleState.Items2" xml:space="preserve">
+    <value>处理中</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>呼叫时间：</value>
+  </data>
+  <data name="textBoxLobby.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 21</value>
+  </data>
+  <data name="pictureBoxSnap.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerStart.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEnd.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerNormalEnd.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>门口机：</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>837, 641</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>開鎖紀錄</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;dgvTextBoxAlarmType.Name" xml:space="preserve">
+    <value>dgvTextBoxAlarmType</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 22</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryDial.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="checkBoxNormalAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;BtnDiviceLogRefresh.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;eventwarnDataGridView.Name" xml:space="preserve">
+    <value>eventwarnDataGridView</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;BtnNormalRefresh.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="BtnDrop.Text" xml:space="preserve">
+    <value>撤銷安防</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 22</value>
+  </data>
+  <data name="&gt;&gt;eventDevStatusGridView.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="eventwarnBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh-CN</value>
+  </metadata>
+  <metadata name="dgvTextBoxAlarmAction.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>74</value>
+  </metadata>
+  <metadata name="eventopendoorbindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>214, 17</value>
+  </metadata>
+  <metadata name="dgvTextBoxOpenDoorTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dgvTextBoxOpenDoorStatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="eventDevStatusbindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>441, 17</value>
+  </metadata>
+</root>

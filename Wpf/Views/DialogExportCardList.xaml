@@ -1,0 +1,78 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogExportCardList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        mc:Ignorable="d"
+        Title="卡清單導出" Width="400" Height="190"
+        WindowStartupLocation="CenterScreen" SizeToContent="Height" ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow" FontSize="14">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+                <ResourceDictionary Source="InputFormResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+
+            <!-- MVVM Locator -->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converter -->
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <converter:ExportCardListOperationToRadioButtonConverter x:Key="ExportOperationConverter"/>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <Binding Mode="OneWay" Path="DialogExportCardListViewModel" Source="{StaticResource Locator}"/>
+    </Window.DataContext>
+
+    <StackPanel>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Margin="0,3,0,12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Style="{StaticResource PropertyName}" Content="{DynamicResource FilePath}"/>
+                <TextBox Grid.Column="1" Text="{Binding FilePath, Mode=TwoWay}" Margin="3" IsReadOnly="True"/>
+                <Button Grid.Column="2" Margin="0,3,0,3" MinWidth="30" Content="..." Command="{Binding PickFileCommand}" />
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton Content="XML" GroupName="ExportOperation" IsChecked="{Binding Operation, Mode=TwoWay, Converter={StaticResource ExportOperationConverter}, ConverterParameter=ToXml}"/>
+                    <RadioButton Content="XML -> PKG" GroupName="ExportOperation" IsChecked="{Binding Operation, Mode=TwoWay, Converter={StaticResource ExportOperationConverter}, ConverterParameter=ToXmlPkg}"/>
+                    <RadioButton Content="XML -> UCL -> PKG" GroupName="ExportOperation" IsChecked="{Binding Operation, Mode=TwoWay, Converter={StaticResource ExportOperationConverter}, ConverterParameter=ToUclPkg}"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <!-- Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="0,0,0,10">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="MinWidth" Value="50"/>
+                    <Setter Property="Margin" Value="20,5,20,5"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="{DynamicResource Start}" Command="{Binding StartCommand, Mode=OneWay}"/>
+            <!--<Button Content="{DynamicResource Cancel}" Command="{Binding StartCommand.CancelCommand, Mode=OneWay}"/>-->
+            <Button Content="{DynamicResource Close}" Click="Button_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

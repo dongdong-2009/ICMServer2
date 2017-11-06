@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddrBookUpgrade" xml:space="preserve">
+    <value>地址簿升级</value>
+  </data>
+  <data name="admin" xml:space="preserve">
+    <value>管理机</value>
+  </data>
+  <data name="AdsTitle" xml:space="preserve">
+    <value>广告标题</value>
+  </data>
+  <data name="AdsTitleAndFilePathCannotBeNull" xml:space="preserve">
+    <value>广告标题和文件位置不得为空</value>
+  </data>
+  <data name="AnnounceTime" xml:space="preserve">
+    <value>发布时间</value>
+  </data>
+  <data name="areadoorbell" xml:space="preserve">
+    <value>小区门口机</value>
+  </data>
+  <data name="AreYouSureDelAll" xml:space="preserve">
+    <value>您确定要刪除全部资料？</value>
+  </data>
+  <data name="AreYouSureDelThis" xml:space="preserve">
+    <value>您确定要刪除此笔资料？</value>
+  </data>
+  <data name="CantBeNull" xml:space="preserve">
+    <value>不得为空</value>
+  </data>
+  <data name="CardExistCannotSave" xml:space="preserve">
+    <value>卡号已存在，无法保存！</value>
+  </data>
+  <data name="CardExpireDate" xml:space="preserve">
+    <value>有效期</value>
+  </data>
+  <data name="CardExpireStatus" xml:space="preserve">
+    <value>有效状态</value>
+  </data>
+  <data name="CardID" xml:space="preserve">
+    <value>卡号</value>
+  </data>
+  <data name="CardRoNameCannotBeNull" xml:space="preserve">
+    <value>卡号、房号、姓名不得为空!</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>卡类型</value>
+  </data>
+  <data name="CardUpgarde" xml:space="preserve">
+    <value>门禁卡升级</value>
+  </data>
+  <data name="ceng" xml:space="preserve">
+    <value>层</value>
+  </data>
+  <data name="DBBackupFinish" xml:space="preserve">
+    <value>数据库备份完成</value>
+  </data>
+  <data name="DBRecoverFinish" xml:space="preserve">
+    <value>数据库还原完成</value>
+  </data>
+  <data name="dong" xml:space="preserve">
+    <value>栋</value>
+  </data>
+  <data name="dongdoorbell" xml:space="preserve">
+    <value>楼栋门口机</value>
+  </data>
+  <data name="ext" xml:space="preserve">
+    <value>分机</value>
+  </data>
+  <data name="FileNameAndPathCannotBeNull" xml:space="preserve">
+    <value>档案名和档案位置不得为空</value>
+  </data>
+  <data name="FileSavePath" xml:space="preserve">
+    <value>文件保存地址</value>
+  </data>
+  <data name="FirmwareUpgrade" xml:space="preserve">
+    <value>软件升级</value>
+  </data>
+  <data name="hasRead" xml:space="preserve">
+    <value>已读</value>
+  </data>
+  <data name="indoor" xml:space="preserve">
+    <value>室内机</value>
+  </data>
+  <data name="indoorSD" xml:space="preserve">
+    <value>室内机 (SD)</value>
+  </data>
+  <data name="ipcam" xml:space="preserve">
+    <value>IP摄像头</value>
+  </data>
+  <data name="IsWorking" xml:space="preserve">
+    <value>有效</value>
+  </data>
+  <data name="leaveMsgDoorAddr" xml:space="preserve">
+    <value>门口机地址</value>
+  </data>
+  <data name="leaveMsgIndoorRo" xml:space="preserve">
+    <value>室內房号</value>
+  </data>
+  <data name="leaveMsgTme" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>管理人员</value>
+  </data>
+  <data name="mobile" xml:space="preserve">
+    <value>手机</value>
+  </data>
+  <data name="MsgFormat" xml:space="preserve">
+    <value>信息格式</value>
+  </data>
+  <data name="MsgType" xml:space="preserve">
+    <value>信息类型</value>
+  </data>
+  <data name="NoResult" xml:space="preserve">
+    <value>查无結果!</value>
+  </data>
+  <data name="notRead" xml:space="preserve">
+    <value>未读</value>
+  </data>
+  <data name="NotWorking" xml:space="preserve">
+    <value>无效</value>
+  </data>
+  <data name="offline" xml:space="preserve">
+    <value>离线</value>
+  </data>
+  <data name="online" xml:space="preserve">
+    <value>在线</value>
+  </data>
+  <data name="OpenOldFile" xml:space="preserve">
+    <value>开启旧档</value>
+  </data>
+  <data name="OperatorID" xml:space="preserve">
+    <value>操作人员編号</value>
+  </data>
+  <data name="OperatorName" xml:space="preserve">
+    <value>操作人员姓名</value>
+  </data>
+  <data name="OperatorPermissionGroup" xml:space="preserve">
+    <value>操作人员权限组</value>
+  </data>
+  <data name="OtherType" xml:space="preserve">
+    <value>其他类型</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="PermissionGroup" xml:space="preserve">
+    <value>权限组</value>
+  </data>
+  <data name="PlaySequence" xml:space="preserve">
+    <value>播放时序</value>
+  </data>
+  <data name="plzEnterPw" xml:space="preserve">
+    <value>请输入密码</value>
+  </data>
+  <data name="plzEnterQueryCondition" xml:space="preserve">
+    <value>请输入查询条件!</value>
+  </data>
+  <data name="plzSelectARoom" xml:space="preserve">
+    <value>请选择某一'室'</value>
+  </data>
+  <data name="pubdoorbell" xml:space="preserve">
+    <value>公共门铃机</value>
+  </data>
+  <data name="PwEnterNotTheSame" xml:space="preserve">
+    <value>兩次输入的密码不一致！</value>
+  </data>
+  <data name="qu" xml:space="preserve">
+    <value>区</value>
+  </data>
+  <data name="ReadStatus" xml:space="preserve">
+    <value>读取状态</value>
+  </data>
+  <data name="RelatedDev" xml:space="preserve">
+    <value>开启设备</value>
+  </data>
+  <data name="RelatedDoorbell" xml:space="preserve">
+    <value>开启门口机</value>
+  </data>
+  <data name="Resident" xml:space="preserve">
+    <value>住户</value>
+  </data>
+  <data name="residentBirth" xml:space="preserve">
+    <value>生日</value>
+  </data>
+  <data name="residentGender" xml:space="preserve">
+    <value>性別</value>
+  </data>
+  <data name="residentLeader" xml:space="preserve">
+    <value>户主</value>
+  </data>
+  <data name="residentName" xml:space="preserve">
+    <value>住户姓名</value>
+  </data>
+  <data name="residentPhone" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="residentPID" xml:space="preserve">
+    <value>身份证号</value>
+  </data>
+  <data name="residentRo" xml:space="preserve">
+    <value>房间号</value>
+  </data>
+  <data name="RoNotExist" xml:space="preserve">
+    <value>房号不存在</value>
+  </data>
+  <data name="ScreensaverUpgarde" xml:space="preserve">
+    <value>屏保升级</value>
+  </data>
+  <data name="SendAddrOrMsgCannotBeNull" xml:space="preserve">
+    <value>发送地址或信息标题不得为空</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="server" xml:space="preserve">
+    <value>服务器</value>
+  </data>
+  <data name="shi" xml:space="preserve">
+    <value>室</value>
+  </data>
+  <data name="smalldoorbell" xml:space="preserve">
+    <value>别墅门口机</value>
+  </data>
+  <data name="Staff" xml:space="preserve">
+    <value>工作人员</value>
+  </data>
+  <data name="SyncFinish" xml:space="preserve">
+    <value>同步完成</value>
+  </data>
+  <data name="TargetAddr" xml:space="preserve">
+    <value>目的地址</value>
+  </data>
+  <data name="TheIPAddrIsNotBelongToIndoorAdminDoorbell" xml:space="preserve">
+    <value>该IP非室内机，管理机或门口机所有！</value>
+  </data>
+  <data name="TimeSequence" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="TmpCard" xml:space="preserve">
+    <value>临时卡</value>
+  </data>
+  <data name="unExpectedError" xml:space="preserve">
+    <value>未预期错误</value>
+  </data>
+  <data name="unit" xml:space="preserve">
+    <value>单元</value>
+  </data>
+  <data name="unitdoorbell" xml:space="preserve">
+    <value>单元门口机</value>
+  </data>
+  <data name="UnrelatedDev" xml:space="preserve">
+    <value>未开启设备</value>
+  </data>
+  <data name="UpgradeDevType" xml:space="preserve">
+    <value>升级设备类型</value>
+  </data>
+  <data name="UpgradeFilePath" xml:space="preserve">
+    <value>升级文件路径</value>
+  </data>
+  <data name="UpgradeFileType" xml:space="preserve">
+    <value>升级文件类型</value>
+  </data>
+  <data name="UploadTime" xml:space="preserve">
+    <value>上传时间</value>
+  </data>
+  <data name="UserCannotBeNull" xml:space="preserve">
+    <value>用户名不得为空</value>
+  </data>
+  <data name="VersionNum" xml:space="preserve">
+    <value>版本号</value>
+  </data>
+  <data name="hasDeal" xml:space="preserve">
+    <value>已处理</value>
+  </data>
+  <data name="notDeal" xml:space="preserve">
+    <value>未处理</value>
+  </data>
+  <data name="CardCannotLessThan10" xml:space="preserve">
+    <value>卡号长度10位</value>
+  </data>
+  <data name="hashandle" xml:space="preserve">
+    <value>已处理</value>
+  </data>
+  <data name="nothandle" xml:space="preserve">
+    <value>未处理</value>
+  </data>
+  <data name="FilePathNotExist" xml:space="preserve">
+    <value>文件不存在</value>
+  </data>
+  <data name="IPNotExist" xml:space="preserve">
+    <value>此IP不存在</value>
+  </data>
+</root>

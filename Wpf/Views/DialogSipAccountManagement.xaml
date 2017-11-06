@@ -1,0 +1,70 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogSipAccountManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter" 
+        mc:Ignorable="d"
+        Title="雲服務管理" Height="Auto" Width="Auto"
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="WidthAndHeight" ResizeMode="NoResize" FontSize="14">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+                <ResourceDictionary Source="InputFormResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converter -->
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <Binding Mode="OneWay" Path="DialogSipAccountManagementViewModel" Source="{StaticResource Locator}"/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="先按房間號查詢，然後操作帳戶" Margin="5" Padding="10">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="房間:"/>
+                <xctk:MaskedTextBox MinWidth="200" Mask="{DynamicResource RoomAddressMask}" IncludeLiteralsInValue="True" IncludePromptInValue="True" PromptChar="0" Text="{Binding RoomAddress, Converter={StaticResource DeviceAddressConverter}}"/>
+                <Button Content="查詢" Margin="5" MinWidth="90" Command="{Binding GetSipAccountsByRoomAddressCommand}"/>
+                <Button Content="同步帳號訊息" Margin="5" MinWidth="90" Command="{Binding SyncSipAccountsCommand}"/>
+            </StackPanel>
+        </GroupBox>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <DataGrid Name="dataGrid" ItemsSource="{Binding SipAccounts}" Margin="5">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="帳號" Binding="{Binding C_user}" />
+                    <DataGridTextColumn Header="房間號" Binding="{Binding C_room, Converter={StaticResource DeviceAddressConverter}}" />
+                    <DataGridTextColumn Header="群組編號" Binding="{Binding C_usergroup}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Column="1" MinHeight="250">
+                <Button Content="{DynamicResource Add}" Command="{Binding AddSipAccountCommand}"/>
+                <Button Content="{DynamicResource Delete}" Command="{Binding DeleteSipAccountsCommand}" CommandParameter="{Binding SelectedItems, ElementName=dataGrid}"/>
+                <Button Content="查看" Command="{Binding DisplayQRCodeCommand}"/>
+                <Button Content="{DynamicResource Close}" Click="Button_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

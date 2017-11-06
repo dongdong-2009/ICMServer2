@@ -1,0 +1,240 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:v="clr-namespace:ICMServer.WPF.Views"
+             xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+             xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+             xmlns:local="clr-namespace:ICMServer.WPF"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+             x:Class="ICMServer.WPF.Views.FormAnnouncementManagement"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="1000"
+             FontSize="14">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <converter:MessageTypeToStringConverter x:Key="MessageTypeToStringConverter"/>
+            <converter:NullableIntToBoolConverter x:Key="NullableIntToBoolConverter"/>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+
+            <!-- MVVM Locator -->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converters -->
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+
+            <!-- Style Settings -->
+            <Style TargetType="{x:Type UserControl}">
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="ContentStringFormat" Value="{}{0}:"/>
+            </Style>
+            <Style x:Key="CommandButtons" TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="MinHeight" Value="30"/>
+                <Setter Property="MinWidth" Value="80"/>
+            </Style>
+            <Style TargetType="{x:Type ComboBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type xctk:MaskedTextBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="{x:Type DatePicker}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type DataGrid}">
+                <Setter Property="RowHeaderWidth" Value="40"/>
+                <Setter Property="CanUserResizeRows" Value="False"/>
+                <Setter Property="SelectionUnit" Value="FullRow"/>
+                <Setter Property="CanUserAddRows" Value="False"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+                <Setter Property="AutoGenerateColumns" Value="False"/>
+                <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+                <!--<Setter Property="RowHeight" Value="25"/>-->
+            </Style>
+            <!-- This is the style used to display enabled or disabled button images for removing filters-->
+            <Style x:Key="ImageStyleForDisableFilterButtons" TargetType="{x:Type Image}">
+                <Style.Triggers>
+                    <!-- Filter Enabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}" Value="True">
+                        <Setter Property="Source"  Value="/Wpf;component/Images/disable_filter_16x16.png"/>
+                    </DataTrigger>
+                    <!-- Filter Disabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" Value="False">
+                        <Setter Property="Source" Value="/Wpf;component/Images/disable_filter_16x16_disabled.png"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <ObjectDataProvider x:Key="MessageTypeValues" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="model:MessageType" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="門口機廣告管理">
+                <TabItem.DataContext>
+                    <Binding Mode="OneWay" Path="AdvertisementsViewModel" Source="{StaticResource Locator}"/>
+                </TabItem.DataContext>
+                    
+                <DockPanel LastChildFill="True">
+                    <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource CommandButtons}" Content="上傳廣告檔案" Command="{Binding AddAdvertisementCommand, Mode=OneWay}"/>
+                            <!--<Button Style="{StaticResource CommandButtons}" Content="設置播放順序" Command="{Binding EditAdvertisementsCommand, Mode=OneWay}"/>-->
+                            <Button Style="{StaticResource CommandButtons}" Content="刪除檔案" Command="{Binding DeleteAdvertisementsCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGridAdvertisements}"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="廣告播放時段" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="起始時間"/>
+                            <xctk:DateTimeUpDown  Format="LongTime" Margin="5" DefaultValue="2017-04-26" DisplayDefaultValueOnEmptyText="True" Value="{Binding BeginPlayTime, Delay=500}"/>
+                            <Label Content="結束時間"/>
+                            <xctk:DateTimeUpDown  Format="LongTime" Margin="5" DefaultValue="04/26/2017 23:59:59" DisplayDefaultValueOnEmptyText="True" Value="{Binding EndPlayTime, Delay=500}"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock Text="總共有 "/>
+                        <TextBlock Text="{Binding Advertisements.Count}"/>
+                        <TextBlock Text=" 筆資料"/>
+                    </StackPanel>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <DataGrid x:Name="dataGridAdvertisements" ItemsSource="{Binding Advertisements}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="播放順序" Binding="{Binding C_no}"/>
+                                <!--<DataGridTextColumn Header="播放順序" Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Converter={converter:RowToIndexConverter}}"/>-->
+                                <DataGridTextColumn Header="廣告標題" Binding="{Binding C_title}"/>
+                                <DataGridTextColumn Header="上傳時間" Binding="{Binding C_time}"/>
+                                <DataGridTextColumn Header="路徑" Width="*" Binding="{Binding C_path}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <StackPanel Grid.Column="1">
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="MinWidth" Value="50"/>
+                                    <Setter Property="Margin" Value="5,15,5,5"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <Button Content="上移" Command="{Binding MoveUpCommand}"/>
+                            <Button Content="下移" Command="{Binding MoveDownCommand}"/>
+                        </StackPanel>
+                    </Grid>
+                </DockPanel>
+            </TabItem>
+
+            <TabItem Header="室內機信息服務">
+                <TabItem.DataContext>
+                    <Binding Mode="OneWay" Path="AnnouncementsViewModel" Source="{StaticResource Locator}"/>
+                </TabItem.DataContext>
+                <DockPanel>
+                    <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource CommandButtons}" Content="新增公告訊息" Command="{Binding AddAnnouncementCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="查看" Command="{Binding DisplayAnnouncementDetailCommand, Mode=OneWay}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Delete}" Command="{Binding DeleteAnnouncementsCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGridAnnouncements}"/>
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource Refresh}" Command="{Binding RefreshCommand, Mode=OneWay}"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- filters -->
+                            <!--<Label Content="目的地址"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,20,0">
+                                <TextBox IsReadOnly="True" MinWidth="150" Grid.Row="1" VerticalAlignment="Center" Text="{Binding AddressFilterValue, Converter={StaticResource DeviceAddressConverter}}" Margin="5,5,0,5"/>
+                                <Button Content="..." Margin="0,5,5,5" Padding="10,0,10,0" VerticalAlignment="Center" Command="{Binding PickAddressFilterValueCommand, Mode=OneWay}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveAddressFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>-->
+
+                            <Label Content="{DynamicResource BeginDate}" Grid.Column="1"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding BeginDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveBeginDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Label Content="{DynamicResource EndDate}" Grid.Column="2"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="1" Margin="0,0,20,0">
+                                <DatePicker SelectedDate="{Binding EndDateFilterValue}"/>
+                                <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveEndDateFilterCommand, Mode=OneWay}">
+                                    <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                                </Button>
+                            </StackPanel>
+
+                            <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ResetFilter}" Grid.Column="3" Grid.Row="1" Command="{Binding ResetFiltersCommand, Mode=OneWay}"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock Text="總共有 "/>
+                        <TextBlock Text="{Binding Announcements.Count}"/>
+                        <TextBlock Text=" 筆資料"/>
+                    </StackPanel>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <DataGrid x:Name="dataGridAnnouncements" ItemsSource="{Binding Announcements}" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="標題" Binding="{Binding title}"/>
+                                <!--<DataGridTextColumn Header="目的地址" Binding="{Binding dstaddr, Converter={StaticResource DeviceAddressConverter}, ConverterParameter=AllDevices}"/>-->
+                                <DataGridTextColumn Header="發佈時間" Binding="{Binding time, StringFormat=\{0:G\}}"/>
+                                <DataGridTextColumn Header="信息類型" Binding="{Binding type, Converter={StaticResource MessageTypeToStringConverter}}"/>
+                                <DataGridTextColumn Header="檔案保存地址" Width="*" Binding="{Binding filepath}"/>
+                                <!--<DataGridCheckBoxColumn Header="已讀" Binding="{Binding isread, Converter={StaticResource NullableIntToBoolConverter}}"/>-->
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <DataGrid Margin="10, 0, 0, 0" Grid.Column="1" MinWidth="240" HeadersVisibility="Column" ItemsSource="{Binding DstRoomsPerAnnouncement}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="目的地址" Binding="{Binding RoomID, Converter={StaticResource DeviceAddressConverter}, ConverterParameter=AllDevices}"/>
+                                <DataGridCheckBoxColumn Header="已讀" Binding="{Binding HasRead}"/> 
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

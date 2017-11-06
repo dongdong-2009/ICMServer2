@@ -1,0 +1,21 @@
+﻿- Validator (驗證器) 的使用方法
+  驗證器是用在輸入表單確認使用者輸入的資料沒有問題，並在使用者輸入錯誤時顯示錯誤提示。
+  我們使用的是 FluentValidation(https://github.com/JeremySkinner/FluentValidation)
+  Library。
+
+  要使用Validator，首先要建立一個繼承自 AbstractValidator<T> 的子類別。譬如我們要為
+  ResidentViewModel產生一個驗證器，首先定義
+  class ResidentValidator : AbstractValidator<ResidentViewModel>
+
+  接著在建構子內撰寫驗證規則
+    public ResidentValidator(IDeviceDataService dataService)
+    {
+        this.dataService = dataService;
+        this.CascadeMode = CascadeMode.StopOnFirstFailure;  // 宣告一個 RuleFor 有多個檢查條件時，只要檢查到第一個錯就停止往下檢查。
+
+        RuleFor(device => device.Name)
+            .NotEmpty()
+            .WithMessage(nameProperty + "欄位不可是空白")
+            .Length(2, 50)
+            .WithMessage(nameProperty + "欄位字元個數必須在2~50個之間
+    }

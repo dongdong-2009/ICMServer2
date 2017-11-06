@@ -1,0 +1,1242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Aba" xml:space="preserve">
+    <value>阿壩</value>
+  </data>
+  <data name="Aksu" xml:space="preserve">
+    <value>阿克蘇</value>
+  </data>
+  <data name="Ali" xml:space="preserve">
+    <value>阿里</value>
+  </data>
+  <data name="Altay" xml:space="preserve">
+    <value>阿勒泰</value>
+  </data>
+  <data name="Anhui" xml:space="preserve">
+    <value>安徽</value>
+  </data>
+  <data name="Ankang" xml:space="preserve">
+    <value>安康</value>
+  </data>
+  <data name="Anqing" xml:space="preserve">
+    <value>安慶</value>
+  </data>
+  <data name="Anshan" xml:space="preserve">
+    <value>鞍山</value>
+  </data>
+  <data name="Anshun" xml:space="preserve">
+    <value>安順</value>
+  </data>
+  <data name="Anyang" xml:space="preserve">
+    <value>安陽</value>
+  </data>
+  <data name="Baise" xml:space="preserve">
+    <value>百色</value>
+  </data>
+  <data name="Baoding" xml:space="preserve">
+    <value>保定</value>
+  </data>
+  <data name="Baoji" xml:space="preserve">
+    <value>寶雞</value>
+  </data>
+  <data name="Baoshan" xml:space="preserve">
+    <value>保山</value>
+  </data>
+  <data name="Baotou" xml:space="preserve">
+    <value>包頭</value>
+  </data>
+  <data name="Beijing" xml:space="preserve">
+    <value>北京</value>
+  </data>
+  <data name="Bengbu" xml:space="preserve">
+    <value>蚌埠</value>
+  </data>
+  <data name="Benxi" xml:space="preserve">
+    <value>本溪</value>
+  </data>
+  <data name="Bijie" xml:space="preserve">
+    <value>畢節</value>
+  </data>
+  <data name="Binzhou" xml:space="preserve">
+    <value>濱州</value>
+  </data>
+  <data name="Bozhou" xml:space="preserve">
+    <value>亳州</value>
+  </data>
+  <data name="Cangzhou" xml:space="preserve">
+    <value>滄州</value>
+  </data>
+  <data name="Carey" xml:space="preserve">
+    <value>凱里</value>
+  </data>
+  <data name="Changchun" xml:space="preserve">
+    <value>長春</value>
+  </data>
+  <data name="Changde" xml:space="preserve">
+    <value>常德</value>
+  </data>
+  <data name="Changji" xml:space="preserve">
+    <value>昌吉</value>
+  </data>
+  <data name="Changsha" xml:space="preserve">
+    <value>長沙</value>
+  </data>
+  <data name="Changshu" xml:space="preserve">
+    <value>常熟</value>
+  </data>
+  <data name="Changzhi" xml:space="preserve">
+    <value>長治</value>
+  </data>
+  <data name="Changzhou" xml:space="preserve">
+    <value>常州</value>
+  </data>
+  <data name="Chaoyang" xml:space="preserve">
+    <value>朝陽</value>
+  </data>
+  <data name="Chaozhou" xml:space="preserve">
+    <value>潮州</value>
+  </data>
+  <data name="Chengde" xml:space="preserve">
+    <value>承德</value>
+  </data>
+  <data name="Chengdu" xml:space="preserve">
+    <value>成都</value>
+  </data>
+  <data name="Chenzhou" xml:space="preserve">
+    <value>郴州</value>
+  </data>
+  <data name="Chifeng" xml:space="preserve">
+    <value>赤峰</value>
+  </data>
+  <data name="Chishui" xml:space="preserve">
+    <value>赤水</value>
+  </data>
+  <data name="Chizhou" xml:space="preserve">
+    <value>池州</value>
+  </data>
+  <data name="Chongqing" xml:space="preserve">
+    <value>重慶</value>
+  </data>
+  <data name="Chongzuo" xml:space="preserve">
+    <value>崇左</value>
+  </data>
+  <data name="Chuxiong" xml:space="preserve">
+    <value>楚雄</value>
+  </data>
+  <data name="Chuzhou" xml:space="preserve">
+    <value>滁州</value>
+  </data>
+  <data name="Daan" xml:space="preserve">
+    <value>大安</value>
+  </data>
+  <data name="Dali" xml:space="preserve">
+    <value>大理</value>
+  </data>
+  <data name="Dalian" xml:space="preserve">
+    <value>大连</value>
+  </data>
+  <data name="Dandong" xml:space="preserve">
+    <value>丹東</value>
+  </data>
+  <data name="Danzhou" xml:space="preserve">
+    <value>儋州</value>
+  </data>
+  <data name="Daqing" xml:space="preserve">
+    <value>大慶</value>
+  </data>
+  <data name="Datong" xml:space="preserve">
+    <value>大同</value>
+  </data>
+  <data name="Daxinganling" xml:space="preserve">
+    <value>大興安嶺</value>
+  </data>
+  <data name="Dazhou" xml:space="preserve">
+    <value>達州</value>
+  </data>
+  <data name="Defender" xml:space="preserve">
+    <value>中衛</value>
+  </data>
+  <data name="Dehong" xml:space="preserve">
+    <value>德宏</value>
+  </data>
+  <data name="Deqing" xml:space="preserve">
+    <value>德慶</value>
+  </data>
+  <data name="Deyang" xml:space="preserve">
+    <value>德陽</value>
+  </data>
+  <data name="Dingxi" xml:space="preserve">
+    <value>定西</value>
+  </data>
+  <data name="Dongguan" xml:space="preserve">
+    <value>東莞</value>
+  </data>
+  <data name="Dongying" xml:space="preserve">
+    <value>東營</value>
+  </data>
+  <data name="Duyun" xml:space="preserve">
+    <value>都勻</value>
+  </data>
+  <data name="Enshi" xml:space="preserve">
+    <value>恩施</value>
+  </data>
+  <data name="Ezhou" xml:space="preserve">
+    <value>鄂州</value>
+  </data>
+  <data name="Fangchenggang" xml:space="preserve">
+    <value>防城港</value>
+  </data>
+  <data name="Fujian" xml:space="preserve">
+    <value>福建</value>
+  </data>
+  <data name="Fushun" xml:space="preserve">
+    <value>撫順</value>
+  </data>
+  <data name="Fuxin" xml:space="preserve">
+    <value>阜新</value>
+  </data>
+  <data name="Fuyang" xml:space="preserve">
+    <value>阜陽</value>
+  </data>
+  <data name="Fuzhou" xml:space="preserve">
+    <value>撫州</value>
+  </data>
+  <data name="Fuzhou2" xml:space="preserve">
+    <value>福州</value>
+  </data>
+  <data name="Gannan" xml:space="preserve">
+    <value>甘南</value>
+  </data>
+  <data name="Gansu" xml:space="preserve">
+    <value>甘肅</value>
+  </data>
+  <data name="Ganzhou" xml:space="preserve">
+    <value>贛州</value>
+  </data>
+  <data name="GanziPrefecture" xml:space="preserve">
+    <value>甘孜州</value>
+  </data>
+  <data name="Gian" xml:space="preserve">
+    <value>吉安</value>
+  </data>
+  <data name="Guangan" xml:space="preserve">
+    <value>廣安</value>
+  </data>
+  <data name="Guangdong" xml:space="preserve">
+    <value>廣東</value>
+  </data>
+  <data name="Guangxi" xml:space="preserve">
+    <value>廣西</value>
+  </data>
+  <data name="Guangyuan" xml:space="preserve">
+    <value>廣元</value>
+  </data>
+  <data name="Guangzhou" xml:space="preserve">
+    <value>廣州</value>
+  </data>
+  <data name="guest" xml:space="preserve">
+    <value>來賓</value>
+  </data>
+  <data name="Guigang" xml:space="preserve">
+    <value>貴港</value>
+  </data>
+  <data name="Guilin" xml:space="preserve">
+    <value>桂林</value>
+  </data>
+  <data name="Guiping" xml:space="preserve">
+    <value>桂平</value>
+  </data>
+  <data name="Guiyang" xml:space="preserve">
+    <value>貴陽</value>
+  </data>
+  <data name="Guizhou" xml:space="preserve">
+    <value>貴州</value>
+  </data>
+  <data name="Guoluo" xml:space="preserve">
+    <value>果洛</value>
+  </data>
+  <data name="Guyuan" xml:space="preserve">
+    <value>固原</value>
+  </data>
+  <data name="Haibei" xml:space="preserve">
+    <value>海北</value>
+  </data>
+  <data name="Haidong" xml:space="preserve">
+    <value>海東</value>
+  </data>
+  <data name="Haikou" xml:space="preserve">
+    <value>海口</value>
+  </data>
+  <data name="Hailar" xml:space="preserve">
+    <value>海拉爾</value>
+  </data>
+  <data name="Hainan" xml:space="preserve">
+    <value>海南</value>
+  </data>
+  <data name="Hainan2" xml:space="preserve">
+    <value>海南</value>
+  </data>
+  <data name="Hami" xml:space="preserve">
+    <value>哈密</value>
+  </data>
+  <data name="Hancheng" xml:space="preserve">
+    <value>韓城</value>
+  </data>
+  <data name="Handan" xml:space="preserve">
+    <value>邯鄲</value>
+  </data>
+  <data name="Hangzhou" xml:space="preserve">
+    <value>杭州</value>
+  </data>
+  <data name="Hanzhong" xml:space="preserve">
+    <value>漢中</value>
+  </data>
+  <data name="Harbin" xml:space="preserve">
+    <value>哈爾濱</value>
+  </data>
+  <data name="Hebei" xml:space="preserve">
+    <value>河北</value>
+  </data>
+  <data name="Hebi" xml:space="preserve">
+    <value>鶴壁</value>
+  </data>
+  <data name="Hechi" xml:space="preserve">
+    <value>河池</value>
+  </data>
+  <data name="Hefei" xml:space="preserve">
+    <value>合肥</value>
+  </data>
+  <data name="Heihe" xml:space="preserve">
+    <value>黑河</value>
+  </data>
+  <data name="Heilongjiang" xml:space="preserve">
+    <value>黑龍江</value>
+  </data>
+  <data name="Henan" xml:space="preserve">
+    <value>河南</value>
+  </data>
+  <data name="Hengshui" xml:space="preserve">
+    <value>衡水</value>
+  </data>
+  <data name="Hengyang" xml:space="preserve">
+    <value>衡陽</value>
+  </data>
+  <data name="Hercynian" xml:space="preserve">
+    <value>海西</value>
+  </data>
+  <data name="Heyuan" xml:space="preserve">
+    <value>河源</value>
+  </data>
+  <data name="Heze" xml:space="preserve">
+    <value>菏澤</value>
+  </data>
+  <data name="Hezhou" xml:space="preserve">
+    <value>賀州</value>
+  </data>
+  <data name="Hohhot" xml:space="preserve">
+    <value>呼和浩特</value>
+  </data>
+  <data name="HongKong" xml:space="preserve">
+    <value>香港</value>
+  </data>
+  <data name="Hotan" xml:space="preserve">
+    <value>和田</value>
+  </data>
+  <data name="Huaian" xml:space="preserve">
+    <value>淮安</value>
+  </data>
+  <data name="Huaibei" xml:space="preserve">
+    <value>淮北</value>
+  </data>
+  <data name="Huaihua" xml:space="preserve">
+    <value>懷化</value>
+  </data>
+  <data name="Huainan" xml:space="preserve">
+    <value>淮南</value>
+  </data>
+  <data name="Huanggang" xml:space="preserve">
+    <value>黃岡</value>
+  </data>
+  <data name="HuangNan" xml:space="preserve">
+    <value>黃南</value>
+  </data>
+  <data name="Huangshan" xml:space="preserve">
+    <value>黃山</value>
+  </data>
+  <data name="Hubei" xml:space="preserve">
+    <value>湖北</value>
+  </data>
+  <data name="Huizhou" xml:space="preserve">
+    <value>惠州</value>
+  </data>
+  <data name="Huludao" xml:space="preserve">
+    <value>葫蘆島</value>
+  </data>
+  <data name="Hulunbeier" xml:space="preserve">
+    <value>呼倫貝爾</value>
+  </data>
+  <data name="Hunan" xml:space="preserve">
+    <value>湖南</value>
+  </data>
+  <data name="Huzhou" xml:space="preserve">
+    <value>湖州</value>
+  </data>
+  <data name="InnerMongolia" xml:space="preserve">
+    <value>內蒙古</value>
+  </data>
+  <data name="Jiamusi" xml:space="preserve">
+    <value>佳木斯</value>
+  </data>
+  <data name="Jiangmen" xml:space="preserve">
+    <value>江门</value>
+  </data>
+  <data name="Jiangsu" xml:space="preserve">
+    <value>江蘇</value>
+  </data>
+  <data name="Jiangxi" xml:space="preserve">
+    <value>江西</value>
+  </data>
+  <data name="Jiaozuo" xml:space="preserve">
+    <value>焦作</value>
+  </data>
+  <data name="Jiaxing" xml:space="preserve">
+    <value>嘉興</value>
+  </data>
+  <data name="Jieyang" xml:space="preserve">
+    <value>揭陽</value>
+  </data>
+  <data name="Jilin" xml:space="preserve">
+    <value>吉林</value>
+  </data>
+  <data name="Jinan" xml:space="preserve">
+    <value>濟南</value>
+  </data>
+  <data name="Jinchang" xml:space="preserve">
+    <value>金昌</value>
+  </data>
+  <data name="Jincheng" xml:space="preserve">
+    <value>晉城</value>
+  </data>
+  <data name="Jingdezhen" xml:space="preserve">
+    <value>景德鎮</value>
+  </data>
+  <data name="Jingmen" xml:space="preserve">
+    <value>荊门</value>
+  </data>
+  <data name="Jingzhou" xml:space="preserve">
+    <value>荊州</value>
+  </data>
+  <data name="Jinhua" xml:space="preserve">
+    <value>金華</value>
+  </data>
+  <data name="Jining" xml:space="preserve">
+    <value>濟寧</value>
+  </data>
+  <data name="Jinzhong" xml:space="preserve">
+    <value>晉中</value>
+  </data>
+  <data name="Jinzhou" xml:space="preserve">
+    <value>錦州</value>
+  </data>
+  <data name="Jishou" xml:space="preserve">
+    <value>吉首</value>
+  </data>
+  <data name="Jiujiang" xml:space="preserve">
+    <value>九江</value>
+  </data>
+  <data name="Jiuquan" xml:space="preserve">
+    <value>酒泉</value>
+  </data>
+  <data name="Jixi" xml:space="preserve">
+    <value>雞西</value>
+  </data>
+  <data name="Kaifeng" xml:space="preserve">
+    <value>開封</value>
+  </data>
+  <data name="Kaohsiung" xml:space="preserve">
+    <value>高雄</value>
+  </data>
+  <data name="Karamay" xml:space="preserve">
+    <value>克拉瑪依</value>
+  </data>
+  <data name="Kashgar" xml:space="preserve">
+    <value>喀什</value>
+  </data>
+  <data name="Korla" xml:space="preserve">
+    <value>库爾勒</value>
+  </data>
+  <data name="Kunming" xml:space="preserve">
+    <value>昆明</value>
+  </data>
+  <data name="Kunshan" xml:space="preserve">
+    <value>昆山</value>
+  </data>
+  <data name="Laiwu" xml:space="preserve">
+    <value>萊蕪</value>
+  </data>
+  <data name="Langfang" xml:space="preserve">
+    <value>廊坊</value>
+  </data>
+  <data name="Lanzhou" xml:space="preserve">
+    <value>蘭州</value>
+  </data>
+  <data name="Leshan" xml:space="preserve">
+    <value>樂山</value>
+  </data>
+  <data name="Lhasa" xml:space="preserve">
+    <value>拉薩</value>
+  </data>
+  <data name="Liangshan" xml:space="preserve">
+    <value>涼山</value>
+  </data>
+  <data name="Lianyungang" xml:space="preserve">
+    <value>连云港</value>
+  </data>
+  <data name="Liaocheng" xml:space="preserve">
+    <value>聊城</value>
+  </data>
+  <data name="Liaoning" xml:space="preserve">
+    <value>遼寧</value>
+  </data>
+  <data name="Liaoyang" xml:space="preserve">
+    <value>遼陽</value>
+  </data>
+  <data name="Liaoyuan" xml:space="preserve">
+    <value>遼源</value>
+  </data>
+  <data name="Lijiang" xml:space="preserve">
+    <value>麗江</value>
+  </data>
+  <data name="Lincang" xml:space="preserve">
+    <value>临滄</value>
+  </data>
+  <data name="Linfen" xml:space="preserve">
+    <value>临汾</value>
+  </data>
+  <data name="Linxia" xml:space="preserve">
+    <value>临夏</value>
+  </data>
+  <data name="Linyi" xml:space="preserve">
+    <value>临沂</value>
+  </data>
+  <data name="Lishui" xml:space="preserve">
+    <value>麗水</value>
+  </data>
+  <data name="Liupanshui" xml:space="preserve">
+    <value>六盤水</value>
+  </data>
+  <data name="Liuzhou" xml:space="preserve">
+    <value>柳州</value>
+  </data>
+  <data name="Longyan" xml:space="preserve">
+    <value>龍巖</value>
+  </data>
+  <data name="Loudi" xml:space="preserve">
+    <value>婁底</value>
+  </data>
+  <data name="Luan" xml:space="preserve">
+    <value>六安</value>
+  </data>
+  <data name="Luliang" xml:space="preserve">
+    <value>呂梁</value>
+  </data>
+  <data name="Luohe" xml:space="preserve">
+    <value>漯河</value>
+  </data>
+  <data name="Luoyang" xml:space="preserve">
+    <value>洛陽</value>
+  </data>
+  <data name="Luzhou" xml:space="preserve">
+    <value>瀘州</value>
+  </data>
+  <data name="Macao" xml:space="preserve">
+    <value>澳门</value>
+  </data>
+  <data name="Maoming" xml:space="preserve">
+    <value>茂名</value>
+  </data>
+  <data name="MaOnShan" xml:space="preserve">
+    <value>馬鞍山</value>
+  </data>
+  <data name="Matsubara" xml:space="preserve">
+    <value>松原</value>
+  </data>
+  <data name="Meizhou" xml:space="preserve">
+    <value>梅州</value>
+  </data>
+  <data name="Mianyang" xml:space="preserve">
+    <value>綿陽</value>
+  </data>
+  <data name="Mudanjiang" xml:space="preserve">
+    <value>牡丹江</value>
+  </data>
+  <data name="Municipality" xml:space="preserve">
+    <value>直轄市</value>
+  </data>
+  <data name="Nagqu" xml:space="preserve">
+    <value>那曲</value>
+  </data>
+  <data name="Nanchang" xml:space="preserve">
+    <value>南昌</value>
+  </data>
+  <data name="Nanjing" xml:space="preserve">
+    <value>南京</value>
+  </data>
+  <data name="Nanning" xml:space="preserve">
+    <value>南寧</value>
+  </data>
+  <data name="Nanping" xml:space="preserve">
+    <value>南平</value>
+  </data>
+  <data name="Nantong" xml:space="preserve">
+    <value>南通</value>
+  </data>
+  <data name="Nanyang" xml:space="preserve">
+    <value>南陽</value>
+  </data>
+  <data name="Neijiang" xml:space="preserve">
+    <value>內江</value>
+  </data>
+  <data name="Ningbo" xml:space="preserve">
+    <value>寧波</value>
+  </data>
+  <data name="Ningde" xml:space="preserve">
+    <value>寧德</value>
+  </data>
+  <data name="Ningxia" xml:space="preserve">
+    <value>寧夏</value>
+  </data>
+  <data name="NorthSea" xml:space="preserve">
+    <value>北海</value>
+  </data>
+  <data name="NuRiver" xml:space="preserve">
+    <value>怒江</value>
+  </data>
+  <data name="Nyingchi" xml:space="preserve">
+    <value>林芝</value>
+  </data>
+  <data name="Ordos" xml:space="preserve">
+    <value>鄂爾多斯</value>
+  </data>
+  <data name="Pakistan" xml:space="preserve">
+    <value>巴中</value>
+  </data>
+  <data name="Panjin" xml:space="preserve">
+    <value>盤錦</value>
+  </data>
+  <data name="Panzhihua" xml:space="preserve">
+    <value>攀枝花</value>
+  </data>
+  <data name="Pingdingshan" xml:space="preserve">
+    <value>平頂山</value>
+  </data>
+  <data name="Pingliang" xml:space="preserve">
+    <value>平涼</value>
+  </data>
+  <data name="Pingxiang" xml:space="preserve">
+    <value>萍鄉</value>
+  </data>
+  <data name="Putian" xml:space="preserve">
+    <value>莆田</value>
+  </data>
+  <data name="Puyang" xml:space="preserve">
+    <value>濮陽</value>
+  </data>
+  <data name="Qamdo" xml:space="preserve">
+    <value>昌都</value>
+  </data>
+  <data name="Qingdao" xml:space="preserve">
+    <value>青島</value>
+  </data>
+  <data name="Qinghai" xml:space="preserve">
+    <value>青海</value>
+  </data>
+  <data name="Qingyang" xml:space="preserve">
+    <value>慶陽</value>
+  </data>
+  <data name="Qingyuan" xml:space="preserve">
+    <value>清遠</value>
+  </data>
+  <data name="Qinhuangdao" xml:space="preserve">
+    <value>秦皇島</value>
+  </data>
+  <data name="Qinzhou" xml:space="preserve">
+    <value>欽州</value>
+  </data>
+  <data name="Qiongshan" xml:space="preserve">
+    <value>瓊山</value>
+  </data>
+  <data name="Qiqihar" xml:space="preserve">
+    <value>齊齊哈爾</value>
+  </data>
+  <data name="Qitaihe" xml:space="preserve">
+    <value>七台河</value>
+  </data>
+  <data name="Quanzhou" xml:space="preserve">
+    <value>泉州</value>
+  </data>
+  <data name="Qufu" xml:space="preserve">
+    <value>曲阜</value>
+  </data>
+  <data name="Qujing" xml:space="preserve">
+    <value>曲靖</value>
+  </data>
+  <data name="Quzhou" xml:space="preserve">
+    <value>衢州</value>
+  </data>
+  <data name="RedRiver" xml:space="preserve">
+    <value>紅河</value>
+  </data>
+  <data name="Sanmenxia" xml:space="preserve">
+    <value>三门峽</value>
+  </data>
+  <data name="Sanming" xml:space="preserve">
+    <value>三明</value>
+  </data>
+  <data name="Sanya" xml:space="preserve">
+    <value>三亞</value>
+  </data>
+  <data name="Shaanxi" xml:space="preserve">
+    <value>陝西</value>
+  </data>
+  <data name="Shandong" xml:space="preserve">
+    <value>山東</value>
+  </data>
+  <data name="Shanghai" xml:space="preserve">
+    <value>上海</value>
+  </data>
+  <data name="Shangluo" xml:space="preserve">
+    <value>商洛</value>
+  </data>
+  <data name="Shangqiu" xml:space="preserve">
+    <value>商丘</value>
+  </data>
+  <data name="Shangrao" xml:space="preserve">
+    <value>上饒</value>
+  </data>
+  <data name="Shannan" xml:space="preserve">
+    <value>山南</value>
+  </data>
+  <data name="Shanwei" xml:space="preserve">
+    <value>汕尾</value>
+  </data>
+  <data name="Shanxi" xml:space="preserve">
+    <value>山西</value>
+  </data>
+  <data name="Shaoguan" xml:space="preserve">
+    <value>韶开</value>
+  </data>
+  <data name="Shaoshan" xml:space="preserve">
+    <value>韶山</value>
+  </data>
+  <data name="Shaoxing" xml:space="preserve">
+    <value>紹興</value>
+  </data>
+  <data name="Shaoyang" xml:space="preserve">
+    <value>邵陽</value>
+  </data>
+  <data name="Shennongjia" xml:space="preserve">
+    <value>神農架</value>
+  </data>
+  <data name="Shenyang" xml:space="preserve">
+    <value>瀋陽</value>
+  </data>
+  <data name="Shenzhen" xml:space="preserve">
+    <value>深圳</value>
+  </data>
+  <data name="Shigatse" xml:space="preserve">
+    <value>日喀則</value>
+  </data>
+  <data name="Shihezi" xml:space="preserve">
+    <value>石河子</value>
+  </data>
+  <data name="Shijiazhuang" xml:space="preserve">
+    <value>石家莊</value>
+  </data>
+  <data name="Shiyan" xml:space="preserve">
+    <value>十堰</value>
+  </data>
+  <data name="Shizuishan" xml:space="preserve">
+    <value>石嘴山</value>
+  </data>
+  <data name="Shuangyashan" xml:space="preserve">
+    <value>雙鴨山</value>
+  </data>
+  <data name="Shuozhou" xml:space="preserve">
+    <value>朔州</value>
+  </data>
+  <data name="Sichuan" xml:space="preserve">
+    <value>四川</value>
+  </data>
+  <data name="silver" xml:space="preserve">
+    <value>白銀</value>
+  </data>
+  <data name="Simao" xml:space="preserve">
+    <value>思茅</value>
+  </data>
+  <data name="Siping" xml:space="preserve">
+    <value>四平</value>
+  </data>
+  <data name="SpecialArea" xml:space="preserve">
+    <value>特別行政区</value>
+  </data>
+  <data name="Suihua" xml:space="preserve">
+    <value>綏化</value>
+  </data>
+  <data name="Suining" xml:space="preserve">
+    <value>遂寧</value>
+  </data>
+  <data name="Suizhou" xml:space="preserve">
+    <value>隨州</value>
+  </data>
+  <data name="sunshine" xml:space="preserve">
+    <value>日照</value>
+  </data>
+  <data name="Suqian" xml:space="preserve">
+    <value>宿遷</value>
+  </data>
+  <data name="Suzhou" xml:space="preserve">
+    <value>蘇州</value>
+  </data>
+  <data name="Suzhou2" xml:space="preserve">
+    <value>宿州</value>
+  </data>
+  <data name="Tacheng" xml:space="preserve">
+    <value>塔城</value>
+  </data>
+  <data name="Taian" xml:space="preserve">
+    <value>泰安</value>
+  </data>
+  <data name="Taicang" xml:space="preserve">
+    <value>太倉</value>
+  </data>
+  <data name="Taipei" xml:space="preserve">
+    <value>台北</value>
+  </data>
+  <data name="Taiwan" xml:space="preserve">
+    <value>台灣</value>
+  </data>
+  <data name="Taiyuan" xml:space="preserve">
+    <value>太原</value>
+  </data>
+  <data name="Taizhou" xml:space="preserve">
+    <value>泰州</value>
+  </data>
+  <data name="Taizhou2" xml:space="preserve">
+    <value>台州</value>
+  </data>
+  <data name="Tangshan" xml:space="preserve">
+    <value>唐山</value>
+  </data>
+  <data name="Texas" xml:space="preserve">
+    <value>德州</value>
+  </data>
+  <data name="Through" xml:space="preserve">
+    <value>通什</value>
+  </data>
+  <data name="Tianjin" xml:space="preserve">
+    <value>天津</value>
+  </data>
+  <data name="Tianshui" xml:space="preserve">
+    <value>天水</value>
+  </data>
+  <data name="Tibet" xml:space="preserve">
+    <value>西藏</value>
+  </data>
+  <data name="Tieling" xml:space="preserve">
+    <value>鐵嶺</value>
+  </data>
+  <data name="Tongchuan" xml:space="preserve">
+    <value>銅川</value>
+  </data>
+  <data name="Tonghua" xml:space="preserve">
+    <value>通化</value>
+  </data>
+  <data name="Tongliao" xml:space="preserve">
+    <value>通遼</value>
+  </data>
+  <data name="Tongling" xml:space="preserve">
+    <value>銅陵</value>
+  </data>
+  <data name="Tongren" xml:space="preserve">
+    <value>銅仁</value>
+  </data>
+  <data name="Tsuruoka" xml:space="preserve">
+    <value>鶴岡</value>
+  </data>
+  <data name="Turpan" xml:space="preserve">
+    <value>吐魯番</value>
+  </data>
+  <data name="Urumqi" xml:space="preserve">
+    <value>烏魯木齊</value>
+  </data>
+  <data name="Weifang" xml:space="preserve">
+    <value>濰坊</value>
+  </data>
+  <data name="Weihai" xml:space="preserve">
+    <value>威海</value>
+  </data>
+  <data name="Weinan" xml:space="preserve">
+    <value>渭南</value>
+  </data>
+  <data name="Wenchang" xml:space="preserve">
+    <value>文昌</value>
+  </data>
+  <data name="Wenshan" xml:space="preserve">
+    <value>文山</value>
+  </data>
+  <data name="Wenzhou" xml:space="preserve">
+    <value>溫州</value>
+  </data>
+  <data name="WhiteCity" xml:space="preserve">
+    <value>白城</value>
+  </data>
+  <data name="WhiteMountain" xml:space="preserve">
+    <value>白山</value>
+  </data>
+  <data name="WuCounty" xml:space="preserve">
+    <value>吳縣</value>
+  </data>
+  <data name="Wuhai" xml:space="preserve">
+    <value>烏海</value>
+  </data>
+  <data name="Wuhan" xml:space="preserve">
+    <value>武漢</value>
+  </data>
+  <data name="Wuhu" xml:space="preserve">
+    <value>蕪湖</value>
+  </data>
+  <data name="Wuwei" xml:space="preserve">
+    <value>武威</value>
+  </data>
+  <data name="Wuxi" xml:space="preserve">
+    <value>无錫</value>
+  </data>
+  <data name="WuZhong" xml:space="preserve">
+    <value>吳忠</value>
+  </data>
+  <data name="Wuzhou" xml:space="preserve">
+    <value>梧州</value>
+  </data>
+  <data name="Xiamen" xml:space="preserve">
+    <value>廈门</value>
+  </data>
+  <data name="Xian" xml:space="preserve">
+    <value>西安</value>
+  </data>
+  <data name="Xiangtan" xml:space="preserve">
+    <value>湘潭</value>
+  </data>
+  <data name="Xiangyang" xml:space="preserve">
+    <value>襄陽</value>
+  </data>
+  <data name="Xianning" xml:space="preserve">
+    <value>咸寧</value>
+  </data>
+  <data name="Xianyang" xml:space="preserve">
+    <value>咸陽</value>
+  </data>
+  <data name="Xiaogan" xml:space="preserve">
+    <value>孝感</value>
+  </data>
+  <data name="Xilinhot" xml:space="preserve">
+    <value>錫林浩特</value>
+  </data>
+  <data name="Xingtai" xml:space="preserve">
+    <value>邢台</value>
+  </data>
+  <data name="Xining" xml:space="preserve">
+    <value>西寧</value>
+  </data>
+  <data name="Xinjiang" xml:space="preserve">
+    <value>新疆</value>
+  </data>
+  <data name="Xinxiang" xml:space="preserve">
+    <value>新鄉</value>
+  </data>
+  <data name="Xinyang" xml:space="preserve">
+    <value>信陽</value>
+  </data>
+  <data name="Xinyu" xml:space="preserve">
+    <value>新余</value>
+  </data>
+  <data name="Xinzhou" xml:space="preserve">
+    <value>忻州</value>
+  </data>
+  <data name="Xuancheng" xml:space="preserve">
+    <value>宣城</value>
+  </data>
+  <data name="Xuchang" xml:space="preserve">
+    <value>許昌</value>
+  </data>
+  <data name="Xuzhou" xml:space="preserve">
+    <value>徐州</value>
+  </data>
+  <data name="Yaan" xml:space="preserve">
+    <value>雅安</value>
+  </data>
+  <data name="Yanan" xml:space="preserve">
+    <value>延安</value>
+  </data>
+  <data name="Yanbian" xml:space="preserve">
+    <value>延邊</value>
+  </data>
+  <data name="Yancheng" xml:space="preserve">
+    <value>鹽城</value>
+  </data>
+  <data name="YandangMountain" xml:space="preserve">
+    <value>雁盪山</value>
+  </data>
+  <data name="Yangjiang" xml:space="preserve">
+    <value>陽江</value>
+  </data>
+  <data name="Yangquan" xml:space="preserve">
+    <value>陽泉</value>
+  </data>
+  <data name="Yangshuo" xml:space="preserve">
+    <value>陽朔</value>
+  </data>
+  <data name="Yangzhou" xml:space="preserve">
+    <value>揚州</value>
+  </data>
+  <data name="Yantai" xml:space="preserve">
+    <value>煙臺</value>
+  </data>
+  <data name="Yellowstone" xml:space="preserve">
+    <value>黃石</value>
+  </data>
+  <data name="Yibin" xml:space="preserve">
+    <value>宜賓</value>
+  </data>
+  <data name="Yichang" xml:space="preserve">
+    <value>宜昌</value>
+  </data>
+  <data name="Yichun" xml:space="preserve">
+    <value>伊春</value>
+  </data>
+  <data name="Yichun2" xml:space="preserve">
+    <value>宜春</value>
+  </data>
+  <data name="Yinchuan" xml:space="preserve">
+    <value>銀川</value>
+  </data>
+  <data name="Yingkou" xml:space="preserve">
+    <value>營口</value>
+  </data>
+  <data name="Yingtan" xml:space="preserve">
+    <value>鷹潭</value>
+  </data>
+  <data name="Yining" xml:space="preserve">
+    <value>伊寧</value>
+  </data>
+  <data name="Yixing" xml:space="preserve">
+    <value>宜興</value>
+  </data>
+  <data name="Yiyang" xml:space="preserve">
+    <value>益陽</value>
+  </data>
+  <data name="Yongzhou" xml:space="preserve">
+    <value>永州</value>
+  </data>
+  <data name="Yueyang" xml:space="preserve">
+    <value>岳陽</value>
+  </data>
+  <data name="Yulin" xml:space="preserve">
+    <value>榆林</value>
+  </data>
+  <data name="Yulin2" xml:space="preserve">
+    <value>玉林</value>
+  </data>
+  <data name="Yuncheng" xml:space="preserve">
+    <value>運城</value>
+  </data>
+  <data name="Yunfu" xml:space="preserve">
+    <value>云浮</value>
+  </data>
+  <data name="Yunnan" xml:space="preserve">
+    <value>云南</value>
+  </data>
+  <data name="Yushu" xml:space="preserve">
+    <value>玉樹</value>
+  </data>
+  <data name="Yuxi" xml:space="preserve">
+    <value>玉溪</value>
+  </data>
+  <data name="Zaozhuang" xml:space="preserve">
+    <value>棗莊</value>
+  </data>
+  <data name="Zhangjiajie" xml:space="preserve">
+    <value>張家界</value>
+  </data>
+  <data name="Zhangjiakou" xml:space="preserve">
+    <value>張家口</value>
+  </data>
+  <data name="Zhangye" xml:space="preserve">
+    <value>張掖</value>
+  </data>
+  <data name="Zhangzhou" xml:space="preserve">
+    <value>漳州</value>
+  </data>
+  <data name="Zhanjiang" xml:space="preserve">
+    <value>湛江</value>
+  </data>
+  <data name="Zhaoqing" xml:space="preserve">
+    <value>肇慶</value>
+  </data>
+  <data name="Zhaotong" xml:space="preserve">
+    <value>昭通</value>
+  </data>
+  <data name="Zhejiang" xml:space="preserve">
+    <value>浙江</value>
+  </data>
+  <data name="Zhengzhou" xml:space="preserve">
+    <value>鄭州</value>
+  </data>
+  <data name="Zhenjiang" xml:space="preserve">
+    <value>鎮江</value>
+  </data>
+  <data name="Zhongshan" xml:space="preserve">
+    <value>中山</value>
+  </data>
+  <data name="Zhoukou" xml:space="preserve">
+    <value>周口</value>
+  </data>
+  <data name="Zhoushan" xml:space="preserve">
+    <value>舟山</value>
+  </data>
+  <data name="Zhumadian" xml:space="preserve">
+    <value>駐馬店</value>
+  </data>
+  <data name="Zhuzhou" xml:space="preserve">
+    <value>株洲</value>
+  </data>
+  <data name="Zibo" xml:space="preserve">
+    <value>淄博</value>
+  </data>
+  <data name="Zigong" xml:space="preserve">
+    <value>自貢</value>
+  </data>
+  <data name="Ziyang" xml:space="preserve">
+    <value>資陽</value>
+  </data>
+  <data name="Zunyi" xml:space="preserve">
+    <value>遵義</value>
+  </data>
+</root>

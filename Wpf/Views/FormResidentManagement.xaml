@@ -1,0 +1,149 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:v="clr-namespace:ICMServer.WPF.Views"
+             xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+             xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+             xmlns:local="clr-namespace:ICMServer.WPF"
+             xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+             x:Class="ICMServer.WPF.Views.FormResidentManagement"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="1000"
+             FontSize="14">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+
+            <!-- MVVM Locator -->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converters -->
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            <converter:IntToSexConverter x:Key="IntToSexConverter"/>
+            <converter:SexToStringConverter x:Key="SexConverter"/>
+            <converter:NullableIntToBoolConverter x:Key="NullableIntToBoolConverter"/>
+            <converter:BoolToIndexConverter x:Key="BoolToIndexConverter" />
+
+            <ObjectDataProvider x:Key="SexValues" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="model:Sex" />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+
+            <!-- Style Settings -->
+            <Style TargetType="{x:Type UserControl}">
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="ContentStringFormat" Value="{}{0}:"/>
+            </Style>
+            <Style x:Key="CommandButtons" TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="MinHeight" Value="30"/>
+                <Setter Property="MinWidth" Value="80"/>
+            </Style>
+            <Style TargetType="{x:Type ComboBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="{x:Type DataGrid}">
+                <Setter Property="RowHeaderWidth" Value="40"/>
+                <Setter Property="CanUserResizeRows" Value="False"/>
+                <Setter Property="SelectionUnit" Value="FullRow"/>
+                <Setter Property="CanUserAddRows" Value="False"/>
+                <!--<Setter Property="RowHeight" Value="25"/>-->
+            </Style>
+            <!-- This is the style used to display enabled or disabled button images for removing filters-->
+            <Style x:Key="ImageStyleForDisableFilterButtons" TargetType="{x:Type Image}">
+                <Style.Triggers>
+                    <!-- Filter Enabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}" Value="True">
+                        <Setter Property="Source"  Value="/Wpf;component/Images/disable_filter_16x16.png"/>
+                    </DataTrigger>
+                    <!-- Filter Disabled 圖示 -->
+                    <DataTrigger Binding="{Binding IsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" Value="False">
+                        <Setter Property="Source" Value="/Wpf;component/Images/disable_filter_16x16_disabled.png"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="ResidentsViewModel" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
+
+    <DockPanel LastChildFill="True" Margin="5">
+        <GroupBox Header="{DynamicResource Toolbar}" DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource CommandButtons}" Content="新增住戶" Command="{Binding AddResidentCommand, Mode=OneWay}"/>
+                <Button Style="{StaticResource CommandButtons}" Content="修改住戶" Command="{Binding EditResidentCommand, Mode=OneWay}"/>
+                <Button Style="{StaticResource CommandButtons}" Content="刪除住戶" Command="{Binding DeleteResidentsCommand, Mode=OneWay}" CommandParameter="{Binding SelectedItems, ElementName=dataGrid}"/>
+            </StackPanel>
+        </GroupBox>
+
+        <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Top">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!-- filters -->
+                <Label Content="是否戶主"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,20,0">
+                    <ComboBox SelectedIndex="{Binding IsHeadFilterValue, Converter={StaticResource BoolToIndexConverter}}">
+                        <ComboBoxItem>是</ComboBoxItem>
+                        <ComboBoxItem>否</ComboBoxItem>
+                    </ComboBox>
+                    <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveIsHeadFilterCommand, Mode=OneWay}">
+                        <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                    </Button>
+                </StackPanel>
+
+                <Label Content="住戶姓名" Grid.Column="1"/>
+                <StackPanel Orientation="Horizontal"  Grid.Column="1" Grid.Row="1" Margin="0,0,20,0">
+                    <TextBox  Width="100" Text="{Binding NameFilterValue, Delay=500, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button HorizontalAlignment="Left" Width="16" Height="16" Command="{Binding RemoveNameFilterCommand, Mode=OneWay}">
+                        <Image Width="10" Height="10" Style="{DynamicResource ImageStyleForDisableFilterButtons}"/>
+                    </Button>
+                </StackPanel>
+
+                <Button Style="{StaticResource CommandButtons}" Content="{DynamicResource ResetFilter}" Grid.Column="2" Grid.Row="1" Command="{Binding ResetFiltersCommand, Mode=OneWay}"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+            <TextBlock Text="總共有 "/>
+            <TextBlock Text="{Binding Residents.Count}"/>
+            <TextBlock Text=" 筆資料"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" ItemsSource="{Binding Residents}" IsReadOnly="True" IsSynchronizedWithCurrentItem="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="住戶姓名" Binding="{Binding C_name}"/>
+                <DataGridTextColumn Header="房間號" Binding="{Binding C_roomid, Converter={StaticResource DeviceAddressConverter}}"/>
+                <DataGridTextColumn Header="性別" Binding="{Binding C_sex, Converter={StaticResource SexConverter}}"/>
+                <DataGridCheckBoxColumn Header="是否戶主" Binding="{Binding C_isholder, Converter={StaticResource NullableIntToBoolConverter}}"/>
+                <DataGridTextColumn Header="電話" Binding="{Binding C_phoneno}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="ITE.WPF.Controls.IPAddressControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:ITE.WPF.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="300" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type UserControl}">
+            <Setter Property="TextOptions.TextFormattingMode" Value="Display"></Setter>
+        </Style>
+        <Style TargetType="{x:Type controls:NumbericTextBox}">
+            <Setter Property="MinValue" Value="0"/>
+            <Setter Property="MaxValue" Value="255"/>
+            <Setter Property="Precision" Value="0"/>
+            <!--<Setter Property="VerticalContentAlignment" Value="Center"/>-->
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid TextBoxBase.GotFocus="TextBox_OnGotFocus">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <controls:NumbericTextBox Grid.Column="0" x:Name="IPPart1"/>
+        <TextBlock   Grid.Column="1" Text="."/>
+        <controls:NumbericTextBox Grid.Column="2"  x:Name="IPPart2"/>
+        <TextBlock   Grid.Column="3" Text="."/>
+        <controls:NumbericTextBox Grid.Column="4"  x:Name="IPPart3"/>
+        <TextBlock   Grid.Column="5" Text="."/>
+        <controls:NumbericTextBox Grid.Column="6"  x:Name="IPPart4"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,1254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;dataGridViewDevDataTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeviceTypesBindingSource.Name" xml:space="preserve">
+    <value>DeviceTypesBindingSource</value>
+  </data>
+  <data name="BtnAccountManager.Text" xml:space="preserve">
+    <value>帳号管理</value>
+  </data>
+  <data name="&gt;&gt;listViewDevManager.Name" xml:space="preserve">
+    <value>listViewDevManager</value>
+  </data>
+  <data name="&gt;&gt;PageDeviceManagement.Name" xml:space="preserve">
+    <value>PageDeviceManagement</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnAccountManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 45</value>
+  </data>
+  <data name="&gt;&gt;buttonQuery.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;BtnDelDev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+    <value>IP摄像头密码</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ComboBoxQueryTypeForPageDevMgmt.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="checkBoxAllSelect.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="listViewDevManager.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="BtnRefreshOnline.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 45</value>
+  </data>
+  <data name="&gt;&gt;BtnAccountManager.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;BtnPushTest.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="BtnUpdateAddressBook.Text" xml:space="preserve">
+    <value>同步地址簿</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="BtnSIPAccountRefresh.Text" xml:space="preserve">
+    <value>帳号刷新</value>
+  </data>
+  <data name="&gt;&gt;BtnSIPAccountRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BtnDelDev.Text" xml:space="preserve">
+    <value>刪除设备</value>
+  </data>
+  <data name="checkBoxAllSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshDevMan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshOnline.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnExportAddressBook.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="dataGridViewDevDataTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>770, 408</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSubnetMask.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSIPAccountDeviceId.Name" xml:space="preserve">
+    <value>dgvTxtBoxColSIPAccountDeviceId</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDevStatus.Parent" xml:space="preserve">
+    <value>PageDeviceInfo</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceStatus.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnUpdateAddressBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>594, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataGridViewSIPAccounts.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>IP摄像头帳号</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllSelect.Name" xml:space="preserve">
+    <value>checkBoxAllSelect</value>
+  </data>
+  <data name="&gt;&gt;PageSipAccountManagement.Name" xml:space="preserve">
+    <value>PageSipAccountManagement</value>
+  </data>
+  <data name="BtnRefreshOnline.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 17</value>
+  </data>
+  <data name="PageDeviceManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 554</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn9</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColMulticastIP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnAddDev.Text" xml:space="preserve">
+    <value>添加设备</value>
+  </data>
+  <data name="labelDeviceStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgvTxtBoxColGateway.HeaderText" xml:space="preserve">
+    <value>网关</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSIPAccountStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceTypeForPageDevMgmt.Parent" xml:space="preserve">
+    <value>PageDeviceManagement</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDevTypeForPageDevInfo.Parent" xml:space="preserve">
+    <value>PageDeviceInfo</value>
+  </data>
+  <data name="BtnAddDev.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
+  </data>
+  <data name="&gt;&gt;BtnExportAddressBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listViewSIPAccount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ComboBoxDevStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="&gt;&gt;BtnDelDev.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="ComboBoxDevStatus.Items2" xml:space="preserve">
+    <value>在線</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewSIPAccounts.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ComboBoxDevStatus.Items1" xml:space="preserve">
+    <value>離線</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>770, 83</value>
+  </data>
+  <data name="&gt;&gt;DeviceInfoToolbox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="BtnPushTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 45</value>
+  </data>
+  <data name="BtnDelDev.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FormDeviceManagement</value>
+  </data>
+  <data name="&gt;&gt;BtnShowDeviceInfo.Parent" xml:space="preserve">
+    <value>DeviceInfoToolbox</value>
+  </data>
+  <data name="&gt;&gt;PageDeviceInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PageSipAccountManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 554</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxQueryTypeForPageDevMgmt.Parent" xml:space="preserve">
+    <value>PageDeviceManagement</value>
+  </data>
+  <data name="BtnRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 580</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="&gt;&gt;BtnAccountManager.Parent" xml:space="preserve">
+    <value>PageSipAccountManagement</value>
+  </data>
+  <data name="BtnUpdateAddressBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 37</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn12.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn12</value>
+  </data>
+  <data name="&gt;&gt;BtnAccountManager.Name" xml:space="preserve">
+    <value>BtnAccountManager</value>
+  </data>
+  <data name="BtnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;PageSipAccountManagement.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="dataGridViewSIPAccounts.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="BtnPushTest.Text" xml:space="preserve">
+    <value>推送測試</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceTypeForPageDevInfo.Name" xml:space="preserve">
+    <value>labelDeviceTypeForPageDevInfo</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn13.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn13</value>
+  </data>
+  <data name="BtnPushTest.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn14.HeaderText" xml:space="preserve">
+    <value>软件版本</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceStatus.Parent" xml:space="preserve">
+    <value>PageDeviceInfo</value>
+  </data>
+  <data name="DeviceInfoToolbox.Text" xml:space="preserve">
+    <value>工具欄</value>
+  </data>
+  <data name="buttonQuery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="PageSipAccountManagement.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDevDataTable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;imageListTreeIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn10</value>
+  </data>
+  <data name="BtnModifyDev.Text" xml:space="preserve">
+    <value>修改设备</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevMgmt.Text" xml:space="preserve">
+    <value>设备类型</value>
+  </data>
+  <data name="DeviceInfoToolbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BtnRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BtnSIPAccountRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BtnShowDeviceInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonQuery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevMgmt.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>子网路遮罩</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnImportAddressBook.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;BtnSIPAccountRefresh.Name" xml:space="preserve">
+    <value>BtnSIPAccountRefresh</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceStatus.Name" xml:space="preserve">
+    <value>labelDeviceStatus</value>
+  </data>
+  <data name="BtnSIPAccountRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 45</value>
+  </data>
+  <data name="DeviceInfoToolbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>设备类型</value>
+  </data>
+  <data name="&gt;&gt;PageDeviceManagement.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDevManager.Name" xml:space="preserve">
+    <value>dataGridViewDevManager</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDevTypeForPageDevInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelDeviceStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listViewSIPAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>749, 447</value>
+  </data>
+  <data name="dgvTxtBoxColMacAddr.HeaderText" xml:space="preserve">
+    <value>MAC地址</value>
+  </data>
+  <data name="dgvTxtBoxColSIPAccountDeviceId.HeaderText" xml:space="preserve">
+    <value>Room Address</value>
+  </data>
+  <data name="BtnImportAddressBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 21</value>
+  </data>
+  <data name="&gt;&gt;listViewSIPAccount.Parent" xml:space="preserve">
+    <value>PageSipAccountManagement</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColOnlineStatus.Name" xml:space="preserve">
+    <value>dgvTxtBoxColOnlineStatus</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceTypeForPageDevMgmt.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="listViewDevManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 137</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevInfo.Text" xml:space="preserve">
+    <value>设备类型</value>
+  </data>
+  <data name="PageSipAccountManagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="dgvTxtBoxColSIPAccountName.HeaderText" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="BtnAccountManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 17</value>
+  </data>
+  <data name="&gt;&gt;BtnUpdateAddressBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PageDeviceManagement.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn14.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn14</value>
+  </data>
+  <data name="BtnExportAddressBook.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;BtnRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDevManager.Parent" xml:space="preserve">
+    <value>PageDeviceManagement</value>
+  </data>
+  <data name="&gt;&gt;dgvComboBoxColDeviceType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSIPAccountGroup.Name" xml:space="preserve">
+    <value>dgvTxtBoxColSIPAccountGroup</value>
+  </data>
+  <data name="listViewDevManager.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn8</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDevStatus.Name" xml:space="preserve">
+    <value>ComboBoxDevStatus</value>
+  </data>
+  <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="BtnPushTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 17</value>
+  </data>
+  <data name="PageDeviceInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BtnRefresh.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceDevices.Name" xml:space="preserve">
+    <value>bindingSourceDevices</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeviceInfoToolbox.Parent" xml:space="preserve">
+    <value>PageDeviceInfo</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BtnRefreshOnline.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="dataGridViewSIPAccounts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>749, 447</value>
+  </data>
+  <data name="DeviceInfoToolbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 6</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshOnline.Name" xml:space="preserve">
+    <value>BtnRefreshOnline</value>
+  </data>
+  <data name="BtnShowDeviceInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listViewSIPAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 82</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceTypeForPageDevMgmt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PageDeviceManagement.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;BtnShowDeviceInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeviceTypesBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PageDeviceInfo.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="imageListTreeIcon.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxQueryTypeForPageDevMgmt.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;DeviceInfoToolbox.Name" xml:space="preserve">
+    <value>DeviceInfoToolbox</value>
+  </data>
+  <data name="dgvComboBoxColDeviceType.HeaderText" xml:space="preserve">
+    <value>设备类型</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceTypeForPageDevInfo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSubnetMask.Name" xml:space="preserve">
+    <value>dgvTxtBoxColSubnetMask</value>
+  </data>
+  <data name="BtnImportAddressBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceSIPAccounts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTxtBoxColSubnetMask.HeaderText" xml:space="preserve">
+    <value>子网路遮罩</value>
+  </data>
+  <data name="ComboBoxDevStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 104</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>IP地址</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewSIPAccounts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 3</value>
+  </data>
+  <data name="labelDeviceStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="checkBoxAllSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="dataGridViewDevManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 137</value>
+  </data>
+  <data name="&gt;&gt;BtnSIPAccountRefresh.Parent" xml:space="preserve">
+    <value>PageSipAccountManagement</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColMulticastIP.Name" xml:space="preserve">
+    <value>dgvTxtBoxColMulticastIP</value>
+  </data>
+  <data name="&gt;&gt;PageDeviceInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PageDeviceInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 554</value>
+  </data>
+  <data name="ComboBoxDevStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDevDataTable.Name" xml:space="preserve">
+    <value>dataGridViewDevDataTable</value>
+  </data>
+  <data name="dgvTxtBoxColMulticastIP.HeaderText" xml:space="preserve">
+    <value>群播IP地址</value>
+  </data>
+  <data name="&gt;&gt;BtnModifyDev.Name" xml:space="preserve">
+    <value>BtnModifyDev</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDevManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="&gt;&gt;BtnAddDev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshOnline.Parent" xml:space="preserve">
+    <value>PageSipAccountManagement</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColIP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAddDev.Name" xml:space="preserve">
+    <value>BtnAddDev</value>
+  </data>
+  <data name="BtnAddDev.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BtnRefreshDevMan.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 107</value>
+  </data>
+  <data name="BtnRefreshOnline.Text" xml:space="preserve">
+    <value>刷新在線状态</value>
+  </data>
+  <data name="&gt;&gt;BtnAddDev.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="BtnRefreshDevMan.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColDeviceId.Name" xml:space="preserve">
+    <value>dgvTxtBoxColDeviceId</value>
+  </data>
+  <data name="dgvTxtBoxColSoftwareVersion.HeaderText" xml:space="preserve">
+    <value>软件版本</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn13.HeaderText" xml:space="preserve">
+    <value>IP摄像头密码</value>
+  </data>
+  <data name="&gt;&gt;PageDeviceInfo.Name" xml:space="preserve">
+    <value>PageDeviceInfo</value>
+  </data>
+  <data name="dgvTxtBoxColSIPAccountGroup.HeaderText" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="&gt;&gt;BtnUpdateAddressBook.Name" xml:space="preserve">
+    <value>BtnUpdateAddressBook</value>
+  </data>
+  <data name="DeviceInfoToolbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn7</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>PageDeviceManagement</value>
+  </data>
+  <data name="&gt;&gt;BtnRefresh.Name" xml:space="preserve">
+    <value>BtnRefresh</value>
+  </data>
+  <data name="buttonQuery.Text" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDevStatus.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ComboBoxDevTypeForPageDevInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="dgvTxtBoxColDeviceId.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="&gt;&gt;timer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColDeviceAlias.Name" xml:space="preserve">
+    <value>dgvTxtBoxColDeviceAlias</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBoxAllSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 523</value>
+  </data>
+  <data name="BtnDelDev.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 21</value>
+  </data>
+  <data name="tabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>MAC地址</value>
+  </data>
+  <data name="BtnModifyDev.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSoftwareVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnSIPAccountRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 17</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSoftwareVersion.Name" xml:space="preserve">
+    <value>dgvTxtBoxColSoftwareVersion</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceTypeForPageDevInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PageDeviceInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;BtnRefresh.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSIPAccountStatus.Name" xml:space="preserve">
+    <value>dgvTxtBoxColSIPAccountStatus</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PageDeviceManagement.Text" xml:space="preserve">
+    <value>设备管理</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshDevMan.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDevTypeForPageDevInfo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceDevices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSIPAccountName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnPushTest.Name" xml:space="preserve">
+    <value>BtnPushTest</value>
+  </data>
+  <data name="&gt;&gt;BtnExportAddressBook.Name" xml:space="preserve">
+    <value>BtnExportAddressBook</value>
+  </data>
+  <data name="dgvTxtBoxColIP.HeaderText" xml:space="preserve">
+    <value>IP地址</value>
+  </data>
+  <data name="dataGridViewDevManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>772, 402</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormDeviceManagement</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer.Name" xml:space="preserve">
+    <value>timer</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDevStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllSelect.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSIPAccountName.Name" xml:space="preserve">
+    <value>dgvTxtBoxColSIPAccountName</value>
+  </data>
+  <data name="BtnImportAddressBook.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewSIPAccounts.Name" xml:space="preserve">
+    <value>dataGridViewSIPAccounts</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>设备地址</value>
+  </data>
+  <data name="&gt;&gt;buttonQuery.Name" xml:space="preserve">
+    <value>buttonQuery</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewDevDataTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 140</value>
+  </data>
+  <data name="BtnRefreshDevMan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="ComboBoxQueryTypeForPageDevMgmt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="&gt;&gt;BtnDelDev.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>工具欄</value>
+  </data>
+  <data name="ComboBoxDevTypeForPageDevInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 104</value>
+  </data>
+  <data name="dgvTxtBoxColOnlineStatus.Width" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColMacAddr.Name" xml:space="preserve">
+    <value>dgvTxtBoxColMacAddr</value>
+  </data>
+  <data name="&gt;&gt;imageListTreeIcon.Name" xml:space="preserve">
+    <value>imageListTreeIcon</value>
+  </data>
+  <data name="dataGridViewDevDataTable.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;BtnPushTest.Parent" xml:space="preserve">
+    <value>PageSipAccountManagement</value>
+  </data>
+  <data name="listViewDevManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>534, 373</value>
+  </data>
+  <data name="&gt;&gt;listViewDevManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnModifyDev.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevMgmt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgvTxtBoxColSIPAccountStatus.HeaderText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="&gt;&gt;BtnDelDev.Name" xml:space="preserve">
+    <value>BtnDelDev</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshOnline.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnShowDeviceInfo.Text" xml:space="preserve">
+    <value>查看设备信息</value>
+  </data>
+  <data name="&gt;&gt;PageSipAccountManagement.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewSIPAccounts.Parent" xml:space="preserve">
+    <value>PageSipAccountManagement</value>
+  </data>
+  <data name="dataGridViewDevManager.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="listViewSIPAccount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;dgvComboBoxColDeviceType.Name" xml:space="preserve">
+    <value>dgvComboBoxColDeviceType</value>
+  </data>
+  <data name="&gt;&gt;PageSipAccountManagement.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTxtBoxColDeviceAlias.HeaderText" xml:space="preserve">
+    <value>设备別名</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;BtnSIPAccountRefresh.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BtnExportAddressBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 37</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxQueryTypeForPageDevMgmt.Name" xml:space="preserve">
+    <value>ComboBoxQueryTypeForPageDevMgmt</value>
+  </data>
+  <data name="&gt;&gt;BtnShowDeviceInfo.Name" xml:space="preserve">
+    <value>BtnShowDeviceInfo</value>
+  </data>
+  <data name="PageDeviceManagement.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BtnShowDeviceInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColMacAddr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>群播IP地址</value>
+  </data>
+  <data name="&gt;&gt;BtnImportAddressBook.Name" xml:space="preserve">
+    <value>BtnImportAddressBook</value>
+  </data>
+  <data name="BtnRefreshDevMan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 21</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnExportAddressBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnUpdateAddressBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSIPAccountDeviceId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColDeviceId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnUpdateAddressBook.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonQuery.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="PageDeviceManagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="PageSipAccountManagement.Text" xml:space="preserve">
+    <value>SIP帳户管理</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>设备別名</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDevTypeForPageDevInfo.Name" xml:space="preserve">
+    <value>ComboBoxDevTypeForPageDevInfo</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonQuery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 91</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceSIPAccounts.Name" xml:space="preserve">
+    <value>bindingSourceSIPAccounts</value>
+  </data>
+  <data name="dataGridViewSIPAccounts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 82</value>
+  </data>
+  <data name="&gt;&gt;listViewDevManager.Parent" xml:space="preserve">
+    <value>PageDeviceManagement</value>
+  </data>
+  <data name="dgvTxtBoxColOnlineStatus.HeaderText" xml:space="preserve">
+    <value>在線状态</value>
+  </data>
+  <data name="ComboBoxDevTypeForPageDevInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColOnlineStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnAddDev.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="dataGridViewDevManager.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxQueryTypeForPageDevMgmt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevMgmt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="dataGridViewDevDataTable.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="checkBoxAllSelect.Text" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColGateway.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTxtBoxColDeviceId.HeaderText" xml:space="preserve">
+    <value>设备地址</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>794, 580</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceDevicesForDeviceManagement.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnImportAddressBook.Text" xml:space="preserve">
+    <value>地址簿導入</value>
+  </data>
+  <data name="&gt;&gt;BtnRefresh.Parent" xml:space="preserve">
+    <value>DeviceInfoToolbox</value>
+  </data>
+  <data name="ComboBoxDevStatus.Items" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceTypeForPageDevMgmt.Name" xml:space="preserve">
+    <value>labelDeviceTypeForPageDevMgmt</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>网关</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>IP摄像头帳号</value>
+  </data>
+  <data name="PageDeviceManagement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;BtnModifyDev.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="ComboBoxQueryTypeForPageDevMgmt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 101</value>
+  </data>
+  <data name="&gt;&gt;listViewDevManager.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelDeviceStatus.Text" xml:space="preserve">
+    <value>设备状态</value>
+  </data>
+  <data name="&gt;&gt;BtnModifyDev.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;BtnAddDev.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="PageDeviceInfo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;BtnImportAddressBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnPushTest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnExportAddressBook.Text" xml:space="preserve">
+    <value>生成地址簿</value>
+  </data>
+  <data name="DeviceInfoToolbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>770, 83</value>
+  </data>
+  <data name="&gt;&gt;buttonQuery.Parent" xml:space="preserve">
+    <value>PageDeviceManagement</value>
+  </data>
+  <data name="&gt;&gt;BtnExportAddressBook.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceTypeForPageDevInfo.Parent" xml:space="preserve">
+    <value>PageDeviceInfo</value>
+  </data>
+  <data name="PageDeviceInfo.Text" xml:space="preserve">
+    <value>设备信息</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDevManager.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listViewSIPAccount.Name" xml:space="preserve">
+    <value>listViewSIPAccount</value>
+  </data>
+  <data name="labelDeviceTypeForPageDevMgmt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 104</value>
+  </data>
+  <data name="BtnAccountManager.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColIP.Name" xml:space="preserve">
+    <value>dgvTxtBoxColIP</value>
+  </data>
+  <data name="&gt;&gt;BtnUpdateAddressBook.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshDevMan.Name" xml:space="preserve">
+    <value>BtnRefreshDevMan</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllSelect.Parent" xml:space="preserve">
+    <value>PageDeviceManagement</value>
+  </data>
+  <data name="&gt;&gt;DeviceInfoToolbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewSIPAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelDeviceStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 107</value>
+  </data>
+  <data name="BtnShowDeviceInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;BtnModifyDev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BtnDelDev.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 38</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColGateway.Name" xml:space="preserve">
+    <value>dgvTxtBoxColGateway</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceDevicesForDeviceManagement.Name" xml:space="preserve">
+    <value>bindingSourceDevicesForDeviceManagement</value>
+  </data>
+  <data name="checkBoxAllSelect.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDevDataTable.Parent" xml:space="preserve">
+    <value>PageDeviceInfo</value>
+  </data>
+  <data name="&gt;&gt;BtnRefreshDevMan.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;BtnAccountManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColSIPAccountGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listViewSIPAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dgvTxtBoxColDeviceAlias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnImportAddressBook.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="BtnModifyDev.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="BtnExportAddressBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>496, 21</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn11</value>
+  </data>
+  <metadata name="DeviceTypesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="bindingSourceDevices.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>564, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>813, 16</value>
+  </metadata>
+  <metadata name="bindingSourceDevicesForDeviceManagement.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 55</value>
+  </metadata>
+  <metadata name="imageListTreeIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>309, 19</value>
+  </metadata>
+  <metadata name="bindingSourceSIPAccounts.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>334, 55</value>
+  </metadata>
+</root>

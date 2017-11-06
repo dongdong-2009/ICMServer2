@@ -1,0 +1,167 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogConfigSystemSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"       
+        xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+        xmlns:controls="clr-namespace:ITE.WPF.Controls;assembly=WpfIPAddressControlLib"
+        mc:Ignorable="d"
+        Title="系統設置" Height="Auto" Width="300"
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="WidthAndHeight" ResizeMode="NoResize"
+        MinWidth="350" FontSize="14">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+                <ResourceDictionary Source="InputFormResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converter -->
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <converter:CloudSolutionToRadioButtonConverter x:Key="CloudSolutionConverter"/>
+            <converter:StringResourceIDToStringConverter x:Key="StringResourceIDConverter"/>
+            <converter:UpgradeStatusToStringConverter x:Key="UpgradeStatusConverter"/>
+
+            <Style TargetType="{x:Type GroupBox}">
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <Binding Mode="OneWay" Path="DialogConfigSystemSettingViewModel" Source="{StaticResource Locator}"/>
+    </Window.DataContext>
+
+    <StackPanel>
+        <GroupBox Header="系統屬性">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Style="{StaticResource PropertyName}" Content="系統名稱"/>
+                    <TextBox Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding AppName}"/>
+
+                    <Label Grid.Row="1" Style="{StaticResource PropertyName}" Content="內網服務IP"/>
+                    <controls:IPAddressControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" IP="{Binding LocalIP}"/>
+
+                    <Label Grid.Row="2" Style="{StaticResource PropertyName}" Content="{DynamicResource SubnetMask}"/>
+                    <controls:IPAddressControl Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" IP="{Binding LocalSubnetMask}"/>
+
+                    <Label Grid.Row="3" Style="{StaticResource PropertyName}" Content="{DynamicResource Gateway}"/>
+                    <controls:IPAddressControl Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" IP="{Binding LocalGateway}"/>
+
+                    <Label Grid.Row="4" Style="{StaticResource PropertyName}" Content="外網服務IP"/>
+                    <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding OutboundIP}"/>
+
+                    <Label Grid.Row="5" Style="{StaticResource PropertyName}" Content="HTTP服務端口號"/>
+                    <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding HTTPServerPort}"/>
+                    <Label Grid.Row="5" Grid.Column="2" Style="{StaticResource PropertyName}" Content="NTP服務端口號"/>
+                    <TextBlock Grid.Row="5" Grid.Column="3" Text="{Binding NTPServerPort}"/>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="雲對講方案">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton Content="採用SIP Server" IsChecked="{Binding CloudSolution, Mode=TwoWay, Converter={StaticResource CloudSolutionConverter}, ConverterParameter=SIPServer}"/>
+                    <RadioButton Grid.Column="1" Content="採用PPHook" IsChecked="{Binding CloudSolution, Mode=TwoWay, Converter={StaticResource CloudSolutionConverter}, ConverterParameter=PPHook}"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" MinWidth="60"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Style="{StaticResource PropertyName}" Content="SIP伺服器" HorizontalAlignment="Right"/>
+                    <TextBox Grid.Column="1" Text="{Binding SIPServerAddress}"/>
+                    <Label Grid.Column="2" Style="{StaticResource PropertyName}" Content="{DynamicResource Port}" HorizontalAlignment="Right"/>
+                    <TextBox Grid.Column="3" Text="{Binding SIPServerPort}"/>
+
+                    <Label Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource PropertyName}" Content="SIP語音對講端口" HorizontalAlignment="Right"/>
+                    <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding SIPCommunicationPort}"/>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="天氣預報設置">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <ComboBox ItemsSource="{Binding Provinces}" SelectedValue="{Binding ProvinceID}" SelectedValuePath="ProvinceID" IsSynchronizedWithCurrentItem="True">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=ProvinceName, Converter={StaticResource StringResourceIDConverter}}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Label Grid.Column="1" Content="省、直轄市" HorizontalAlignment="Left" Margin="0, 0, 20, 0"/>
+                <ComboBox Grid.Column="2" ItemsSource="{Binding Cities}" SelectedValue="{Binding CityID}" SelectedValuePath="CityID" IsSynchronizedWithCurrentItem="True">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=CityName, Converter={StaticResource StringResourceIDConverter}}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Label Grid.Column="3" Content="地區" HorizontalAlignment="Left"/>
+            </Grid>
+        </GroupBox>
+
+        <Grid Visibility="{Binding SaveCommand.Execution, Converter={StaticResource NullToVisibilityConverter}}">
+            <Label Visibility="{Binding SaveCommand.Execution.IsNotCompleted, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                   Content="{DynamicResource Saving}" ContentStringFormat="{}{0}..."/>
+
+            <!--Completed-->
+            <Label Visibility="{Binding SaveCommand.Execution.IsSuccessfullyCompleted, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                   Content="{DynamicResource SuccessfullySaved}" ContentStringFormat="{}{0}..."/>
+
+            <!--Canceled-->
+            <Label Visibility="{Binding SaveCommand.Execution.IsCanceled, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                   Content="{DynamicResource Canceled}" ContentStringFormat="{}{0}..."/>
+
+            <!--Error details-->
+            <Label Visibility="{Binding SaveCommand.Execution.IsFaulted, Converter={StaticResource BooleanToVisibilityConverter}}" Foreground="Red" 
+                   Content="{Binding SaveCommand.Execution.ErrorMessage}" />
+        </Grid>
+
+        <Button Content="{DynamicResource Save}" Margin="10" HorizontalAlignment="Center" Command="{Binding SaveCommand}"/>
+    </StackPanel>
+</Window>

@@ -1,0 +1,67 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogBackupData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"       
+        xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+        xmlns:controls="clr-namespace:ITE.WPF.Controls;assembly=WpfIPAddressControlLib"
+        mc:Ignorable="d"
+        Title="數據備份/恢復" Height="Auto" Width="300" 
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="WidthAndHeight" ResizeMode="NoResize"
+        MinWidth="350" FontSize="14">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+                <ResourceDictionary Source="InputFormResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converter -->
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <converter:DatabaseBackupOperationToRadioButtonConverter x:Key="DatabaseBackupOperationConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <Binding Mode="OneWay" Path="DialogBackupDataViewModel" Source="{StaticResource Locator}"/>
+    </Window.DataContext>
+    
+    <StackPanel>
+        <StackPanel Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <RadioButton Content="數據備份" IsChecked="{Binding Operation, Mode=TwoWay, Converter={StaticResource DatabaseBackupOperationConverter}, ConverterParameter=Backup}"/>
+                <RadioButton Grid.Column="1" Content="數據恢復" IsChecked="{Binding Operation, Mode=TwoWay, Converter={StaticResource DatabaseBackupOperationConverter}, ConverterParameter=Restore}"/>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Style="{StaticResource PropertyName}" Content="{DynamicResource FilePath}" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1" IsReadOnly="True" VerticalAlignment="Center" Text="{Binding FilePath}"/>
+                <Button Grid.Column="2" Content="..." VerticalAlignment="Center" Margin="0" MinWidth="30" Command="{Binding PickFileCommand}"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Content="{DynamicResource Execute}" Margin="10" Command="{Binding ExecuteCommand}"/>
+            <Button Content="{DynamicResource Exit}" Margin="10" Click="Button_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

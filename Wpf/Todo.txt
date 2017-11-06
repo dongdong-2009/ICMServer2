@@ -1,0 +1,6 @@
+﻿- 裝置管理 -> 同步地址簿
+- Heartbeat 目前是根據 device count 來決定是否要重新載入 device 列表，但如果只是 device 資料內容有修改而數量不變，則可能拿
+  過時的資料在 polling。
+- 多國語系處理的不完整，有bug，有些明明有翻譯成簡體中文的，介面卻顯示繁體中文的字樣
+- 告警訊息不實用
+- iccard 與 icmap table 之間要加上 foreign key 關聯

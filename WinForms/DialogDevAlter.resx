@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ComboBoxDeviceType.Items" xml:space="preserve">
+    <value>管理中心</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items1" xml:space="preserve">
+    <value>别墅门口机</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items2" xml:space="preserve">
+    <value>单元门口机</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items3" xml:space="preserve">
+    <value>楼栋门口机</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items4" xml:space="preserve">
+    <value>小区门口机</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items5" xml:space="preserve">
+    <value>分机</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items6" xml:space="preserve">
+    <value>管理机</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items7" xml:space="preserve">
+    <value>分机带SD卡</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items8" xml:space="preserve">
+    <value>手机</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items9" xml:space="preserve">
+    <value>紧急对讲机</value>
+  </data>
+  <data name="ComboBoxDeviceType.Items10" xml:space="preserve">
+    <value>IP摄像头</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ComboBoxDeviceType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 23</value>
+  </data>
+  <data name="ComboBoxDeviceType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ComboBoxDeviceType.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDeviceType.Name" xml:space="preserve">
+    <value>ComboBoxDeviceType</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDeviceType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDeviceType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxDeviceType.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="labelDeviceAddr.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDeviceAddr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 63</value>
+  </data>
+  <data name="labelDeviceAddr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="labelDeviceAddr.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="labelDeviceAddr.Text" xml:space="preserve">
+    <value>设备地址：</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceAddr.Name" xml:space="preserve">
+    <value>labelDeviceAddr</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceAddr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceAddr.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceAddr.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="labelDeviceType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDeviceType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 26</value>
+  </data>
+  <data name="labelDeviceType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="labelDeviceType.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="labelDeviceType.Text" xml:space="preserve">
+    <value>设备类型：</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceType.Name" xml:space="preserve">
+    <value>labelDeviceType</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceType.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="labelDeviceIp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDeviceIp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 100</value>
+  </data>
+  <data name="labelDeviceIp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 12</value>
+  </data>
+  <data name="labelDeviceIp.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="labelDeviceIp.Text" xml:space="preserve">
+    <value>设备 IP：</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceIp.Name" xml:space="preserve">
+    <value>labelDeviceIp</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceIp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceIp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceIp.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="labelDeviceGateway.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDeviceGateway.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 174</value>
+  </data>
+  <data name="labelDeviceGateway.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="labelDeviceGateway.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="labelDeviceGateway.Text" xml:space="preserve">
+    <value>设备網开：</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceGateway.Name" xml:space="preserve">
+    <value>labelDeviceGateway</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceGateway.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceGateway.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceGateway.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="labelDeviceSubnetMask.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDeviceSubnetMask.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 211</value>
+  </data>
+  <data name="labelDeviceSubnetMask.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="labelDeviceSubnetMask.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="labelDeviceSubnetMask.Text" xml:space="preserve">
+    <value>子網掩码：</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceSubnetMask.Name" xml:space="preserve">
+    <value>labelDeviceSubnetMask</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceSubnetMask.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceSubnetMask.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceSubnetMask.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items" xml:space="preserve">
+    <value>239.255.42.42</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items1" xml:space="preserve">
+    <value>239.255.42.43</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items2" xml:space="preserve">
+    <value>239.255.42.44</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items3" xml:space="preserve">
+    <value>239.255.42.45</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items4" xml:space="preserve">
+    <value>239.255.42.46</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items5" xml:space="preserve">
+    <value>239.255.42.47</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items6" xml:space="preserve">
+    <value>239.255.42.48</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items7" xml:space="preserve">
+    <value>239.255.42.49</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items8" xml:space="preserve">
+    <value>239.255.42.56</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items9" xml:space="preserve">
+    <value>239.255.42.57</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items10" xml:space="preserve">
+    <value>239.255.42.58</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items11" xml:space="preserve">
+    <value>239.255.42.59</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items12" xml:space="preserve">
+    <value>239.255.42.60</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items13" xml:space="preserve">
+    <value>239.255.42.61</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items14" xml:space="preserve">
+    <value>239.255.42.62</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items15" xml:space="preserve">
+    <value>239.255.42.63</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items16" xml:space="preserve">
+    <value>239.255.42.64</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items17" xml:space="preserve">
+    <value>239.255.42.65</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items18" xml:space="preserve">
+    <value>239.255.42.66</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items19" xml:space="preserve">
+    <value>239.255.42.67</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items20" xml:space="preserve">
+    <value>239.255.42.68</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items21" xml:space="preserve">
+    <value>239.255.42.69</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items22" xml:space="preserve">
+    <value>239.255.42.70</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items23" xml:space="preserve">
+    <value>239.255.42.71</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items24" xml:space="preserve">
+    <value>239.255.42.72</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items25" xml:space="preserve">
+    <value>239.255.42.73</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items26" xml:space="preserve">
+    <value>239.255.42.74</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items27" xml:space="preserve">
+    <value>239.255.42.75</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items28" xml:space="preserve">
+    <value>239.255.42.76</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items29" xml:space="preserve">
+    <value>239.255.42.77</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items30" xml:space="preserve">
+    <value>239.255.42.78</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items31" xml:space="preserve">
+    <value>239.255.42.79</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items32" xml:space="preserve">
+    <value>239.255.42.128</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items33" xml:space="preserve">
+    <value>239.255.42.129</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items34" xml:space="preserve">
+    <value>239.255.42.130</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items35" xml:space="preserve">
+    <value>239.255.42.131</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items36" xml:space="preserve">
+    <value>239.255.42.132</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items37" xml:space="preserve">
+    <value>239.255.42.133</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items38" xml:space="preserve">
+    <value>239.255.42.134</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items39" xml:space="preserve">
+    <value>239.255.42.135</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items40" xml:space="preserve">
+    <value>239.255.42.136</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items41" xml:space="preserve">
+    <value>239.255.42.137</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items42" xml:space="preserve">
+    <value>239.255.42.138</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items43" xml:space="preserve">
+    <value>239.255.42.139</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items44" xml:space="preserve">
+    <value>239.255.42.140</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items45" xml:space="preserve">
+    <value>239.255.42.141</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items46" xml:space="preserve">
+    <value>239.255.42.142</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items47" xml:space="preserve">
+    <value>239.255.42.143</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items48" xml:space="preserve">
+    <value>239.255.42.192</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items49" xml:space="preserve">
+    <value>239.255.42.193</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items50" xml:space="preserve">
+    <value>239.255.42.194</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items51" xml:space="preserve">
+    <value>239.255.42.195</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items52" xml:space="preserve">
+    <value>239.255.42.196</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items53" xml:space="preserve">
+    <value>239.255.42.197</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items54" xml:space="preserve">
+    <value>239.255.42.198</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items55" xml:space="preserve">
+    <value>239.255.42.199</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items56" xml:space="preserve">
+    <value>239.255.42.200</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items57" xml:space="preserve">
+    <value>239.255.42.201</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items58" xml:space="preserve">
+    <value>239.255.42.202</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items59" xml:space="preserve">
+    <value>239.255.42.203</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items60" xml:space="preserve">
+    <value>239.255.42.204</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items61" xml:space="preserve">
+    <value>239.255.42.205</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items62" xml:space="preserve">
+    <value>239.255.42.206</value>
+  </data>
+  <data name="ComboBoxGroupIp.Items63" xml:space="preserve">
+    <value>239.255.42.207</value>
+  </data>
+  <data name="ComboBoxGroupIp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 238</value>
+  </data>
+  <data name="ComboBoxGroupIp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 20</value>
+  </data>
+  <data name="ComboBoxGroupIp.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxGroupIp.Name" xml:space="preserve">
+    <value>ComboBoxGroupIp</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxGroupIp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxGroupIp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxGroupIp.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="labelGroupIp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelGroupIp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 248</value>
+  </data>
+  <data name="labelGroupIp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="labelGroupIp.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="labelGroupIp.Text" xml:space="preserve">
+    <value>Group IP：</value>
+  </data>
+  <data name="&gt;&gt;labelGroupIp.Name" xml:space="preserve">
+    <value>labelGroupIp</value>
+  </data>
+  <data name="&gt;&gt;labelGroupIp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelGroupIp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelGroupIp.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="labelDeviceAlias.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDeviceAlias.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 137</value>
+  </data>
+  <data name="labelDeviceAlias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="labelDeviceAlias.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="labelDeviceAlias.Text" xml:space="preserve">
+    <value>设备別名：</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceAlias.Name" xml:space="preserve">
+    <value>labelDeviceAlias</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceAlias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceAlias.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceAlias.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="BtnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 146</value>
+  </data>
+  <data name="BtnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="BtnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="BtnCancel.Text" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="&gt;&gt;BtnCancel.Name" xml:space="preserve">
+    <value>BtnCancel</value>
+  </data>
+  <data name="&gt;&gt;BtnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnCancel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="BtnOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 101</value>
+  </data>
+  <data name="BtnOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="BtnOK.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="BtnOK.Text" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="&gt;&gt;BtnOK.Name" xml:space="preserve">
+    <value>BtnOK</value>
+  </data>
+  <data name="&gt;&gt;BtnOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnOK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnOK.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="ipAddressControlDevIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 94</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ipAddressControlDevIP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="ipAddressControlDevIP.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>91, 21</value>
+  </data>
+  <data name="ipAddressControlDevIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="ipAddressControlDevIP.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="ipAddressControlDevIP.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlDevIP.Name" xml:space="preserve">
+    <value>ipAddressControlDevIP</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlDevIP.Type" xml:space="preserve">
+    <value>IPAddressControlLib.IPAddressControl, IPAddressControlLib, Version=1.2.6508.20373, Culture=neutral, PublicKeyToken=7052a5c2c6d6e1fc</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlDevIP.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlDevIP.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ipAddressControlGW.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 166</value>
+  </data>
+  <data name="ipAddressControlGW.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="ipAddressControlGW.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>91, 21</value>
+  </data>
+  <data name="ipAddressControlGW.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="ipAddressControlGW.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="ipAddressControlGW.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlGW.Name" xml:space="preserve">
+    <value>ipAddressControlGW</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlGW.Type" xml:space="preserve">
+    <value>IPAddressControlLib.IPAddressControl, IPAddressControlLib, Version=1.2.6508.20373, Culture=neutral, PublicKeyToken=7052a5c2c6d6e1fc</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlGW.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlGW.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ipAddressControlSM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 202</value>
+  </data>
+  <data name="ipAddressControlSM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="ipAddressControlSM.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>91, 21</value>
+  </data>
+  <data name="ipAddressControlSM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="ipAddressControlSM.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="ipAddressControlSM.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlSM.Name" xml:space="preserve">
+    <value>ipAddressControlSM</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlSM.Type" xml:space="preserve">
+    <value>IPAddressControlLib.IPAddressControl, IPAddressControlLib, Version=1.2.6508.20373, Culture=neutral, PublicKeyToken=7052a5c2c6d6e1fc</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlSM.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ipAddressControlSM.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="labelCamID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCamID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 322</value>
+  </data>
+  <data name="labelCamID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 12</value>
+  </data>
+  <data name="labelCamID.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="labelCamID.Text" xml:space="preserve">
+    <value>IP摄像头 ID：</value>
+  </data>
+  <data name="labelCamID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelCamID.Name" xml:space="preserve">
+    <value>labelCamID</value>
+  </data>
+  <data name="&gt;&gt;labelCamID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCamID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelCamID.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelCamPW.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCamPW.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 359</value>
+  </data>
+  <data name="labelCamPW.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 12</value>
+  </data>
+  <data name="labelCamPW.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="labelCamPW.Text" xml:space="preserve">
+    <value>IP摄像头 PW：</value>
+  </data>
+  <data name="labelCamPW.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelCamPW.Name" xml:space="preserve">
+    <value>labelCamPW</value>
+  </data>
+  <data name="&gt;&gt;labelCamPW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCamPW.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelCamPW.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="textBoxCamID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 315</value>
+  </data>
+  <data name="textBoxCamID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="textBoxCamID.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="textBoxCamID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamID.Name" xml:space="preserve">
+    <value>textBoxCamID</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamID.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textBoxCamPW.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 351</value>
+  </data>
+  <data name="textBoxCamPW.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="textBoxCamPW.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="textBoxCamPW.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamPW.Name" xml:space="preserve">
+    <value>textBoxCamPW</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamPW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamPW.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamPW.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="checkBoxSD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxSD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>392, 25</value>
+  </data>
+  <data name="checkBoxSD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="checkBoxSD.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="checkBoxSD.Text" xml:space="preserve">
+    <value>SD卡</value>
+  </data>
+  <data name="checkBoxSD.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSD.Name" xml:space="preserve">
+    <value>checkBoxSD</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSD.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textBoxAlias.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 130</value>
+  </data>
+  <data name="textBoxAlias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="textBoxAlias.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="&gt;&gt;textBoxAlias.Name" xml:space="preserve">
+    <value>textBoxAlias</value>
+  </data>
+  <data name="&gt;&gt;textBoxAlias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxAlias.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxAlias.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelDeviceMac.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDeviceMac.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 285</value>
+  </data>
+  <data name="labelDeviceMac.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 12</value>
+  </data>
+  <data name="labelDeviceMac.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="labelDeviceMac.Text" xml:space="preserve">
+    <value>Device Mac：</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceMac.Name" xml:space="preserve">
+    <value>labelDeviceMac</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceMac.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceMac.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelDeviceMac.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxDeviceMac.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PMingLiU, 12pt</value>
+  </data>
+  <data name="textBoxDeviceMac.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 273</value>
+  </data>
+  <data name="textBoxDeviceMac.Mask" xml:space="preserve">
+    <value>CC:CC:CC:CC:CC:CC</value>
+  </data>
+  <data name="textBoxDeviceMac.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 27</value>
+  </data>
+  <data name="textBoxDeviceMac.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="textBoxDeviceMac.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;textBoxDeviceMac.Name" xml:space="preserve">
+    <value>textBoxDeviceMac</value>
+  </data>
+  <data name="&gt;&gt;textBoxDeviceMac.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxDeviceMac.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxDeviceMac.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="DeviceAddressControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 60</value>
+  </data>
+  <data name="DeviceAddressControl.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>234, 21</value>
+  </data>
+  <data name="DeviceAddressControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="DeviceAddressControl.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="DeviceAddressControl.Text" xml:space="preserve">
+    <value>00-00-00-00-00-00</value>
+  </data>
+  <data name="&gt;&gt;DeviceAddressControl.Name" xml:space="preserve">
+    <value>DeviceAddressControl</value>
+  </data>
+  <data name="&gt;&gt;DeviceAddressControl.Type" xml:space="preserve">
+    <value>DeviceAddressControlLib.DeviceAddressControl, DeviceAddressControlLib, Version=1.0.6508.20375, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DeviceAddressControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DeviceAddressControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>493, 400</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>修改设备</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DialogDevAlter</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

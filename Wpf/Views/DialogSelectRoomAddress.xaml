@@ -1,0 +1,46 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogSelectRoomAddress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+        mc:Ignorable="d"
+        Title="小區地址" Height="600" Width="400"
+        WindowStartupLocation="CenterScreen" FontSize="14">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+
+            <Style x:Key="TreeViewItemStyle" TargetType="TreeViewItem">
+                <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                <Setter Property="KeyboardNavigation.AcceptsReturn" Value="True" />
+                <Setter Property="local:VirtualToggleButton.IsVirtualToggleButton" Value="True" />
+                <Setter Property="local:VirtualToggleButton.IsChecked" Value="{Binding IsChecked}" />
+            </Style>
+
+            <!-- MVVM Locator -->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converters -->
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <TreeView ItemsSource="{Binding DevicesTree}" ItemContainerStyle="{StaticResource TreeViewItemStyle}">
+            <TreeView.Resources>
+                <HierarchicalDataTemplate DataType="{x:Type vm:DeviceNodeViewModel}" ItemsSource="{Binding Children, Mode=OneTime}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding DeviceAddress, Converter={StaticResource DeviceAddressConverter}, ConverterParameter=AllDevices}" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+    </Grid>
+</Window>

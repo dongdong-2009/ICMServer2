@@ -1,0 +1,103 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogSelectDevicesToBeUpgraded"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        xmlns:v="clr-namespace:ICMServer.WPF.Views"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"       
+        xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+        xmlns:controls="clr-namespace:ITE.WPF.Controls;assembly=WpfIPAddressControlLib"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=vm:DialogSelectDevicesToBeUpgradedViewModel, IsDesignTimeCreatable=True}"
+        Title="{DynamicResource SoftwareUpgrade}" Height="Auto" Width="400"
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="Height" ResizeMode="NoResize"
+        FontSize="14" v:WindowBehavior.HideCloseButton="True">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+                <ResourceDictionary Source="InputFormResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converter -->
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <converter:SelectDeviceOptionToRadioButtonConverter x:Key="SelectDeviceOptionConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <StackPanel>
+        <StackPanel Margin="10" HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+            </StackPanel.Resources>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Style="{StaticResource PropertyName}" Content="選擇方式"/>
+
+                <RadioButton Content="根據 IP" GroupName="SelectDeviceOption" IsChecked="{Binding SelectDeviceOption, Mode=TwoWay, Converter={StaticResource SelectDeviceOptionConverter}, ConverterParameter=ByIP}"/>
+                <RadioButton Content="根據裝置位址" GroupName="SelectDeviceOption" IsChecked="{Binding SelectDeviceOption, Mode=TwoWay, Converter={StaticResource SelectDeviceOptionConverter}, ConverterParameter=ByDeviceAddress}"/>
+            </StackPanel>
+            <StackPanel MinWidth="300">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel.Style>
+                        <Style TargetType="{x:Type StackPanel}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding SelectDeviceOption}" Value="ByIP">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding SelectDeviceOption}" Value="ByDeviceAddress">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </StackPanel.Style>
+                    <Label Style="{StaticResource PropertyName}" Content="升級地址"/>
+                    <ComboBox MinWidth="180" ItemsSource="{Binding Devices}" DisplayMemberPath="ip">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel />
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel.Style>
+                        <Style TargetType="{x:Type StackPanel}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding SelectDeviceOption}" Value="ByIP">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding SelectDeviceOption}" Value="ByDeviceAddress">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </StackPanel.Style>
+                    <Label Style="{StaticResource PropertyName}" Content="升級地址"/>
+                    <TextBox MinWidth="180" IsReadOnly="True" Text="{Binding DeviceAddress, Converter={StaticResource DeviceAddressConverter}, ConverterParameter=AllDevices}"/>
+                    <Button Content="..." MinWidth="40" Command="{Binding PickDeviceAddressCommand, Mode=OneWay}"/>
+                </StackPanel>
+
+                <Grid Margin="0, 10, 0, 0" Visibility="{Binding OkCommand.Execution, Converter={StaticResource NullToVisibilityConverter}}">
+                    <ProgressBar Minimum="0" Maximum="100" Value="{Binding Progress, Mode=OneWay}"/>
+                    <TextBlock Margin="10,3,0,3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Text="{Binding Path=Progress, StringFormat={}{0:0}%}" />
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="{DynamicResource Ok}" Command="{Binding OkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" Margin="10"/>
+            <Button Content="{DynamicResource Close}" Command="{Binding CloseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" Margin="10"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

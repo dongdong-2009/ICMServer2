@@ -1,0 +1,86 @@
+﻿<Window x:Class="ICMServer.WPF.Views.DialogSyncSipAccounts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICMServer.WPF"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:vm="clr-namespace:ICMServer.WPF.ViewModels"
+        xmlns:model="clr-namespace:ICMServer.Models;assembly=ICMServer.Models"
+        xmlns:converter="clr-namespace:ICMServer.WPF.Converter"
+        mc:Ignorable="d"
+        Title="同步帳號訊息" Height="300" Width="300"
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="WidthAndHeight" ResizeMode="NoResize"
+        FontSize="14">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:DesignTimeResourceDictionary x:Name="lanaguageResource" DesignTimeSource="pack://application:,,,/Wpf;component/Cultures/StringResource.xaml"/>
+                <ResourceDictionary Source="GlobalResource.xaml"/>
+                <ResourceDictionary Source="InputFormResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CulturesHelper x:Key="CulturesHelperDataSource" d:IsDataSource="True"/>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <!-- Converter -->
+            <converter:DeviceAddressConverter x:Key="DeviceAddressConverter"/>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <converter:SyncStatusToStringConverter x:Key="SyncStatusConverter"/>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <Binding Mode="OneWay" Path="DialogSyncSipAccountsViewModel" Source="{StaticResource Locator}"/>
+    </Window.DataContext>
+
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="開始同步" Margin="5" Command="{Binding SyncCommand}"/>
+                <Button Content="取消同步" Margin="5" Command="{Binding SyncCommand.CancelCommand}"/>
+            </StackPanel>
+            
+            <Grid Visibility="{Binding SyncCommand.Execution, Converter={StaticResource NullToVisibilityConverter}}" VerticalAlignment="Center">
+                <Label Visibility="{Binding SyncCommand.Execution.IsNotCompleted, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                   Content="同步中..." />
+
+                <!--Completed-->
+                <Label Visibility="{Binding SyncCommand.Execution.IsSuccessfullyCompleted, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                   Content="同步成功..." />
+
+                <!--Canceled-->
+                <Label Visibility="{Binding SyncCommand.Execution.IsCanceled, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                       Content="{DynamicResource Canceled}" ContentStringFormat="{}{0}..."/>
+
+                <!--Error details-->
+                <Label Visibility="{Binding SyncCommand.Execution.IsFaulted, Converter={StaticResource BooleanToVisibilityConverter}}" Foreground="Red" 
+                   Content="{Binding SyncCommand.Execution.ErrorMessage}" />
+            </Grid>
+        </StackPanel>
+
+        <GroupBox Header="待同步帳號列表" Margin="5">
+            <DataGrid ItemsSource="{Binding SipAccounts}" Margin="5" MinHeight="300" MaxHeight="550">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="帳號" Binding="{Binding C_user}" />
+                    <!--
+                <DataGridTextColumn Header="房間號" Binding="{Binding C_room, Converter={StaticResource DeviceAddressConverter}}" />
+                <DataGridTextColumn Header="群組編號" Binding="{Binding C_usergroup}" />
+                <DataGridTextColumn Header="同步狀態" Binding="{Binding C_sync, Converter={StaticResource SyncStatusConverter}}"/>
+                -->
+                </DataGrid.Columns>
+
+                <DataGrid.GroupStyle>
+                    <GroupStyle ContainerStyle="{StaticResource SipAccountsGroupHeaderStyle}">
+                        <GroupStyle.Panel>
+                            <ItemsPanelTemplate>
+                                <DataGridRowsPresenter/>
+                            </ItemsPanelTemplate>
+                        </GroupStyle.Panel>
+                    </GroupStyle>
+                </DataGrid.GroupStyle>
+            </DataGrid>
+        </GroupBox>
+    </DockPanel>
+</Window>
