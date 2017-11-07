@@ -32,10 +32,12 @@ namespace ICMServer
              **/
             using (var db = new ICMDBContext())
             {
-                Device dev = new Device();
-                dev.ip = AddrIP;
-                dev.roomid = addr;
-                dev.Alias = textBoxAlias.Text;
+                Device dev = new Device
+                {
+                    ip = AddrIP,
+                    roomid = addr,
+                    Alias = textBoxAlias.Text
+                };
                 try { dev.group = ComboBoxGroupIp.SelectedItem.ToString(); }
                 catch { dev.group =""; }
                 if (textBoxDeviceMac.Text == "  :  :  :  :  :")

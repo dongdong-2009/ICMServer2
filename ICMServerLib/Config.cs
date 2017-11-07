@@ -56,7 +56,7 @@ namespace ICMServer
             set { m_IniFile.WriteValue(SECTION_GENERAL, "FTPDIR", value); }
         }
 
-        // TODO 資料库相關欄位必須加密
+        // TODO 資料库相關栏位必須加密
         public string DatabaseName
         {
             get { return m_IniFile.GetString(SECTION_DATABASE, "INITIALCATALOG", "icmdb"); }

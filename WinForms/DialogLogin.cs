@@ -17,7 +17,7 @@ namespace ICMServer
     public partial class DialogLogin : Form
     {
         /// <summary>
-        /// 用于視窗拖曳移动
+        /// 用于视窗拖曳移动
         /// </summary>
         int m_PX;
         int m_PY;

@@ -14,7 +14,7 @@ namespace ICMServer.Models {
     public partial class AddrList
     {
         /// <summary>
-        /// 處理 multicast group ip 記錄專用類別
+        /// 處理 multicast group ip 記录專用類別
         /// </summary>
         partial class MulticastGroupDataTable
         {

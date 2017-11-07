@@ -39,8 +39,8 @@ namespace ICMServer
             }
 
             /// <summary>
-            /// 判断要开启的視窗是否已經开启
-            /// 若視窗已开启，将该視窗带到最上层
+            /// 判断要开启的视窗是否已經开启
+            /// 若视窗已开启，将该视窗带到最上层
             /// </summary>
             /// <param name="childFormName"></param>
             /// <returns>form if form is opened, else return null</returns>
@@ -48,7 +48,7 @@ namespace ICMServer
             {
                 if (m_Form != null)
                 {
-                    // 将視窗带到到最上层
+                    // 将视窗带到到最上层
                     m_Form.BringToFront();
                 }
                 return m_Form;
@@ -283,9 +283,9 @@ namespace ICMServer
         }
 
         /// <summary>
-        /// 如果该目錄不存在的话，試著建立目錄
+        /// 如果该目录不存在的话，試著建立目录
         /// </summary>
-        /// <param name="folderPath">目錄路径</param>
+        /// <param name="folderPath">目录路径</param>
         private static void CreateFolderIfNotExist(string folderPath)
         {
             bool exists = System.IO.Directory.Exists(folderPath);

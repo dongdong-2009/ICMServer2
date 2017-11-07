@@ -274,7 +274,7 @@
     <value>开閉</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>升级任務</value>
+    <value>升级任务</value>
   </data>
   <data name="&gt;&gt;BtnClose.ZOrder" xml:space="preserve">
     <value>0</value>

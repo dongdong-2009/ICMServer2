@@ -373,7 +373,7 @@
     <value>PageDeviceInfo</value>
   </data>
   <data name="DeviceInfoToolbox.Text" xml:space="preserve">
-    <value>工具欄</value>
+    <value>工具栏</value>
   </data>
   <data name="buttonQuery.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 38</value>
@@ -883,7 +883,7 @@
     <value>4</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
-    <value>工具欄</value>
+    <value>工具栏</value>
   </data>
   <data name="ComboBoxDevTypeForPageDevInfo.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 104</value>

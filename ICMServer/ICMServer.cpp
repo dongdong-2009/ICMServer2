@@ -106,8 +106,8 @@ namespace ICMServer {
 		HttpServer::Instance->Start(gcnew Uri(String::Format("http://localhost:{0}", Config::Instance->HTTPServerPort)));
 		//HttpServer::Instance->Start(gcnew Uri(String::Format("http://localhost:8080")));
 
-        // TODO: 非同步啟用天气服務 （即一個WebClient不断去天气查詢網站要資料）
-        // TODO: 非同步啟用 Heart Beat 查詢服務
+        // TODO: 非同步啟用天气服务 （即一個WebClient不断去天气查詢網站要資料）
+        // TODO: 非同步啟用 Heart Beat 查詢服务
         //HeartbeatService::Instance->Start();
         Heartbeat::Instance->Start();
 

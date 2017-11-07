@@ -196,7 +196,7 @@
     <value>6</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>状态欄</value>
+    <value>状态栏</value>
   </data>
   <data name="BtnDel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>

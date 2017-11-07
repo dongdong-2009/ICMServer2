@@ -22,8 +22,10 @@ namespace ICMServer
 
         private void DialogShowQR_Load(object sender, EventArgs e)
         {
-            BarcodeWriter bw = new BarcodeWriter();
-            bw.Format = BarcodeFormat.QR_CODE;
+            BarcodeWriter bw = new BarcodeWriter
+            {
+                Format = BarcodeFormat.QR_CODE
+            };
             bw.Options.Width = 260;
             bw.Options.Height = 237;
             Bitmap bitmap = bw.Write(qrContent);

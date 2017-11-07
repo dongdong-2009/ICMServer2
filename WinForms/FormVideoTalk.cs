@@ -88,7 +88,7 @@ namespace ICMServer
             }
         }
 
-        // 作用只是記錄某值，並在该值有改變时呼叫 ValueChanged event handler
+        // 作用只是記录某值，並在该值有改變时呼叫 ValueChanged event handler
         public class Values
         {
             public Values(int InitialValue)

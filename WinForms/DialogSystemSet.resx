@@ -334,7 +334,7 @@
     <value>9</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>NTP服務端口：</value>
+    <value>NTP服务端口：</value>
   </data>
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
@@ -364,7 +364,7 @@
     <value>8</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Http服務端口号：</value>
+    <value>Http服务端口号：</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -394,7 +394,7 @@
     <value>7</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>外網服務IP：</value>
+    <value>外網服务IP：</value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -484,7 +484,7 @@
     <value>4</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>內網服務IP：</value>
+    <value>內網服务IP：</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>

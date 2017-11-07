@@ -22,12 +22,14 @@ namespace ICMServer
         {
             using (var db = new ICMServer.Models.ICMDBContext())
             {
-                holderinfo ResidentIndfo = new holderinfo();
-                ResidentIndfo.C_name = textBoxName.Text;
-                ResidentIndfo.C_roomid = textBoxRoomID.Text;
-                ResidentIndfo.C_sex = ComboBoxSex.SelectedIndex;
-                ResidentIndfo.C_isholder = ComboBoxIsResident.SelectedIndex;
-                ResidentIndfo.C_phoneno = textBoxPhone.Text;
+                holderinfo ResidentIndfo = new holderinfo
+                {
+                    C_name = textBoxName.Text,
+                    C_roomid = textBoxRoomID.Text,
+                    C_sex = ComboBoxSex.SelectedIndex,
+                    C_isholder = ComboBoxIsResident.SelectedIndex,
+                    C_phoneno = textBoxPhone.Text
+                };
                 //ResidentIndfo.birth = dateTimePickerBirth.Value;
                 //ResidentIndfo.PID = textBoxPID.Text;
                 db.Holderinfoes.Add(ResidentIndfo);

@@ -475,7 +475,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>云服務管理</value>
+    <value>云服务管理</value>
   </data>
   <data name="&gt;&gt;sipaccountBindingSource.Name" xml:space="preserve">
     <value>sipaccountBindingSource</value>

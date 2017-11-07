@@ -39,11 +39,13 @@ namespace ICMServer
             ICMDBContext dbRefresh = new ICMDBContext();
             foreach (var ads in dbRefresh.Advertisements.OrderBy(s => s.C_no))  // 按播放順序排序
             {
-                List<string> sublist = new List<string>();  // 重填列表
-                sublist.Add(ads.C_no.ToString());
-                sublist.Add(ads.C_title);
-                sublist.Add(ads.C_time.ToString());
-                sublist.Add(ads.C_path);
+                List<string> sublist = new List<string>
+                {
+                    ads.C_no.ToString(),
+                    ads.C_title,
+                    ads.C_time.ToString(),
+                    ads.C_path
+                };  // 重填列表
                 listViewPlaySeq.Items.Add(new ListViewItem(sublist.ToArray()));
             }
         }

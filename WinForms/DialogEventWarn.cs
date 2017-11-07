@@ -60,15 +60,14 @@ namespace ICMServer
             }
             else if (e.ColumnIndex == dgvTextBoxAlarmAction.Index)
             {
-                string action = e.Value as string;
-                if (action != null)
+                if (e.Value is string action)
                 {
                     if (action == "trig")
-                        e.Value = "事件觸发";
+                        e.Value = "事件触发";
                     else if (action == "unalarm")
                         e.Value = "事件解除";
                     else if (action == "enable")
-                        e.Value = "佈防";
+                        e.Value = "布防";
                     else if (action == "disable")
                         e.Value = "撤防";
                     else

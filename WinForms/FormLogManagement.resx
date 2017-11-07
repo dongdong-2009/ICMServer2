@@ -351,7 +351,7 @@
     <value>未接來电</value>
   </data>
   <data name="ComboBoxSessionlog.Items2" xml:space="preserve">
-    <value>去电紀錄</value>
+    <value>去电记录</value>
   </data>
   <data name="&gt;&gt;BtnQueryNormal.Name" xml:space="preserve">
     <value>BtnQueryNormal</value>
@@ -447,7 +447,7 @@
     <value>0</value>
   </data>
   <data name="clogtimeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>日誌时间</value>
+    <value>日志时间</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -907,7 +907,7 @@
     <value>dgvTextBoxOpenDoorFrom</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>对讲紀錄</value>
+    <value>对讲记录</value>
   </data>
   <data name="BtnChooseDev.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
@@ -1042,7 +1042,7 @@
     <value>True</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>安防紀錄</value>
+    <value>安防记录</value>
   </data>
   <data name="BtnDiviceLogRefresh.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 38</value>
@@ -1468,7 +1468,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabPage5.Text" xml:space="preserve">
-    <value>设备状态紀錄</value>
+    <value>设备状态记录</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -1558,7 +1558,7 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
-    <value>普通事件紀錄</value>
+    <value>普通事件记录</value>
   </data>
   <data name="BtnNormalRefresh.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -1735,7 +1735,7 @@
     <value>tabPage3</value>
   </data>
   <data name="clogDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>日誌信息</value>
+    <value>日志信息</value>
   </data>
   <data name="ComboBoxHandleState.Items2" xml:space="preserve">
     <value>处理中</value>
@@ -1768,7 +1768,7 @@
     <value>837, 641</value>
   </data>
   <data name="tabPage4.Text" xml:space="preserve">
-    <value>開鎖紀錄</value>
+    <value>開鎖记录</value>
   </data>
   <data name="&gt;&gt;dgvTextBoxAlarmType.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

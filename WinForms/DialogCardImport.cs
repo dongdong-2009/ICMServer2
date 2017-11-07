@@ -23,9 +23,11 @@ namespace ICMServer
 
         private void BtnImport_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlgFile = new OpenFileDialog();
-            dlgFile.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
-            dlgFile.FileName = "cardlist.xml";
+            OpenFileDialog dlgFile = new OpenFileDialog
+            {
+                Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*",
+                FileName = "cardlist.xml"
+            };
             if (dlgFile.ShowDialog() == DialogResult.OK)
             {
                 XDocument doc = XDocument.Load(dlgFile.FileName);

@@ -161,7 +161,7 @@ namespace ICMServer.Models
 
         private string _laVer;
         /// <summary>
-        /// 设备在服務器最新地址薄版本
+        /// 设备在服务器最新地址薄版本
         /// </summary>
         public string laVer
         {
@@ -171,7 +171,7 @@ namespace ICMServer.Models
 
         private string _lcVer;
         /// <summary>
-        /// 设备在服務器最新卡列表版本
+        /// 设备在服务器最新卡列表版本
         /// </summary>
         public string lcVer
         {
@@ -181,7 +181,7 @@ namespace ICMServer.Models
 
         private string _lfVer;
         /// <summary>
-        /// 设备在服務器最新軟件版本
+        /// 设备在服务器最新軟件版本
         /// </summary>
         public string lfVer
         {

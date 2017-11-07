@@ -42,11 +42,11 @@ namespace ICMServer
             if (action != null)
             {
                 if (action == "trig")
-                    return "事件觸发";
+                    return "事件触发";
                 else if (action == "unalarm")
                     return "事件解除";
                 else if (action == "enable")
-                    return "佈防";
+                    return "布防";
                 else if (action == "disable")
                     return "撤防";    
             }

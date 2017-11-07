@@ -136,7 +136,7 @@ namespace ICMServer
             listViewSync.CheckBoxes = false;
             listViewSync.Columns.Add("SIP Account", 110);
             listViewSync.Columns.Add("SIP Status", 110);
-            // 列出兩欄，acount和status
+            // 列出兩栏，acount和status
 
             // 找出所有尚未同步的帳号
             m_SipAccounts = (from a in m_DB.Sipaccounts
@@ -144,9 +144,11 @@ namespace ICMServer
                              select a).ToList();
             foreach (var account in m_SipAccounts)
             {
-                List<string> sublist = new List<string>();
-                sublist.Add(account.C_user);    // 帳号名稱
-                sublist.Add("unsync");          // 顯示未同步
+                List<string> sublist = new List<string>
+                {
+                    account.C_user,    // 帳号名稱
+                    "unsync"          // 顯示未同步
+                };
                 listViewSync.Items.Add(new ListViewItem(sublist.ToArray()));
 
                 if (account.C_usergroup.Length > 0)

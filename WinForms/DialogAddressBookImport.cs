@@ -17,9 +17,11 @@ namespace ICMServer
 
         private void BtnSelectFile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlgFile = new OpenFileDialog();
-            dlgFile.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
-            dlgFile.FileName = "addressbook.xml";
+            OpenFileDialog dlgFile = new OpenFileDialog
+            {
+                Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*",
+                FileName = "addressbook.xml"
+            };
             if (dlgFile.ShowDialog() == DialogResult.OK)
             {
                 textBoxPath.Text += dlgFile.FileName;

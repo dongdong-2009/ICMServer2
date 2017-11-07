@@ -202,7 +202,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>工具欄</value>
+    <value>工具栏</value>
   </data>
   <data name="BtnUploadFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 48</value>
@@ -364,7 +364,7 @@
     <value>$this</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>FTP根目錄</value>
+    <value>FTP根目录</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 141</value>

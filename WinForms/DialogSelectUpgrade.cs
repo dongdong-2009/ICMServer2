@@ -22,8 +22,10 @@ namespace ICMServer
         private void BtnSelectFile_Click(object sender, EventArgs e)
         {
             // 选择档案，开启档案對话框
-            OpenFileDialog dlgFile = new OpenFileDialog();
-            dlgFile.Filter = "PKG files (*.pkg)|*.pkg|All files (*.*)|*.*";
+            OpenFileDialog dlgFile = new OpenFileDialog
+            {
+                Filter = "PKG files (*.pkg)|*.pkg|All files (*.*)|*.*"
+            };
             if (dlgFile.ShowDialog() == DialogResult.OK)
             {
                 textBoxPath.Text += dlgFile.FileName;
@@ -142,13 +144,15 @@ namespace ICMServer
                             where f.filetype == fileType
                                && f.Device_type == DeviceType
                             select f).FirstOrDefault();
-                upgrade upgradeInfo = new upgrade();
-                upgradeInfo.Device_type = DeviceType;
-                upgradeInfo.filetype = fileType;
-                upgradeInfo.filepath = filename.Substring(Config.Instance.FTPServerRootDir.Length + 1, filename.Length - Config.Instance.FTPServerRootDir.Length - 1);
-                upgradeInfo.is_default = (file == null) ? 1 : 0;
-                upgradeInfo.version = this.textBoxVersion.Text;
-                upgradeInfo.time = DateTime.Now;
+                upgrade upgradeInfo = new upgrade
+                {
+                    Device_type = DeviceType,
+                    filetype = fileType,
+                    filepath = filename.Substring(Config.Instance.FTPServerRootDir.Length + 1, filename.Length - Config.Instance.FTPServerRootDir.Length - 1),
+                    is_default = (file == null) ? 1 : 0,
+                    version = this.textBoxVersion.Text,
+                    time = DateTime.Now
+                };
                 db.Upgrades.Add(upgradeInfo);
                 db.SaveChanges();
                 this.DialogResult = DialogResult.OK;

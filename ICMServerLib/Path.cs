@@ -11,9 +11,9 @@ namespace ICMServer
     public class Path
     {
         /// <summary>
-        /// 如果该目錄不存在的話，試著建立目錄
+        /// 如果该目录不存在的話，試著建立目录
         /// </summary>
-        /// <param name="folderPath">目錄路徑</param>
+        /// <param name="folderPath">目录路徑</param>
         private static void CreateFolderIfNotExist(string folderPath)
         {
             bool exists = System.IO.Directory.Exists(folderPath);
@@ -22,9 +22,9 @@ namespace ICMServer
         }
 
         /// <summary>
-        /// 取得應用程式可以存取的資料目錄路徑
+        /// 取得應用程式可以存取的資料目录路徑
         /// </summary>
-        /// <returns>應用程式可以存取的資料目錄路徑</returns>
+        /// <returns>應用程式可以存取的資料目录路徑</returns>
         public static string GetAppDataFolderPath()
         {
             string folderPath = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)

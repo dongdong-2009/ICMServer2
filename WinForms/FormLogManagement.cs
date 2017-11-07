@@ -663,7 +663,7 @@ namespace ICMServer
                     if (action == "trig")
                     {
                         e.CellStyle.BackColor = Color.Red;
-                        e.Value = "事件觸发";
+                        e.Value = "事件触发";
                     }
                     else if (action == "unalarm")
                     {
@@ -671,7 +671,7 @@ namespace ICMServer
                         e.Value = "事件解除";
                     }
                     else if (action == "enable")
-                        e.Value = "佈防";
+                        e.Value = "布防";
                     else if (action == "disable")
                         e.Value = "撤防";
                     else

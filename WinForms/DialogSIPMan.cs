@@ -39,7 +39,7 @@ namespace ICMServer
             listViewSIPAccount.Columns.Add("Group", 150);
         }
 
-        // 云服務管理 - 查询 
+        // 云服务管理 - 查询 
         // 查询该房号下的 SIP Accounts
         private void BtnQuery_Click(object sender, EventArgs e)
         {
@@ -59,10 +59,12 @@ namespace ICMServer
                     foreach (var sip in SIPQuery)
                     {
                         room = sip.C_room;//DevicesAddressConverter.RoToChStr(sip.C_room);//sip.room;
-                        List<string> sublist = new List<string>();
-                        sublist.Add(sip.C_user);
-                        sublist.Add(DevicesAddressConverter.RoToChStr(room));
-                        sublist.Add(sip.C_usergroup);
+                        List<string> sublist = new List<string>
+                        {
+                            sip.C_user,
+                            DevicesAddressConverter.RoToChStr(room),
+                            sip.C_usergroup
+                        };
                         listViewSIPAccount.Items.Add(new ListViewItem(sublist.ToArray()));
                     }
                 }

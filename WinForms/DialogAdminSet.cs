@@ -51,20 +51,24 @@ namespace ICMServer
 
             foreach (var user in db.Users)
             {
-                List<string> sublist = new List<string>();
-                sublist.Add(user.C_userno);
-                sublist.Add(user.C_username);
-                sublist.Add(user.C_id.ToString());
-                sublist.Add(user.C_powerid.ToString());
+                List<string> sublist = new List<string>
+                {
+                    user.C_userno,
+                    user.C_username,
+                    user.C_id.ToString(),
+                    user.C_powerid.ToString()
+                };
                 listViewAdmin.Items.Add(new ListViewItem(sublist.ToArray()));
             }
 
             foreach (var us in db.Authorities)
             {
-                List<string> sublist = new List<string>();
-                sublist.Add(us.C_name);
-                sublist.Add("");
-                sublist.Add(us.C_id.ToString());
+                List<string> sublist = new List<string>
+                {
+                    us.C_name,
+                    "",
+                    us.C_id.ToString()
+                };
                 listViewAutho.Items.Add(new ListViewItem(sublist.ToArray()));
             }
         }

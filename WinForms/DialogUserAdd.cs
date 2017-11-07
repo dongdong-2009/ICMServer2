@@ -58,12 +58,14 @@ namespace ICMServer
                 {
                     if (m_id == 0)
                     {
-                        user users = new Models.user();
-                        //User user = new User();
-                        users.C_username = txtBoxName.Text;
-                        users.C_userno = txtBoxNum.Text;
-                        users.C_password = txtBoxPassword.Text;
-                        users.C_powerid = cmbBoxAuthority.SelectedIndex;//.SelectedItem.ToString();
+                        user users = new Models.user
+                        {
+                            //User user = new User();
+                            C_username = txtBoxName.Text,
+                            C_userno = txtBoxNum.Text,
+                            C_password = txtBoxPassword.Text,
+                            C_powerid = cmbBoxAuthority.SelectedIndex//.SelectedItem.ToString();
+                        };
                         m_db.Users.Add(users);
                     }
                     else

@@ -44,9 +44,11 @@ namespace ICMServer
                         select ad;
             foreach (var list in order)
             {
-                List<string> sublist = new List<string>();
-                sublist.Add(list.C_no.ToString());
-                sublist.Add(list.C_title);
+                List<string> sublist = new List<string>
+                {
+                    list.C_no.ToString(),
+                    list.C_title
+                };
                 listViewOrder.Items.Add(new ListViewItem(sublist.ToArray()));
             }
         }

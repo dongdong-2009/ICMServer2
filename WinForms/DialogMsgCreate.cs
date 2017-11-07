@@ -51,12 +51,14 @@ namespace ICMServer
                 return;
             }
 
-            m_PublishInfo = new publishinfo();
-            m_PublishInfo.type = radioBtnText.Checked ? 0 : 1;  // 0: text, 1: picture
-            m_PublishInfo.dstaddr = txtBoxAddress.Text;
-            m_PublishInfo.title = txtBoxTitle.Text;
-            m_PublishInfo.time = DateTime.Now;
-            m_PublishInfo.isread = 0;//false;
+            m_PublishInfo = new publishinfo
+            {
+                type = radioBtnText.Checked ? 0 : 1,  // 0: text, 1: picture
+                dstaddr = txtBoxAddress.Text,
+                title = txtBoxTitle.Text,
+                time = DateTime.Now,
+                isread = 0//false;
+            };
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmssffff");
             // [TODO] bmp 室内机可能无法顯示 =_=
             string filename = string.Format(timeStamp + ".jpg");
@@ -157,9 +159,11 @@ namespace ICMServer
 
         private void BtnPicImport_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Title = strings.OpenOldFile;// "开启存档";
-            dlg.Filter = "JPEG files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            OpenFileDialog dlg = new OpenFileDialog
+            {
+                Title = strings.OpenOldFile,// "开启存档";
+                Filter = "JPEG files (*.jpg)|*.jpg|All files (*.*)|*.*"
+            };
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
